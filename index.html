@@ -21,7 +21,7 @@
             --light-bg: #FAFAFA;
             --white: #FFFFFF;
             --border: #E5E5E5;
-            --highlight: #0066CC;
+            --highlight: #045149;
         }
         
         body {
@@ -92,6 +92,7 @@
             margin: 0 auto;
         }
         
+        /* UPDATED: Interactive heading with letter hover effect */
         .hero h1 {
             font-size: 48px;
             font-weight: 200;
@@ -99,6 +100,21 @@
             margin-bottom: 1rem;
             color: var(--primary);
             line-height: 1.1;
+            cursor: default;
+            display: flex;
+            gap: 1px;
+        }
+
+        .hero h1 span {
+            display: inline-block;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), font-weight 0.2s ease, color 0.2s ease;
+            font-weight: 200;
+        }
+
+        .hero h1 span:hover {
+            font-weight: 500;
+            color: var(--highlight);
+            transform: scale(1.05) translateY(-2px);
         }
         
         .hero .subtitle {
@@ -220,8 +236,10 @@
             border-bottom-color: var(--primary);
         }
         
+        /* UPDATED: Removed grey background from projects section */
         section {
             padding: 5rem 3rem;
+            background: var(--white);
         }
         
         .container {
@@ -559,6 +577,7 @@
             
             .hero h1 {
                 font-size: 32px;
+                flex-wrap: wrap;
             }
             
             section {
@@ -620,7 +639,12 @@
 
     <section class="hero" id="about">
         <div class="hero-content">
-            <h1>Ananya Shrimali</h1>
+            <!-- UPDATED: Name split into individual letter spans for hover effect -->
+            <h1>
+                <span>A</span><span>n</span><span>a</span><span>n</span><span>y</span><span>a</span>
+                <span>&nbsp;</span>
+                <span>S</span><span>h</span><span>r</span><span>i</span><span>m</span><span>a</span><span>l</span><span>i</span>
+            </h1>
             <p class="subtitle">Computational Designer · Building Performance Analyst</p>
             <p class="description">
                 <a href="https://www.cmu.edu" target="_blank" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border);">Carnegie Mellon University</a> graduate student specializing in parametric design, full-stack development, and data-driven sustainable design. 
@@ -1031,7 +1055,6 @@
                 <h2 class="section-title">Computational Design</h2>
                 
                 <div class="projects-grid">
-                    <!-- Same projects but filtered for computational -->
                     <div class="project-card" onclick="openModal('thesis')">
                         <div class="project-header">
                             <span class="project-number">01</span>
