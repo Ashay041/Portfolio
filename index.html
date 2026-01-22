@@ -93,6 +93,81 @@
             margin: 0 auto;
         }
         
+        /* Fun Fact Card Styles */
+        .fun-fact-card {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: var(--white);
+            border: 2px solid var(--highlight);
+            padding: 2.5rem;
+            max-width: 400px;
+            width: 90%;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .fun-fact-card.active {
+            opacity: 1;
+            pointer-events: all;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .fun-fact-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .fun-fact-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .fun-fact-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--secondary);
+            background: none;
+            border: none;
+            font-weight: 200;
+            transition: color 0.2s;
+        }
+
+        .fun-fact-close:hover {
+            color: var(--highlight);
+        }
+
+        .fun-fact-letter {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 48px;
+            font-weight: 300;
+            color: var(--highlight);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .fun-fact-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--secondary);
+            text-align: center;
+        }
+
         /* UPDATED: Interactive heading with letter hover effect */
         .hero h1 {
             font-size: 48px;
@@ -567,7 +642,14 @@
                 flex-direction: column;
                 gap: 1rem;
             }
-            
+            .fun-fact-card {
+                max-width: 90%;
+                padding: 2rem;
+            }
+
+            .fun-fact-letter {
+                font-size: 36px;
+            }
             .nav-links {
                 gap: 1.5rem;
             }
@@ -642,9 +724,9 @@
         <div class="hero-content">
             <!-- UPDATED: Name split into individual letter spans for hover effect -->
             <h1>
-                <span>A</span><span>n</span><span>a</span><span>n</span><span>y</span><span>a</span>
+                <span data-fact="Always curious about how to optimize performance of building and guess MBTI of people around me accurately everytime.">A</span><span data-fact="Nerd for parametric design and computational workflows and Harry Potter">n</span><span data-fact="Advocate for sustainable, data-driven design decisions and rationality over emotions">a</span><span data-fact="Never makes eye contact in the elevator unless you're a hiring manager">n</span><span data-fact="Yes I have too many As in my name but year-round obsession for samoyeds">y</span><span data-fact="Adaptive thinker who loves problem solving but mostly alone unless you're a well organized team">a</span>
                 <span>&nbsp;</span>
-                <span>S</span><span>h</span><span>r</span><span>i</span><span>m</span><span>a</span><span>l</span><span>i</span>
+                <span data-fact="Skilled in RhinoPython, AI Automation, and Astrology even though I don't completely believe in it.">S</span><span data-fact="Happy to collaborate on computational design projects and watch a thriller together">h</span><span data-fact="Really passionate about optimization in my work as well as general conversations. I hate small talk.">r</span><span data-fact=" Inspired by the intersection of code, construction, and candies (dark chocolate if you wanna ask me the type).">i</span><span data-fact="Maps out everything, including my life from plan-A till plan-appendices">m</span><span data-fact="Amused about being right but also listening when I'm wrong.">a</span><span data-fact="Luminous. Not really, I just love the word. I like low intensity lights or no lights at all.">l</span><span data-fact="Investigator if you ask investigation worthy questions.">i</span>
             </h1>
             <p class="subtitle">Computational Designer · Building Performance Analyst</p>
             <p class="description">
@@ -678,7 +760,13 @@
             </div>
         </div>
     </section>
-
+<!-- Fun Fact Overlay and Card -->
+    <div class="fun-fact-overlay" id="funFactOverlay" onclick="closeFunFact()"></div>
+    <div class="fun-fact-card" id="funFactCard">
+        <button class="fun-fact-close" onclick="closeFunFact()">&times;</button>
+        <div class="fun-fact-letter" id="funFactLetter">A</div>
+        <div class="fun-fact-text" id="funFactText">Fun fact goes here</div>
+    </div>
     <section class="skills">
         <div class="skills-container">
             <span class="skill-badge">Grasshopper</span>
@@ -1659,6 +1747,43 @@
     </div>
 
     <script>
+// Fun fact functionality
+        function showFunFact(letter, fact) {
+            const overlay = document.getElementById('funFactOverlay');
+            const card = document.getElementById('funFactCard');
+            const letterEl = document.getElementById('funFactLetter');
+            const textEl = document.getElementById('funFactText');
+            
+            letterEl.textContent = letter;
+            textEl.textContent = fact;
+            
+            overlay.classList.add('active');
+            card.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFunFact() {
+            const overlay = document.getElementById('funFactOverlay');
+            const card = document.getElementById('funFactCard');
+            
+            overlay.classList.remove('active');
+            card.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Add click listeners to name letters
+        document.querySelectorAll('.hero h1 span').forEach(span => {
+            const fact = span.getAttribute('data-fact');
+            if (fact) {
+                span.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const letter = span.textContent.trim();
+                    if (letter) {
+                        showFunFact(letter, fact);
+                    }
+                });
+            }
+        });
         function switchTab(tabName) {
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
