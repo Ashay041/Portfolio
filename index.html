@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Template extracted from claude sonnet 4.5 -->
+<!-- Asked claude to change the styling to "minimalist style with small fonts and use minimal or no colors" -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <!-- editted manualy: font size, colors, fonts, alignment etc. -->
+    <!-- manually added hovers and css interactivity and visualization -->
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         :root {
             --primary: #000000;
             --secondary: #666666;
@@ -109,7 +112,8 @@
             border-color: var(--highlight);
         }
         
-        /* Fun Fact Card Styles */
+        /* prompted sonnet 4.5 to give a code chunk for adding "interactive cards when clicking each letter when hovered" */
+        /* editted styling manually */
         .fun-fact-card {
             position: fixed;
             top: 50%;
@@ -184,7 +188,8 @@
             text-align: center;
         }
 
-        /* UPDATED: Interactive heading with letter hover effect */
+        /* Prompted AI to get a template chunk to add interactivity in the title name */
+        /* Eeditted color, font, sizes manually */
         .hero h1 {
             font-size: 48px;
             font-weight: 200;
@@ -280,13 +285,14 @@
             text-transform: uppercase;
             transition: all 0.2s;
         }
-        
+        /* added the hover interactivity suing claude sonnet 4.5 and edited colors manually */
         .skill-badge:hover {
             border-color: var(--highlight);
             color: var(--primary);
         }
         
         /* Category Tabs */
+        /* experimented with multiple color styling manually but settled on black and white */
         .category-tabs {
             background: var(--white);
             border-bottom: 1px solid var(--border);
@@ -327,8 +333,7 @@
             color: var(--highlight);
             border-bottom-color: var(--highlight);
         }
-        
-        /* UPDATED: Removed grey background from projects section */
+        /* asked sonnet 4.5 to organize projects in sections */
         section {
             padding: 5rem 3rem;
             background: var(--white);
@@ -364,6 +369,7 @@
             border: 1px solid var(--border);
         }
         
+        /* edited manually */
         .project-card {
             background: var(--white);
             padding: 3rem;
@@ -399,6 +405,7 @@
         }
         
         /* PROJECT IMAGES */
+        /* template didnt have photos so asked sonnet 4.5 to give chunks to add a cover photo and a photo on card */
         .project-image {
             width: 100%;
             height: 250px;
@@ -490,7 +497,7 @@
             text-align: center;
             max-width: 700px;
         }
-        
+
         .contact p {
             font-size: 13px;
             color: var(--secondary);
@@ -651,7 +658,8 @@
             padding: 2rem;
             margin: 2rem 0;
         }
-        
+        /* asked sonnet 4.5 to add */
+        /* editted manually */
         @media (max-width: 768px) {
             nav {
                 padding: 1rem 1.5rem;
@@ -664,7 +672,7 @@
             }
 
             .fun-fact-letter {
-                font-size: 36px;
+                font-size: 18px;
             }
             .nav-links {
                 gap: 1.5rem;
@@ -738,7 +746,9 @@
 
     <section class="hero" id="about">
         <div class="hero-content">
-            <!-- UPDATED: Name split into individual letter spans for hover effect -->
+            <!-- asked claude to add the letter hover effect -->
+            <!-- editted text and image names-->
+            
             <img src="Images/profile.jpg" alt="Ananya Shrimali" class="hero-photo">
             <h1>
                 <span data-fact="Always curious about how to optimize performance of building and guess MBTI of people around me accurately everytime.">A</span><span data-fact="Nerd for parametric design and computational workflows and Harry Potter">n</span><span data-fact="Advocate for sustainable, data-driven design decisions and rationality over emotions">a</span><span data-fact="Never makes eye contact in the elevator unless you're a hiring manager">n</span><span data-fact="Yes I have too many As in my name but year-round obsession for samoyeds">y</span><span data-fact="Adaptive thinker who loves problem solving but mostly alone unless you're a well organized team">a</span>
@@ -750,13 +760,14 @@
                 <a href="https://www.cmu.edu" target="_blank" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border);">Carnegie Mellon University</a> graduate student specializing in parametric design, full-stack development, and data-driven sustainable design. 
                 Bridging computational workflows with building performance analysis to enable early-stage design decisions.
                 <br><br>
-                <strong style="font-weight: 400;">Core Expertise:</strong> RhinoPython, Grasshopper, React, Machine Learning, Energy Modeling
+                <strong style="font-weight: 400;">Core Expertise:</strong> RhinoPython, Grasshopper, Climate Studio, Data Science, Energy Modeling
                 <br><br>
+                <!-- asked claude to add resume link and updated manually -->
                 <a href="#resume" onclick="window.open('https://drive.google.com/file/d/1BqCEEF8ljxbLj-432oF0XXdy8G85-0OQ/view?usp=drive_link', '_blank'); return false;" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">View Resume →</a>
                 &nbsp;&nbsp;
                 <a href="https://github.com/ananyashrimali03" target="_blank" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">GitHub →</a>
             </p>
-            
+             <!-- asked claude to add chunk for key metrics -->
             <div class="hero-metrics">
                 <div class="metric">
                     <div class="metric-value">100+</div>
@@ -777,7 +788,7 @@
             </div>
         </div>
     </section>
-<!-- Fun Fact Overlay and Card -->
+<!-- asked claude to add Fun Fact Overlay and Card  -->
     <div class="fun-fact-overlay" id="funFactOverlay" onclick="closeFunFact()"></div>
     <div class="fun-fact-card" id="funFactCard">
         <button class="fun-fact-close" onclick="closeFunFact()">&times;</button>
@@ -785,6 +796,7 @@
         <div class="fun-fact-text" id="funFactText">Fun fact goes here</div>
     </div>
     <section class="skills">
+         <!-- updated the badges manually -->
         <div class="skills-container">
             <span class="skill-badge">Grasshopper</span>
             <span class="skill-badge">RhinoPython</span>
@@ -795,14 +807,13 @@
             <span class="skill-badge">Climate Studio</span>
             <span class="skill-badge">Energy Modeling</span>
             <span class="skill-badge">Parametric Design</span>
-            <span class="skill-badge">Full-Stack Development</span>
             <span class="skill-badge">API Integration</span>
             <span class="skill-badge">Data Visualization</span>
             <span class="skill-badge">HVAC Design</span>
             <span class="skill-badge">GIS Analysis</span>
         </div>
     </section>
-
+ <!-- asked claude to edit the projects into organized catagory tabs, edited manually -->
     <div class="category-tabs" id="projects">
         <div class="tabs-container">
             <button class="tab-btn active" onclick="switchTab('all')">All Projects</button>
@@ -825,6 +836,7 @@
                             <span class="project-number">01</span>
                             <span class="project-year">Ongoing</span>
                         </div>
+                        <!-- edited text manually -->
                         <img src="Images/ThesisOut.jpg" alt="Adaptive Reuse Thesis" class="project-image">
                         <h3 class="project-title">Adaptive Reuse Thesis</h3>
                         <p class="project-meta">Pittsburgh, PA · Office-to-Residential · Computational Research</p>
@@ -833,7 +845,7 @@
                             of 1965-1985 office buildings. Automated workflow evaluating spatial daylight autonomy 
                             across 100+ building configurations.
                         </p>
-                        
+                         <!-- edited metrics manually -->
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">100+</div>
@@ -862,7 +874,7 @@
                     <div class="project-card" onclick="openModal('tartan')">
                         <div class="project-header">
                             <span class="project-number">02</span>
-                            <span class="project-year">2024</span>
+                            <span class="project-year">2025</span>
                         </div>
                         <img src="Images/TartanOut.jpg" alt="Tartan Tuesday Management System" class="project-image">
                         <h3 class="project-title">Tartan Tuesday Management System</h3>
@@ -1473,10 +1485,12 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
+             <!-- edited text manually -->
             <p>
                 Available for computational design roles, building performance analysis positions, 
                 and collaborative research opportunities. Let's connect!
             </p>
+             <!-- edited links  manually -->
             <div class="contact-links">
                 <a href="mailto:ashrimal@andrew.cmu.edu" class="contact-btn">Email</a>
                 <a href="https://www.linkedin.com/in/ananyashrimali" target="_blank" class="contact-btn">LinkedIn</a>
@@ -1498,6 +1512,7 @@
             
             <div class="modal-section">
                 <h3>Overview</h3>
+                 <!-- edited text manually -->
                 <p>
                     Thesis research focusing on adaptive reuse of Pittsburgh office buildings from 1965-1985, 
                     analyzing residential conversion potential with emphasis on daylighting performance.
@@ -1506,6 +1521,7 @@
 
             <div class="highlight-box">
                 <h3>Research Focus</h3>
+                 <!-- edited text manually -->
                 <ul>
                     <li>Parametric building iterations using RhinoPython scripts</li>
                     <li>Comprehensive daylighting analysis via ClimateStudio API</li>
@@ -1516,7 +1532,7 @@
 
             <div class="modal-section">
                 <h3>Tools & Technologies</h3>
-                <p><strong>Rhino, Grasshopper, RhinoPython, ClimateStudio API, Machine Learning, Python</strong></p>
+                <p><strong>Rhino, Grasshopper, RhinoPython, ClimateStudio, Machine Learning, Python</strong></p>
             </div>
         </div>
     </div>
@@ -1560,6 +1576,7 @@
             
             <div class="modal-section">
                 <h3>Overview</h3>
+                 <!-- edited text manually -->
                 <p>
                     Winner of Harvard HPAIR Impact Challenge 2025. ML model for fire-spread prediction 
                     using geospatial data and simulation-based analysis.
@@ -1850,3 +1867,4 @@
     </script>
 </body>
 </html>
+ <!-- edited years and factual data all manually -->
