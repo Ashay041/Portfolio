@@ -92,7 +92,21 @@
             max-width: 900px;
             margin: 0 auto;
         }
+        .hero-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 2rem;
+            display: block;
+            border: 3px solid var(--border);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
         
+        .hero-photo:hover {
+            transform: scale(1.05);
+            border-color: var(--highlight);
+        }
         /* Fun Fact Card Styles */
         .fun-fact-card {
             position: fixed;
@@ -723,6 +737,7 @@
     <section class="hero" id="about">
         <div class="hero-content">
             <!-- UPDATED: Name split into individual letter spans for hover effect -->
+            <img src="Images/profile.jpg" alt="Ananya Shrimali" class="hero-photo">
             <h1>
                 <span data-fact="Always curious about how to optimize performance of building and guess MBTI of people around me accurately everytime.">A</span><span data-fact="Nerd for parametric design and computational workflows and Harry Potter">n</span><span data-fact="Advocate for sustainable, data-driven design decisions and rationality over emotions">a</span><span data-fact="Never makes eye contact in the elevator unless you're a hiring manager">n</span><span data-fact="Yes I have too many As in my name but year-round obsession for samoyeds">y</span><span data-fact="Adaptive thinker who loves problem solving but mostly alone unless you're a well organized team">a</span>
                 <span>&nbsp;</span>
