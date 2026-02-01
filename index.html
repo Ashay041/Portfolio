@@ -92,7 +92,21 @@
             max-width: 900px;
             margin: 0 auto;
         }
+        .hero-photo {
+            width: 120px;
+            height: 160px;
+            border-radius: 0;
+            object-fit: cover;
+            margin: 0 0 2rem 0;
+            display: block;
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
         
+        .hero-photo:hover {
+            transform: translateY(-2px);
+            border-color: var(--highlight);
+        }
         /* Fun Fact Card Styles */
         .fun-fact-card {
             position: fixed;
@@ -722,24 +736,28 @@
 
     <section class="hero" id="about">
         <div class="hero-content">
-            <!-- UPDATED: Name split into individual letter spans for hover effect -->
+            <!-- asked claude to add the letter hover effect -->
+            <!-- editted text and image names-->
+            
+            <img src="Images/profile.jpg" alt="Ananya Shrimali" class="hero-photo">
             <h1>
-                <span data-fact="Always curious about how to optimize performance of building and guess MBTI of people around me accurately everytime.">A</span><span data-fact="Nerd for parametric design and computational workflows and Harry Potter">N</span><span data-fact="Advocate for sustainable, data-driven design decisions and rationality over emotions">A</span><span data-fact="Never makes eye contact in the elevator unless you're a hiring manager">N</span><span data-fact="Yes I have too many As in my name but year-round obsession for samoyeds">Y</span><span data-fact="Adaptive thinker who loves problem solving but mostly alone unless you're a well organized team">A</span>
+                <span data-fact="Always curious about how to optimize performance of building and guess MBTI of people around me accurately everytime.">A</span><span data-fact="Nerd for parametric design and computational workflows and Harry Potter">n</span><span data-fact="Advocate for sustainable, data-driven design decisions and rationality over emotions">a</span><span data-fact="Never makes eye contact in the elevator unless you're a hiring manager">n</span><span data-fact="Yes I have too many As in my name but year-round obsession for samoyeds">y</span><span data-fact="Adaptive thinker who loves problem solving but mostly alone unless you're a well organized team">a</span>
                 <span>&nbsp;</span>
-                <span data-fact="Skilled in RhinoPython, AI Automation, and Astrology even though I don't completely believe in it.">S</span><span data-fact="Happy to collaborate on computational design projects and watching a thriller together">H</span><span data-fact="Really passionate about optimization in my work as well as general conversations. I hate small talk.">R</span><span data-fact="Inspired by the intersection of code, construction and candies (dark chocolate if you wanna ask me the type).">I</span><span data-fact="Maps out everything including my life from plan-A till plan-appendices">M</span><span data-fact="Amused about being right but also listening when I'm wrong.">A</span><span data-fact="Luminous. Not really, I just love the word. I like low intensity lights or no lights at all.">L</span><span data-fact="Investigator if you ask investigation worthy questions.">I</span>
+                <span data-fact="Skilled in RhinoPython, AI Automation, and Astrology even though I don't completely believe in it.">S</span><span data-fact="Happy to collaborate on computational design projects and watch a thriller together">h</span><span data-fact="Really passionate about optimization in my work as well as general conversations. I hate small talk.">r</span><span data-fact=" Inspired by the intersection of code, construction, and candies (dark chocolate if you wanna ask me the type).">i</span><span data-fact="Maps out everything, including my life from plan-A till plan-appendices">m</span><span data-fact="Amused about being right but also listening when I'm wrong.">a</span><span data-fact="Luminous. Not really, I just love the word. I like low intensity lights or no lights at all.">l</span><span data-fact="Investigator if you ask investigation worthy questions.">i</span>
             </h1>
             <p class="subtitle">Computational Designer · Building Performance Analyst</p>
             <p class="description">
                 <a href="https://www.cmu.edu" target="_blank" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border);">Carnegie Mellon University</a> graduate student specializing in parametric design, full-stack development, and data-driven sustainable design. 
                 Bridging computational workflows with building performance analysis to enable early-stage design decisions.
                 <br><br>
-                <strong style="font-weight: 400;">Core Expertise:</strong> RhinoPython, Grasshopper, React, Machine Learning, Energy Modeling
+                <strong style="font-weight: 400;">Core Expertise:</strong> RhinoPython, Grasshopper, Climate Studio, Data Science, Energy Modeling
                 <br><br>
+                <!-- asked claude to add resume link and updated manually -->
                 <a href="#resume" onclick="window.open('https://drive.google.com/file/d/1BqCEEF8ljxbLj-432oF0XXdy8G85-0OQ/view?usp=drive_link', '_blank'); return false;" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">View Resume →</a>
                 &nbsp;&nbsp;
                 <a href="https://github.com/ananyashrimali03" target="_blank" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">GitHub →</a>
             </p>
-            
+             <!-- asked claude to add chunk for key metrics -->
             <div class="hero-metrics">
                 <div class="metric">
                     <div class="metric-value">100+</div>
