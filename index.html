@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ananya Shrimali · Computational Design & Building Performance</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=JetBrains+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --primary: #000000;
             --secondary: #666666;
@@ -24,7 +27,7 @@
             --highlight: #000000;
             --highlight2: #97A399;
         }
-        
+
         body {
             font-family: 'Inter', -apple-system, sans-serif;
             font-size: 13px;
@@ -34,7 +37,7 @@
             background: var(--white);
             letter-spacing: -0.01em;
         }
-        
+
         header {
             background: rgba(255, 255, 255, 0.95);
             border-bottom: 1px solid var(--highlight);
@@ -43,7 +46,7 @@
             z-index: 100;
             backdrop-filter: blur(10px);
         }
-        
+
         nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -52,7 +55,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-family: 'JetBrains Mono', monospace;
             font-size: 11px;
@@ -61,13 +64,13 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: var(--secondary);
@@ -77,21 +80,22 @@
             letter-spacing: 0.02em;
             text-transform: uppercase;
         }
-        
+
         .nav-links a:hover {
             color: var(--highlight);
         }
-        
+
         .hero {
             background: var(--white);
             border-bottom: 1px solid var(--border);
             padding: 8rem 3rem 6rem;
         }
-        
+
         .hero-content {
             max-width: 900px;
             margin: 0 auto;
         }
+
         .hero-photo {
             width: 120px;
             height: 160px;
@@ -102,11 +106,12 @@
             border: 1px solid var(--border);
             transition: transform 0.2s ease, border-color 0.2s ease;
         }
-        
+
         .hero-photo:hover {
             transform: translateY(-2px);
             border-color: var(--highlight);
         }
+
         /* Fun Fact Card Styles */
         .fun-fact-card {
             position: fixed;
@@ -206,7 +211,7 @@
             color: var(--highlight);
             transform: scale(1.05) translateY(-2px);
         }
-        
+
         .hero .subtitle {
             font-size: 15px;
             font-weight: 300;
@@ -214,7 +219,7 @@
             color: var(--secondary);
             letter-spacing: 0.01em;
         }
-        
+
         .hero .description {
             font-size: 14px;
             font-weight: 300;
@@ -223,7 +228,7 @@
             max-width: 650px;
             letter-spacing: 0.01em;
         }
-        
+
         .hero-metrics {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -232,11 +237,11 @@
             padding-top: 3rem;
             border-top: 1px solid var(--border);
         }
-        
+
         .metric {
             text-align: left;
         }
-        
+
         .metric-value {
             font-family: 'JetBrains Mono', monospace;
             font-size: 28px;
@@ -244,7 +249,7 @@
             color: var(--primary);
             margin-bottom: 0.3rem;
         }
-        
+
         .metric-label {
             font-size: 10px;
             font-weight: 300;
@@ -252,13 +257,13 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
-        
+
         .skills {
             padding: 3rem 3rem;
             background: var(--light-bg);
             border-bottom: 1px solid var(--border);
         }
-        
+
         .skills-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -266,7 +271,7 @@
             gap: 1rem;
             flex-wrap: wrap;
         }
-        
+
         .skill-badge {
             background: var(--white);
             padding: 0.5rem 1rem;
@@ -278,12 +283,12 @@
             text-transform: uppercase;
             transition: all 0.2s;
         }
-        
+
         .skill-badge:hover {
             border-color: var(--highlight);
             color: var(--primary);
         }
-        
+
         /* Category Tabs */
         .category-tabs {
             background: var(--white);
@@ -294,14 +299,14 @@
             z-index: 90;
             backdrop-filter: blur(10px);
         }
-        
+
         .tabs-container {
             max-width: 1400px;
             margin: 0 auto;
             display: flex;
             gap: 0;
         }
-        
+
         .tab-btn {
             background: transparent;
             border: none;
@@ -316,27 +321,27 @@
             transition: all 0.2s;
             font-family: 'Inter', sans-serif;
         }
-        
+
         .tab-btn:hover {
             color: var(--highlight);
         }
-        
+
         .tab-btn.active {
             color: var(--highlight);
             border-bottom-color: var(--highlight);
         }
-        
+
         /* UPDATED: Removed grey background from projects section */
         section {
             padding: 5rem 3rem;
             background: var(--white);
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .section-title {
             font-size: 10px;
             color: var(--secondary);
@@ -345,15 +350,15 @@
             letter-spacing: 0.15em;
             text-transform: uppercase;
         }
-        
+
         .tab-content {
             display: none;
         }
-        
+
         .tab-content.active {
             display: block;
         }
-        
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -361,19 +366,19 @@
             background: var(--border);
             border: 1px solid var(--border);
         }
-        
+
         .project-card {
             background: var(--white);
             padding: 3rem;
             transition: background 0.2s, transform 0.2s;
             cursor: pointer;
         }
-        
+
         .project-card:hover {
             background: var(--light-bg);
             transform: translateY(-2px);
         }
-        
+
         .project-header {
             display: flex;
             justify-content: space-between;
@@ -382,20 +387,20 @@
             padding-bottom: 1rem;
             border-bottom: 1px solid var(--border);
         }
-        
+
         .project-number {
             font-family: 'JetBrains Mono', monospace;
             font-size: 10px;
             color: var(--accent);
             letter-spacing: 0.1em;
         }
-        
+
         .project-year {
             font-size: 10px;
             color: var(--accent);
             letter-spacing: 0.05em;
         }
-        
+
         /* PROJECT IMAGES */
         .project-image {
             width: 100%;
@@ -406,7 +411,7 @@
             border: 1px solid var(--border);
             background: var(--light-bg);
         }
-        
+
         .project-title {
             font-size: 20px;
             color: var(--primary);
@@ -415,7 +420,7 @@
             letter-spacing: -0.01em;
             line-height: 1.3;
         }
-        
+
         .project-meta {
             color: var(--secondary);
             font-size: 11px;
@@ -423,7 +428,7 @@
             font-weight: 300;
             letter-spacing: 0.01em;
         }
-        
+
         .project-description {
             color: var(--secondary);
             margin-bottom: 2rem;
@@ -431,7 +436,7 @@
             font-size: 13px;
             font-weight: 300;
         }
-        
+
         .project-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -441,11 +446,11 @@
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
-        
+
         .stat {
             text-align: center;
         }
-        
+
         .stat-value {
             font-family: 'JetBrains Mono', monospace;
             font-size: 22px;
@@ -453,20 +458,20 @@
             color: var(--primary);
             margin-bottom: 0.3rem;
         }
-        
+
         .stat-label {
             font-size: 9px;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
-        
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
-        
+
         .tag {
             background: transparent;
             border: 1px solid var(--border);
@@ -477,18 +482,18 @@
             text-transform: uppercase;
             font-weight: 300;
         }
-        
+
         .contact {
             background: var(--light-bg);
             border-top: 1px solid var(--border);
             padding: 5rem 3rem;
         }
-        
+
         .contact .container {
             text-align: center;
             max-width: 700px;
         }
-        
+
         .contact p {
             font-size: 13px;
             color: var(--secondary);
@@ -496,14 +501,14 @@
             margin-bottom: 3rem;
             font-weight: 300;
         }
-        
+
         .contact-links {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .contact-btn {
             background: transparent;
             color: var(--primary);
@@ -516,13 +521,13 @@
             text-transform: uppercase;
             transition: all 0.2s;
         }
-        
+
         .contact-btn:hover {
             background: var(--highlight);
             color: var(--white);
             border-color: var(--highlight);
         }
-        
+
         footer {
             background: var(--primary);
             color: var(--white);
@@ -532,7 +537,7 @@
             font-weight: 300;
             letter-spacing: 0.05em;
         }
-        
+
         .modal {
             display: none;
             position: fixed;
@@ -546,13 +551,13 @@
             overflow-y: auto;
             padding: 3rem;
         }
-        
+
         .modal.active {
             display: flex;
             align-items: flex-start;
             justify-content: center;
         }
-        
+
         .modal-content {
             background: var(--white);
             border: 1px solid var(--border);
@@ -562,7 +567,7 @@
             margin-top: 3rem;
             position: relative;
         }
-        
+
         .modal-close {
             position: absolute;
             top: 2rem;
@@ -575,11 +580,11 @@
             font-weight: 200;
             transition: color 0.2s;
         }
-        
+
         .modal-close:hover {
             color: var(--highlight);
         }
-        
+
         .modal-title {
             font-size: 28px;
             color: var(--primary);
@@ -589,7 +594,7 @@
             padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--border);
         }
-        
+
         /* MODAL IMAGES */
         .modal-image {
             width: 100%;
@@ -600,11 +605,11 @@
             border: 1px solid var(--border);
             background: var(--light-bg);
         }
-        
+
         .modal-section {
             margin-bottom: 3rem;
         }
-        
+
         .modal-section h3 {
             color: var(--highlight2);
             margin-bottom: 1rem;
@@ -613,19 +618,19 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-        
+
         .modal-section p {
             font-size: 13px;
             line-height: 1.8;
             color: var(--secondary);
             font-weight: 300;
         }
-        
+
         .modal-section ul {
             list-style: none;
             padding-left: 0;
         }
-        
+
         .modal-section li {
             font-size: 13px;
             line-height: 1.8;
@@ -635,27 +640,28 @@
             position: relative;
             margin-bottom: 0.5rem;
         }
-        
+
         .modal-section li:before {
             content: "—";
             position: absolute;
             left: 0;
             color: var(--accent);
         }
-        
+
         .highlight-box {
             background: var(--light-bg);
             border: 1px solid var(--border);
             padding: 2rem;
             margin: 2rem 0;
         }
-        
+
         @media (max-width: 768px) {
             nav {
                 padding: 1rem 1.5rem;
                 flex-direction: column;
                 gap: 1rem;
             }
+
             .fun-fact-card {
                 max-width: 90%;
                 padding: 2rem;
@@ -664,64 +670,111 @@
             .fun-fact-letter {
                 font-size: 36px;
             }
+
             .nav-links {
                 gap: 1.5rem;
             }
-            
+
             .hero {
                 padding: 5rem 1.5rem 4rem;
             }
-            
+
             .hero h1 {
                 font-size: 32px;
                 flex-wrap: wrap;
             }
-            
+
             section {
                 padding: 3rem 1.5rem;
             }
-            
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .project-card {
                 padding: 2rem;
             }
-            
+
             .modal {
                 padding: 1rem;
             }
-            
+
             .modal-content {
                 padding: 2rem 1.5rem;
                 margin-top: 1rem;
             }
-            
+
             .project-stats {
                 grid-template-columns: 1fr;
             }
-            
+
             .hero-metrics {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .category-tabs {
                 padding: 1rem 1.5rem 0;
             }
-            
+
             .tabs-container {
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
             }
-            
+
             .tab-btn {
                 white-space: nowrap;
                 padding: 1rem 1.5rem;
             }
+
+            .sort-controls {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* Sort Controls */
+        .sort-controls {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .sort-label {
+            font-size: 10px;
+            font-weight: 400;
+            color: var(--secondary);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .sort-select {
+            appearance: none;
+            -webkit-appearance: none;
+            background: transparent;
+            border: 1px solid var(--border);
+            padding: 0.5rem 2rem 0.5rem 0.8rem;
+            font-size: 10px;
+            font-weight: 300;
+            color: var(--secondary);
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.6rem center;
+        }
+
+        .sort-select:hover,
+        .sort-select:focus {
+            border-color: var(--highlight);
+            color: var(--primary);
+            outline: none;
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -738,28 +791,52 @@
         <div class="hero-content">
             <!-- asked claude to add the letter hover effect -->
             <!-- editted text and image names-->
-            
+
             <img src="Images/profile.jpg" alt="Ananya Shrimali" class="hero-photo">
             <h1>
-                <span data-fact="Always curious about how to optimize performance of building and guess MBTI of people around me accurately everytime.">A</span><span data-fact="Nerd for parametric design and computational workflows and Harry Potter">n</span><span data-fact="Advocate for sustainable, data-driven design decisions and rationality over emotions">a</span><span data-fact="Never makes eye contact in the elevator unless you're a hiring manager">n</span><span data-fact="Yes I have too many As in my name but year-round obsession for samoyeds">y</span><span data-fact="Adaptive thinker who loves problem solving but mostly alone unless you're a well organized team">a</span>
+                <span
+                    data-fact="Always curious about how to optimize performance of building and guess MBTI of people around me accurately everytime.">A</span><span
+                    data-fact="Nerd for parametric design and computational workflows and Harry Potter">n</span><span
+                    data-fact="Advocate for sustainable, data-driven design decisions and rationality over emotions">a</span><span
+                    data-fact="Never makes eye contact in the elevator unless you're a hiring manager">n</span><span
+                    data-fact="Yes I have too many As in my name but year-round obsession for samoyeds">y</span><span
+                    data-fact="Adaptive thinker who loves problem solving but mostly alone unless you're a well organized team">a</span>
                 <span>&nbsp;</span>
-                <span data-fact="Skilled in RhinoPython, AI Automation, and Astrology even though I don't completely believe in it.">S</span><span data-fact="Happy to collaborate on computational design projects and watch a thriller together">h</span><span data-fact="Really passionate about optimization in my work as well as general conversations. I hate small talk.">r</span><span data-fact=" Inspired by the intersection of code, construction, and candies (dark chocolate if you wanna ask me the type).">i</span><span data-fact="Maps out everything, including my life from plan-A till plan-appendices">m</span><span data-fact="Amused about being right but also listening when I'm wrong.">a</span><span data-fact="Luminous. Not really, I just love the word. I like low intensity lights or no lights at all.">l</span><span data-fact="Investigator if you ask investigation worthy questions.">i</span>
+                <span
+                    data-fact="Skilled in RhinoPython, AI Automation, and Astrology even though I don't completely believe in it.">S</span><span
+                    data-fact="Happy to collaborate on computational design projects and watch a thriller together">h</span><span
+                    data-fact="Really passionate about optimization in my work as well as general conversations. I hate small talk.">r</span><span
+                    data-fact=" Inspired by the intersection of code, construction, and candies (dark chocolate if you wanna ask me the type).">i</span><span
+                    data-fact="Maps out everything, including my life from plan-A till plan-appendices">m</span><span
+                    data-fact="Amused about being right but also listening when I'm wrong.">a</span><span
+                    data-fact="Luminous. Not really, I just love the word. I like low intensity lights or no lights at all.">l</span><span
+                    data-fact="Investigator if you ask investigation worthy questions.">i</span>
             </h1>
-            <p class="subtitle">Computational Designer · Building Performance Analyst</p>
+            <p class="subtitle">Computational Designer · Building Performance Analyst · Sustainable Design</p>
             <p class="description">
-                <a href="https://www.cmu.edu" target="_blank" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border);">Carnegie Mellon University</a> graduate student specializing in parametric design, full-stack development, and data-driven sustainable design. 
-                Bridging computational workflows with building performance analysis to enable early-stage design decisions. 
-                <p> Easter egg: Click on the letters of my name in the title ;)
-                </p>
-                <br><br>
-                <strong style="font-weight: 400;">Core Expertise:</strong> RhinoPython, Grasshopper, Climate Studio, Data Science, Energy Modeling
-                <br><br>
-                <!-- asked claude to add resume link and updated manually -->
-                <a href="#resume" onclick="window.open('https://drive.google.com/file/d/1BqCEEF8ljxbLj-432oF0XXdy8G85-0OQ/view?usp=drive_link', '_blank'); return false;" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">View Resume →</a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/ananyashrimali03" target="_blank" style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">GitHub →</a>
+                <a href="https://www.cmu.edu" target="_blank"
+                    style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border);">Carnegie
+                    Mellon University</a> graduate student specializing in parametric design, full-stack development,
+                and data-driven sustainable design.
+                Bridging computational workflows with building performance analysis and sustainability decision making
+                to enable early-stage design decisions.
+            <p> Easter egg: Click on the letters of my name in the title ;)
             </p>
-             <!-- asked claude to add chunk for key metrics -->
+            <br><br>
+            <strong style="font-weight: 400;">Core Expertise:</strong> RhinoPython, Grasshopper, Climate Studio, Data
+            Science, Energy Modeling
+            <br><br>
+            <!-- asked claude to add resume link and updated manually -->
+            <a href="#resume"
+                onclick="window.open('https://drive.google.com/file/d/1BqCEEF8ljxbLj-432oF0XXdy8G85-0OQ/view?usp=drive_link', '_blank'); return false;"
+                style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">View
+                Resume →</a>
+            &nbsp;&nbsp;
+            <a href="https://github.com/ananyashrimali03" target="_blank"
+                style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">GitHub
+                →</a>
+            </p>
+            <!-- asked claude to add chunk for key metrics -->
             <div class="hero-metrics">
                 <div class="metric">
                     <div class="metric-value">100+</div>
@@ -770,7 +847,7 @@
                     <div class="metric-label">Energy Reduction</div>
                 </div>
                 <div class="metric">
-                    <div class="metric-value">9</div>
+                    <div class="metric-value">14</div>
                     <div class="metric-label">Featured Projects</div>
                 </div>
                 <div class="metric">
@@ -780,7 +857,7 @@
             </div>
         </div>
     </section>
-<!-- Fun Fact Overlay and Card -->
+    <!-- Fun Fact Overlay and Card -->
     <div class="fun-fact-overlay" id="funFactOverlay" onclick="closeFunFact()"></div>
     <div class="fun-fact-card" id="funFactCard">
         <button class="fun-fact-close" onclick="closeFunFact()">&times;</button>
@@ -803,6 +880,11 @@
             <span class="skill-badge">Data Visualization</span>
             <span class="skill-badge">HVAC Design</span>
             <span class="skill-badge">GIS Analysis</span>
+            <span class="skill-badge">IESVE</span>
+            <span class="skill-badge">Energy Plus</span>
+            <span class="skill-badge">Design Builder</span>
+            <span class="skill-badge">Carbon Optimization</span>
+            <span class="skill-badge">Design Optimization</span>
         </div>
     </section>
 
@@ -812,16 +894,27 @@
             <button class="tab-btn" onclick="switchTab('computational')">Computational Design</button>
             <button class="tab-btn" onclick="switchTab('fullstack')">Web Development</button>
             <button class="tab-btn" onclick="switchTab('performance')">Building Performance</button>
+            <button class="tab-btn" onclick="switchTab('sustainable')">Sustainable Design</button>
             <button class="tab-btn" onclick="switchTab('gamedev')">Game Development</button>
+            <button class="tab-btn" onclick="switchTab('architecture')">Architectural Design</button>
         </div>
     </div>
 
     <section>
         <div class="container">
+            <div class="sort-controls">
+                <span class="sort-label">Sort by:</span>
+                <select class="sort-select" onchange="sortProjects(this.value)">
+                    <option value="number-asc">Project # (Ascending)</option>
+                    <option value="number-desc">Project # (Descending)</option>
+                    <option value="year-asc">Year (Oldest First)</option>
+                    <option value="year-desc">Year (Newest First)</option>
+                </select>
+            </div>
             <!-- All Projects Tab -->
             <div id="all-content" class="tab-content active">
                 <h2 class="section-title">All Work</h2>
-                
+
                 <div class="projects-grid">
                     <!-- Project 1: Thesis -->
                     <div class="project-card" onclick="openModal('thesis')">
@@ -833,11 +926,11 @@
                         <h3 class="project-title">Adaptive Reuse Thesis</h3>
                         <p class="project-meta">Pittsburgh, PA · Office-to-Residential · Computational Research</p>
                         <p class="project-description">
-                            Parametric analysis using RhinoPython + Grasshopper + ML for daylighting optimization 
-                            of 1965-1985 office buildings. Automated workflow evaluating spatial daylight autonomy 
+                            Parametric analysis using RhinoPython + Grasshopper + ML for daylighting optimization
+                            of 1965-1985 office buildings. Automated workflow evaluating spatial daylight autonomy
                             across 100+ building configurations.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">100+</div>
@@ -852,7 +945,7 @@
                                 <div class="stat-label">Metrics</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">RhinoPython</span>
                             <span class="tag">Grasshopper</span>
@@ -872,11 +965,11 @@
                         <h3 class="project-title">Tartan Tuesday Management System</h3>
                         <p class="project-meta">Carnegie Mellon University · Full-Stack Web Application</p>
                         <p class="project-description">
-                            Built React + Google Apps Script web application for student engagement program 
-                            serving 200+ weekly participants. Real-time cloud sync, duplicate detection, 
+                            Built React + Google Apps Script web application for student engagement program
+                            serving 200+ weekly participants. Real-time cloud sync, duplicate detection,
                             point tracking, and Excel import/export functionality.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">200+</div>
@@ -891,7 +984,7 @@
                                 <div class="stat-label">Real-time</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">Google Apps Script</span>
@@ -911,10 +1004,10 @@
                         <h3 class="project-title">ASHRAE Library Design</h3>
                         <p class="project-meta">São Paulo, Brazil · Climate Zone 2A · 3-Story Public Library</p>
                         <p class="project-description">
-                            Comprehensive HVAC system design integrating VRF-DOAS with renewable energy, 
+                            Comprehensive HVAC system design integrating VRF-DOAS with renewable energy,
                             achieving 45% energy reduction through facade optimization and smart zoning strategies.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">45%</div>
@@ -929,7 +1022,7 @@
                                 <div class="stat-label">kWh Solar/Year</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">VRF-DOAS</span>
                             <span class="tag">Energy Analysis</span>
@@ -948,10 +1041,11 @@
                         <h3 class="project-title">Urban Fire Risk Prediction</h3>
                         <p class="project-meta">Harvard HPAIR Impact Challenge Winner · AI Geospatial Analysis</p>
                         <p class="project-description">
-                            Developed ML model for fire-spread prediction in urban districts using geospatial data. 
-                            Created interactive visualization dashboard integrating simulation with predictive algorithms.
+                            Developed ML model for fire-spread prediction in urban districts using geospatial data.
+                            Created interactive visualization dashboard integrating simulation with predictive
+                            algorithms.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">Winner</div>
@@ -966,7 +1060,7 @@
                                 <div class="stat-label">Analysis</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">Machine Learning</span>
                             <span class="tag">Python</span>
@@ -985,10 +1079,10 @@
                         <h3 class="project-title">Small Office HVAC Analysis</h3>
                         <p class="project-meta">San Francisco, CA · System Comparison Study</p>
                         <p class="project-description">
-                            Comparative HVAC system analysis with detailed load calculations and ERV sizing. 
+                            Comparative HVAC system analysis with detailed load calculations and ERV sizing.
                             Evaluated four system types, recommending mini-split VRF for 33% energy savings.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">33%</div>
@@ -1003,7 +1097,7 @@
                                 <div class="stat-label">Selected</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">System Selection</span>
                             <span class="tag">Load Calculations</span>
@@ -1022,10 +1116,10 @@
                         <h3 class="project-title">Chicago Drug Data Dashboard</h3>
                         <p class="project-meta">Interactive Data Science · Web Application</p>
                         <p class="project-description">
-                            Built full-featured Python dashboard using Pandas, NumPy, Altair, Pydeck, and Streamlit. 
+                            Built full-featured Python dashboard using Pandas, NumPy, Altair, Pydeck, and Streamlit.
                             Interactive geospatial visualizations and time-series analysis of 100,000+ data points.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">100K+</div>
@@ -1040,7 +1134,7 @@
                                 <div class="stat-label">Interactive</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Pandas</span>
@@ -1059,10 +1153,11 @@
                         <h3 class="project-title">Attendance Matrix Tool</h3>
                         <p class="project-meta">Carnegie Mellon University · Web-Based Automation</p>
                         <p class="project-description">
-                            Built web-based tool to automate attendance tracking for 66-student class across 21 sessions. 
+                            Built web-based tool to automate attendance tracking for 66-student class across 21
+                            sessions.
                             Processes Excel files, calculates percentages, and generates formatted reports.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">66</div>
@@ -1077,7 +1172,7 @@
                                 <div class="stat-label">Processing</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">JavaScript</span>
                             <span class="tag">Excel Processing</span>
@@ -1096,10 +1191,10 @@
                         <h3 class="project-title">Shaping Daylight Workshop</h3>
                         <p class="project-meta">Academic Workshop · Parametric Daylighting</p>
                         <p class="project-description">
-                            Intensive daylighting workshop exploring spatial quality through annual metrics, 
+                            Intensive daylighting workshop exploring spatial quality through annual metrics,
                             glare analysis, and view studies. Parametric iteration of shading strategies.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">sDA</div>
@@ -1114,7 +1209,7 @@
                                 <div class="stat-label">Glare</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">Daylighting</span>
                             <span class="tag">ClimateStudio</span>
@@ -1132,10 +1227,10 @@
                         <h3 class="project-title">Environmental Justice Analysis</h3>
                         <p class="project-meta">Louisiana Cancer Alley · GIS Spatial Analysis</p>
                         <p class="project-description">
-                            Spatial analysis examining relationships between industrial facilities and demographics 
+                            Spatial analysis examining relationships between industrial facilities and demographics
                             using kernel density analysis, buffer zones, and demographic correlations.
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">GIS</div>
@@ -1150,7 +1245,7 @@
                                 <div class="stat-label">Builder</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">GIS</span>
                             <span class="tag">Spatial Analysis</span>
@@ -1168,16 +1263,15 @@
                         <h3 class="project-title">Crossy Road</h3>
                         <p class="project-meta">Python Arcade Game · CMU 15-113</p>
                         <p class="project-description">
-                            2D arcade game clone with procedural terrain generation, 
+                            2D arcade game clone with procedural terrain generation,
                             object-oriented design, and dynamic difficulty scaling.
-                            <a href="https://github.com/ananyashrimali03/Crossy-Road-15113-CMU" 
-                               target="_blank" 
-                               onclick="event.stopPropagation()"
-                               style="color: var(--primary); text-decoration: underline; cursor: pointer;">
+                            <a href="https://github.com/ananyashrimali03/Crossy-Road-15113-CMU" target="_blank"
+                                onclick="event.stopPropagation()"
+                                style="color: var(--primary); text-decoration: underline; cursor: pointer;">
                                 View Game Code →
                             </a>
                         </p>
-                        
+
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">OOP</div>
@@ -1192,7 +1286,7 @@
                                 <div class="stat-label">Logic</div>
                             </div>
                         </div>
-                        
+
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Game Development</span>
@@ -1238,10 +1332,88 @@
                         </div>
                     </div>
 
-                    <!-- Project 12: Carb-Off -->
-                    <div class="project-card" onclick="openModal('carboff')">
+                    <!-- Project 12: Building Performance Modeling -->
+                    <div class="project-card" onclick="openModal('bpm')">
                         <div class="project-header">
                             <span class="project-number">12</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="Building Performance Modeling" class="project-image"
+                            style="background: var(--light-bg); display: flex; align-items: center; justify-content: center;">
+                        <h3 class="project-title">Building Performance Modeling</h3>
+                        <p class="project-meta">Pittsburgh & Miami · Dual-Climate Parametric Optimization</p>
+                        <p class="project-description">
+                            Parametric energy optimization across two climate zones using eQUEST.
+                            37 energy models with OFAT methodology achieving 5.6% (Pittsburgh) and
+                            8.8% (Miami) EUI reductions through climate-specific envelope strategies.
+                        </p>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">37</div>
+                                <div class="stat-label">Models</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">8.8%</div>
+                                <div class="stat-label">Best Reduction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Climate Zones</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">eQUEST</span>
+                            <span class="tag">Energy Modeling</span>
+                            <span class="tag">Parametric Analysis</span>
+                            <span class="tag">ASHRAE</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 13: Environmental Performance Simulation -->
+                    <div class="project-card" onclick="openModal('eps')">
+                        <div class="project-header">
+                            <span class="project-number">13</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="Environmental Performance Simulation" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Environmental Performance Simulation</h3>
+                        <p class="project-meta">Climate Studio & IESVE · Daylighting & Energy Analysis</p>
+                        <p class="project-description">
+                            Parametric daylighting analysis of a small office space and comprehensive
+                            secondary school energy optimization in Pittsburgh. Achieved 54.5% EUI
+                            reduction through envelope, glazing, and lighting load optimization.
+                        </p>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">54.5%</div>
+                                <div class="stat-label">EUI Reduction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">57.1%</div>
+                                <div class="stat-label">sDA Achieved</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">IESVE</div>
+                                <div class="stat-label">Simulation</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Climate Studio</span>
+                            <span class="tag">IESVE</span>
+                            <span class="tag">Daylighting</span>
+                            <span class="tag">ASHRAE 90.1</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 14: Carb-Off -->
+                    <div class="project-card" onclick="openModal('carboff')">
+                        <div class="project-header">
+                            <span class="project-number">14</span>
                             <span class="project-year">2026</span>
                         </div>
                         <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
@@ -1275,13 +1447,127 @@
                             <span class="tag">Anthropic AI</span>
                         </div>
                     </div>
+
+                    <!-- Project 15: Museum of Event 1971 -->
+                    <div class="project-card" onclick="openModal('museum1971')">
+                        <div class="project-header">
+                            <span class="project-number">15</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <img src="" alt="Museum of Event 1971" class="project-image" style="background: var(--light-bg);">
+                        <h3 class="project-title">Museum of Event 1971</h3>
+                        <p class="project-meta">Bangladesh Liberation War Memorial · Thesis Project</p>
+                        <p class="project-description">
+                            Phenomenological architecture translating the 1971 Bangladesh Liberation War into
+                            a 1.2 km experiential journey through 12 emotional zones. Highest marks in
+                            Final External Jury 2023.
+                        </p>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">1.2km</div>
+                                <div class="stat-label">Journey</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">Emotional Zones</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">80%</div>
+                                <div class="stat-label">Landscape</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Phenomenology</span>
+                            <span class="tag">Memorial</span>
+                            <span class="tag">Daylighting</span>
+                            <span class="tag">Serial Vision</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 16: Tesseract -->
+                    <div class="project-card" onclick="openModal('tesseract')">
+                        <div class="project-header">
+                            <span class="project-number">16</span>
+                            <span class="project-year">2022</span>
+                        </div>
+                        <img src="" alt="Tesseract Mixed-Use Development" class="project-image" style="background: var(--light-bg);">
+                        <h3 class="project-title">Tesseract</h3>
+                        <p class="project-meta">Mixed-Use Development · Downtown Kolkata · Studio Project</p>
+                        <p class="project-description">
+                            Climate-responsive high-density mixed-use development with 80 residential units,
+                            retail, and coworking. Porous form achieves Venturi-effect natural ventilation
+                            and community-building through 15+ activity nodes. Top 5 in External Jury.
+                        </p>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">80</div>
+                                <div class="stat-label">Apartments</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">12+</div>
+                                <div class="stat-label">Floors</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Cross-Vent</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Mixed-Use</span>
+                            <span class="tag">Climate-Responsive</span>
+                            <span class="tag">Community Design</span>
+                            <span class="tag">Venturi Effect</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 17: Social Nexus -->
+                    <div class="project-card" onclick="openModal('socialnexus')">
+                        <div class="project-header">
+                            <span class="project-number">17</span>
+                            <span class="project-year">2022</span>
+                        </div>
+                        <img src="" alt="Social Nexus - Tianducheng" class="project-image" style="background: var(--light-bg);">
+                        <h3 class="project-title">Social Nexus</h3>
+                        <p class="project-meta">Tianducheng Ghost City Activation · International Competition Winner</p>
+                        <p class="project-description">
+                            Adaptive urban design transforming a Chinese ghost town (Parisian replica) through
+                            grid-based community activation. 16 activity typologies foster cultural identity
+                            through interaction, collaboration, and creation. 54-hour competition winner.
+                        </p>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">Winner</div>
+                                <div class="stat-label">International</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">16</div>
+                                <div class="stat-label">Activity Types</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">54hr</div>
+                                <div class="stat-label">Competition</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Urban Design</span>
+                            <span class="tag">Community</span>
+                            <span class="tag">Adaptive Reuse</span>
+                            <span class="tag">Competition Winner</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Computational Design Tab -->
             <div id="computational-content" class="tab-content">
                 <h2 class="section-title">Computational Design</h2>
-                
+
                 <div class="projects-grid">
                     <div class="project-card" onclick="openModal('thesis')">
                         <div class="project-header">
@@ -1292,13 +1578,22 @@
                         <h3 class="project-title">Adaptive Reuse Thesis</h3>
                         <p class="project-meta">Pittsburgh, PA · Office-to-Residential · Computational Research</p>
                         <p class="project-description">
-                            Parametric analysis using RhinoPython + Grasshopper + ML for daylighting optimization 
+                            Parametric analysis using RhinoPython + Grasshopper + ML for daylighting optimization
                             of 1965-1985 office buildings.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">100+</div><div class="stat-label">Iterations</div></div>
-                            <div class="stat"><div class="stat-value">ML</div><div class="stat-label">Prediction</div></div>
-                            <div class="stat"><div class="stat-value">sDA/ASE</div><div class="stat-label">Metrics</div></div>
+                            <div class="stat">
+                                <div class="stat-value">100+</div>
+                                <div class="stat-label">Iterations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ML</div>
+                                <div class="stat-label">Prediction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">sDA/ASE</div>
+                                <div class="stat-label">Metrics</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">RhinoPython</span>
@@ -1316,12 +1611,22 @@
                         <h3 class="project-title">Tartan Tuesday Management System</h3>
                         <p class="project-meta">Carnegie Mellon University</p>
                         <p class="project-description">
-                            React + Google Apps Script web application for 200+ weekly participants with real-time cloud sync.
+                            React + Google Apps Script web application for 200+ weekly participants with real-time cloud
+                            sync.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">200+</div><div class="stat-label">Users</div></div>
-                            <div class="stat"><div class="stat-value">React</div><div class="stat-label">Frontend</div></div>
-                            <div class="stat"><div class="stat-value">Cloud</div><div class="stat-label">Backend</div></div>
+                            <div class="stat">
+                                <div class="stat-value">200+</div>
+                                <div class="stat-label">Users</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">React</div>
+                                <div class="stat-label">Frontend</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Cloud</div>
+                                <div class="stat-label">Backend</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">React</span>
@@ -1341,9 +1646,18 @@
                             ML model for fire-spread prediction using geospatial data.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">Winner</div><div class="stat-label">HPAIR</div></div>
-                            <div class="stat"><div class="stat-value">ML</div><div class="stat-label">Prediction</div></div>
-                            <div class="stat"><div class="stat-value">GIS</div><div class="stat-label">Analysis</div></div>
+                            <div class="stat">
+                                <div class="stat-value">Winner</div>
+                                <div class="stat-label">HPAIR</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ML</div>
+                                <div class="stat-label">Prediction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">GIS</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Machine Learning</span>
@@ -1363,9 +1677,18 @@
                             Python dashboard with interactive geospatial visualizations (100K+ data points).
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">100K+</div><div class="stat-label">Data Points</div></div>
-                            <div class="stat"><div class="stat-value">Python</div><div class="stat-label">Stack</div></div>
-                            <div class="stat"><div class="stat-value">GeoViz</div><div class="stat-label">Interactive</div></div>
+                            <div class="stat">
+                                <div class="stat-value">100K+</div>
+                                <div class="stat-label">Data Points</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Python</div>
+                                <div class="stat-label">Stack</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">GeoViz</div>
+                                <div class="stat-label">Interactive</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -1385,9 +1708,18 @@
                             Automated attendance tracking for 66 students across 21 sessions.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">66</div><div class="stat-label">Students</div></div>
-                            <div class="stat"><div class="stat-value">21</div><div class="stat-label">Sessions</div></div>
-                            <div class="stat"><div class="stat-value">Auto</div><div class="stat-label">Processing</div></div>
+                            <div class="stat">
+                                <div class="stat-value">66</div>
+                                <div class="stat-label">Students</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">21</div>
+                                <div class="stat-label">Sessions</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Auto</div>
+                                <div class="stat-label">Processing</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">JavaScript</span>
@@ -1407,9 +1739,18 @@
                             GIS spatial analysis with kernel density and demographic correlations.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">GIS</div><div class="stat-label">Analysis</div></div>
-                            <div class="stat"><div class="stat-value">Python</div><div class="stat-label">Scripting</div></div>
-                            <div class="stat"><div class="stat-value">Model</div><div class="stat-label">Builder</div></div>
+                            <div class="stat">
+                                <div class="stat-value">GIS</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Python</div>
+                                <div class="stat-label">Scripting</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Model</div>
+                                <div class="stat-label">Builder</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">GIS</span>
@@ -1422,7 +1763,7 @@
             <!-- Web Development Tab -->
             <div id="fullstack-content" class="tab-content">
                 <h2 class="section-title">Web Development</h2>
-                
+
                 <div class="projects-grid">
                     <div class="project-card" onclick="openModal('tartan')">
                         <div class="project-header">
@@ -1436,9 +1777,18 @@
                             React frontend with Google Apps Script backend serving 200+ weekly participants.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">200+</div><div class="stat-label">Users</div></div>
-                            <div class="stat"><div class="stat-value">React</div><div class="stat-label">Frontend</div></div>
-                            <div class="stat"><div class="stat-value">Cloud</div><div class="stat-label">Backend</div></div>
+                            <div class="stat">
+                                <div class="stat-value">200+</div>
+                                <div class="stat-label">Users</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">React</div>
+                                <div class="stat-label">Frontend</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Cloud</div>
+                                <div class="stat-label">Backend</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">React</span>
@@ -1459,9 +1809,18 @@
                             Client-side Excel processing tool with dynamic report generation.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">66</div><div class="stat-label">Students</div></div>
-                            <div class="stat"><div class="stat-value">21</div><div class="stat-label">Sessions</div></div>
-                            <div class="stat"><div class="stat-value">5hrs</div><div class="stat-label">Saved Weekly</div></div>
+                            <div class="stat">
+                                <div class="stat-value">66</div>
+                                <div class="stat-label">Students</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">21</div>
+                                <div class="stat-label">Sessions</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">5hrs</div>
+                                <div class="stat-label">Saved Weekly</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">JavaScript</span>
@@ -1482,9 +1841,18 @@
                             Streamlit-based dashboard with geospatial visualizations and real-time filtering.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">100K+</div><div class="stat-label">Data Points</div></div>
-                            <div class="stat"><div class="stat-value">Streamlit</div><div class="stat-label">Framework</div></div>
-                            <div class="stat"><div class="stat-value">Interactive</div><div class="stat-label">Real-time</div></div>
+                            <div class="stat">
+                                <div class="stat-value">100K+</div>
+                                <div class="stat-label">Data Points</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Streamlit</div>
+                                <div class="stat-label">Framework</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Interactive</div>
+                                <div class="stat-label">Real-time</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -1506,9 +1874,18 @@
                             Score tracking rewards fewer moves with more points.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">Flask</div><div class="stat-label">Backend</div></div>
-                            <div class="stat"><div class="stat-value">API</div><div class="stat-label">Dog CEO</div></div>
-                            <div class="stat"><div class="stat-value">3×3</div><div class="stat-label">Puzzle</div></div>
+                            <div class="stat">
+                                <div class="stat-value">Flask</div>
+                                <div class="stat-label">Backend</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">API</div>
+                                <div class="stat-label">Dog CEO</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">3×3</div>
+                                <div class="stat-label">Puzzle</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -1524,7 +1901,7 @@
             <!-- Building Performance Tab -->
             <div id="performance-content" class="tab-content">
                 <h2 class="section-title">Building Performance</h2>
-                
+
                 <div class="projects-grid">
                     <div class="project-card" onclick="openModal('ashrae')">
                         <div class="project-header">
@@ -1538,9 +1915,18 @@
                             VRF-DOAS system design achieving 45% energy reduction.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">45%</div><div class="stat-label">Energy Saved</div></div>
-                            <div class="stat"><div class="stat-value">157</div><div class="stat-label">kWh/m² EUI</div></div>
-                            <div class="stat"><div class="stat-value">398k</div><div class="stat-label">kWh Solar</div></div>
+                            <div class="stat">
+                                <div class="stat-value">45%</div>
+                                <div class="stat-label">Energy Saved</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">157</div>
+                                <div class="stat-label">kWh/m² EUI</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">398k</div>
+                                <div class="stat-label">kWh Solar</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">VRF-DOAS</span>
@@ -1560,9 +1946,18 @@
                             System comparison achieving 33% energy savings.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">33%</div><div class="stat-label">Energy Saved</div></div>
-                            <div class="stat"><div class="stat-value">54</div><div class="stat-label">kBTU/ft²</div></div>
-                            <div class="stat"><div class="stat-value">VRF</div><div class="stat-label">Selected</div></div>
+                            <div class="stat">
+                                <div class="stat-value">33%</div>
+                                <div class="stat-label">Energy Saved</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">54</div>
+                                <div class="stat-label">kBTU/ft²</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">VRF</div>
+                                <div class="stat-label">Selected</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Load Calculations</span>
@@ -1582,9 +1977,18 @@
                             Performance analysis of office-to-residential conversions.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">100+</div><div class="stat-label">Iterations</div></div>
-                            <div class="stat"><div class="stat-value">sDA</div><div class="stat-label">Metric</div></div>
-                            <div class="stat"><div class="stat-value">ASE</div><div class="stat-label">Analysis</div></div>
+                            <div class="stat">
+                                <div class="stat-value">100+</div>
+                                <div class="stat-label">Iterations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">sDA</div>
+                                <div class="stat-label">Metric</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ASE</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Daylighting</span>
@@ -1604,13 +2008,406 @@
                             Annual daylight metrics and parametric shading optimization.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">sDA</div><div class="stat-label">Metric</div></div>
-                            <div class="stat"><div class="stat-value">ASE</div><div class="stat-label">Analysis</div></div>
-                            <div class="stat"><div class="stat-value">DGP</div><div class="stat-label">Glare</div></div>
+                            <div class="stat">
+                                <div class="stat-value">sDA</div>
+                                <div class="stat-label">Metric</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ASE</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">DGP</div>
+                                <div class="stat-label">Glare</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Daylighting</span>
                             <span class="tag">Glare Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('bpm')">
+                        <div class="project-header">
+                            <span class="project-number">05</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="Building Performance Modeling" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Building Performance Modeling</h3>
+                        <p class="project-meta">Pittsburgh & Miami · Dual-Climate Analysis</p>
+                        <p class="project-description">
+                            37 parametric energy models across two climate zones. OFAT optimization achieving
+                            5.6% and 8.8% EUI reductions.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">37</div>
+                                <div class="stat-label">Models</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">8.8%</div>
+                                <div class="stat-label">Best Reduction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">eQUEST</div>
+                                <div class="stat-label">Software</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">eQUEST</span>
+                            <span class="tag">Energy Modeling</span>
+                            <span class="tag">ASHRAE</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('eps')">
+                        <div class="project-header">
+                            <span class="project-number">06</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="Environmental Performance Simulation" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Environmental Performance Simulation</h3>
+                        <p class="project-meta">Climate Studio & IESVE · Daylighting & Energy</p>
+                        <p class="project-description">
+                            Daylighting analysis + secondary school energy optimization. 54.5% EUI reduction
+                            through parametric envelope and lighting strategies.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">54.5%</div>
+                                <div class="stat-label">EUI Reduction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">57.1%</div>
+                                <div class="stat-label">sDA</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">IESVE</div>
+                                <div class="stat-label">Simulation</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Climate Studio</span>
+                            <span class="tag">IESVE</span>
+                            <span class="tag">Daylighting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sustainable Design Tab -->
+            <div id="sustainable-content" class="tab-content">
+                <h2 class="section-title">Sustainable Design</h2>
+
+                <div class="projects-grid">
+                    <div class="project-card" onclick="openModal('ashrae')">
+                        <div class="project-header">
+                            <span class="project-number">01</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <img src="Images/ASHRAEOut.jpg" alt="ASHRAE Library" class="project-image">
+                        <h3 class="project-title">ASHRAE Library Design</h3>
+                        <p class="project-meta">São Paulo, Brazil · VRF-DOAS</p>
+                        <p class="project-description">
+                            Comprehensive HVAC system design achieving 45% energy reduction with renewable energy
+                            integration.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">45%</div>
+                                <div class="stat-label">Energy Saved</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">157</div>
+                                <div class="stat-label">kWh/m² EUI</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">398k</div>
+                                <div class="stat-label">kWh Solar</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">VRF-DOAS</span>
+                            <span class="tag">Energy Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('hvac')">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <img src="Images/HVACOut.jpg" alt="HVAC Analysis" class="project-image">
+                        <h3 class="project-title">Small Office HVAC Analysis</h3>
+                        <p class="project-meta">San Francisco, CA</p>
+                        <p class="project-description">
+                            Comparative HVAC system analysis recommending mini-split VRF for 33% energy savings.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">33%</div>
+                                <div class="stat-label">Energy Saved</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">54</div>
+                                <div class="stat-label">kBTU/ft²</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">VRF</div>
+                                <div class="stat-label">Selected</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Load Calculations</span>
+                            <span class="tag">ERV Sizing</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('thesis')">
+                        <div class="project-header">
+                            <span class="project-number">03</span>
+                            <span class="project-year">Ongoing</span>
+                        </div>
+                        <img src="Images/ThesisOut.jpg" alt="Thesis Daylighting" class="project-image">
+                        <h3 class="project-title">Adaptive Reuse Thesis</h3>
+                        <p class="project-meta">Daylighting Analysis</p>
+                        <p class="project-description">
+                            Performance analysis of office-to-residential conversions with ML-driven daylighting
+                            optimization.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">100+</div>
+                                <div class="stat-label">Iterations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">sDA</div>
+                                <div class="stat-label">Metric</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ASE</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Daylighting</span>
+                            <span class="tag">ClimateStudio</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('shading')">
+                        <div class="project-header">
+                            <span class="project-number">04</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="Images/DaylightOut.jpg" alt="Daylight Workshop" class="project-image">
+                        <h3 class="project-title">Shaping Daylight Workshop</h3>
+                        <p class="project-meta">Parametric Daylighting</p>
+                        <p class="project-description">
+                            Annual daylight metrics and parametric shading optimization.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">sDA</div>
+                                <div class="stat-label">Metric</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ASE</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">DGP</div>
+                                <div class="stat-label">Glare</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Daylighting</span>
+                            <span class="tag">Glare Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('bpm')">
+                        <div class="project-header">
+                            <span class="project-number">05</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="Building Performance Modeling" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Building Performance Modeling</h3>
+                        <p class="project-meta">Pittsburgh & Miami · Dual-Climate Analysis</p>
+                        <p class="project-description">
+                            37 parametric energy models across two climate zones with OFAT optimization.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">37</div>
+                                <div class="stat-label">Models</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">8.8%</div>
+                                <div class="stat-label">Best Reduction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">eQUEST</div>
+                                <div class="stat-label">Software</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">eQUEST</span>
+                            <span class="tag">Energy Modeling</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('eps')">
+                        <div class="project-header">
+                            <span class="project-number">06</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="Environmental Performance Simulation" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Environmental Performance Simulation</h3>
+                        <p class="project-meta">Climate Studio & IESVE · Daylighting & Energy</p>
+                        <p class="project-description">
+                            Daylighting analysis + secondary school energy optimization. 54.5% EUI reduction.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">54.5%</div>
+                                <div class="stat-label">EUI Reduction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">57.1%</div>
+                                <div class="stat-label">sDA</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">IESVE</div>
+                                <div class="stat-label">Simulation</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Climate Studio</span>
+                            <span class="tag">IESVE</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('fire')">
+                        <div class="project-header">
+                            <span class="project-number">07</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="Images/HPAIROut.jpg" alt="Fire Risk Prediction" class="project-image">
+                        <h3 class="project-title">Urban Fire Risk Prediction</h3>
+                        <p class="project-meta">Harvard HPAIR Winner</p>
+                        <p class="project-description">
+                            ML model for fire-spread prediction in urban districts using geospatial data.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">Winner</div>
+                                <div class="stat-label">HPAIR</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ML</div>
+                                <div class="stat-label">Prediction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">GIS</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Geospatial</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('carboff')">
+                        <div class="project-header">
+                            <span class="project-number">08</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
+                        <h3 class="project-title">Carb-Off</h3>
+                        <p class="project-meta">AI Climate Coach · Tartan Hacks 2026</p>
+                        <p class="project-description">
+                            Conversational AI carbon tracker with real-time collective impact counter.
+                            Inspired by Indore's behavior change model.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">AI</div>
+                                <div class="stat-label">Claude Sonnet 4</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">FastAPI</div>
+                                <div class="stat-label">Backend</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">React</div>
+                                <div class="stat-label">Frontend</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Anthropic AI</span>
+                            <span class="tag">Carbon Tracking</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('chicago')">
+                        <div class="project-header">
+                            <span class="project-number">09</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="Images/DrugDataOut.jpg" alt="Chicago Dashboard" class="project-image">
+                        <h3 class="project-title">Chicago Drug Data Dashboard</h3>
+                        <p class="project-meta">Interactive Data Science</p>
+                        <p class="project-description">
+                            Python dashboard with interactive geospatial visualizations analyzing 100K+ data points.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">100K+</div>
+                                <div class="stat-label">Data Points</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Streamlit</div>
+                                <div class="stat-label">Framework</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">GeoViz</div>
+                                <div class="stat-label">Interactive</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('tesseract')">
+                        <div class="project-header">
+                            <span class="project-number">10</span>
+                            <span class="project-year">2022</span>
+                        </div>
+                        <img src="" alt="Tesseract Mixed-Use Development" class="project-image" style="background: var(--light-bg);">
+                        <h3 class="project-title">Tesseract</h3>
+                        <p class="project-meta">Climate-Responsive Mixed-Use · Kolkata</p>
+                        <p class="project-description">
+                            Porous form with Venturi-effect ventilation, green roofs, rainwater harvesting,
+                            and 100% cross-ventilated units. 80 apartments + retail + coworking.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat"><div class="stat-value">80</div><div class="stat-label">Apartments</div></div>
+                            <div class="stat"><div class="stat-value">100%</div><div class="stat-label">Cross-Vent</div></div>
+                            <div class="stat"><div class="stat-value">Passive</div><div class="stat-label">Cooling</div></div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Passive Design</span>
+                            <span class="tag">Green Roofs</span>
+                            <span class="tag">Rainwater</span>
                         </div>
                     </div>
                 </div>
@@ -1629,26 +2426,67 @@
                         <h3 class="project-title">Crossy Road</h3>
                         <p class="project-meta">Python Arcade Game</p>
                         <p class="project-description">
-                            2D arcade game clone features procedural terrain generation, 
+                            2D arcade game clone features procedural terrain generation,
                             object-oriented design, and dynamic difficulty scaling.
                             <br><br>
-                            <a href="https://github.com/ananyashrimali03/Crossy-Road-15113-CMU" 
-                               target="_blank" 
-                               onclick="event.stopPropagation()"
-                               style="color: var(--primary); text-decoration: underline; cursor: pointer;">
+                            <a href="https://github.com/ananyashrimali03/Crossy-Road-15113-CMU" target="_blank"
+                                onclick="event.stopPropagation()"
+                                style="color: var(--primary); text-decoration: underline; cursor: pointer;">
                                 View Game Code →
                             </a>
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">OOP</div><div class="stat-label">Architecture</div></div>
-                            <div class="stat"><div class="stat-value">Python</div><div class="stat-label">Language</div></div>
-                            <div class="stat"><div class="stat-value">Game</div><div class="stat-label">Logic</div></div>
+                            <div class="stat">
+                                <div class="stat-value">OOP</div>
+                                <div class="stat-label">Architecture</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Python</div>
+                                <div class="stat-label">Language</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Game</div>
+                                <div class="stat-label">Logic</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('dogjigsaw')">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="Images/Dogout.jpg" alt="Dog Jigsaw App" class="project-image">
+                        <h3 class="project-title">Dog Jigsaw</h3>
+                        <p class="project-meta">Flask Web App · Claude Opus 4.6</p>
+                        <p class="project-description">
+                            Browse random dog photos, save favorites, and solve 3×3 jigsaw puzzles.
+                            Score tracking rewards fewer moves with more points.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">Flask</div>
+                                <div class="stat-label">Backend</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">API</div>
+                                <div class="stat-label">Dog CEO</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">3×3</div>
+                                <div class="stat-label">Puzzle</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">REST API</span>
                         </div>
                     </div>
 
                     <div class="project-card" onclick="openModal('carboff')">
                         <div class="project-header">
-                            <span class="project-number">02</span>
+                            <span class="project-number">03</span>
                             <span class="project-year">2026</span>
                         </div>
                         <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
@@ -1659,9 +2497,18 @@
                             Inspired by Indore's behavior change model.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">AI</div><div class="stat-label">Claude Sonnet 4</div></div>
-                            <div class="stat"><div class="stat-value">FastAPI</div><div class="stat-label">Backend</div></div>
-                            <div class="stat"><div class="stat-value">React</div><div class="stat-label">Frontend</div></div>
+                            <div class="stat">
+                                <div class="stat-value">AI</div>
+                                <div class="stat-label">Claude Sonnet 4</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">FastAPI</div>
+                                <div class="stat-label">Backend</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">React</div>
+                                <div class="stat-label">Frontend</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -1672,13 +2519,91 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Architectural Design Tab -->
+            <div id="architecture-content" class="tab-content">
+                <h2 class="section-title">Architectural Design</h2>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));">
+                    <div class="project-card" onclick="openModal('museum1971')">
+                        <div class="project-header">
+                            <span class="project-number">01</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <img src="" alt="Museum of Event 1971" class="project-image" style="background: var(--light-bg);">
+                        <h3 class="project-title">Museum of Event 1971</h3>
+                        <p class="project-meta">Bangladesh Liberation War Memorial · Thesis</p>
+                        <p class="project-description">
+                            Phenomenological architecture translating historical events into a 1.2 km
+                            experiential journey through 12 emotional zones. Highest marks in Final External Jury 2023.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat"><div class="stat-value">1.2km</div><div class="stat-label">Journey</div></div>
+                            <div class="stat"><div class="stat-value">12</div><div class="stat-label">Emotional Zones</div></div>
+                            <div class="stat"><div class="stat-value">80%</div><div class="stat-label">Landscape</div></div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Phenomenology</span>
+                            <span class="tag">Memorial</span>
+                            <span class="tag">Serial Vision</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('tesseract')">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
+                            <span class="project-year">2022</span>
+                        </div>
+                        <img src="" alt="Tesseract Mixed-Use Development" class="project-image" style="background: var(--light-bg);">
+                        <h3 class="project-title">Tesseract</h3>
+                        <p class="project-meta">Mixed-Use Development · Downtown Kolkata</p>
+                        <p class="project-description">
+                            Climate-responsive high-density development with 80 units, porous form for
+                            Venturi-effect ventilation, and 15+ community activity nodes. Top 5 in External Jury.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat"><div class="stat-value">80</div><div class="stat-label">Apartments</div></div>
+                            <div class="stat"><div class="stat-value">12+</div><div class="stat-label">Floors</div></div>
+                            <div class="stat"><div class="stat-value">100%</div><div class="stat-label">Cross-Vent</div></div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Mixed-Use</span>
+                            <span class="tag">Climate-Responsive</span>
+                            <span class="tag">Community</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('socialnexus')">
+                        <div class="project-header">
+                            <span class="project-number">03</span>
+                            <span class="project-year">2022</span>
+                        </div>
+                        <img src="" alt="Social Nexus - Tianducheng" class="project-image" style="background: var(--light-bg);">
+                        <h3 class="project-title">Social Nexus</h3>
+                        <p class="project-meta">Tianducheng Ghost City · International Winner</p>
+                        <p class="project-description">
+                            Adaptive urban design transforming a Chinese ghost town through grid-based community
+                            activation. 16 activity typologies in a 54-hour competition.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat"><div class="stat-value">Winner</div><div class="stat-label">International</div></div>
+                            <div class="stat"><div class="stat-value">16</div><div class="stat-label">Activity Types</div></div>
+                            <div class="stat"><div class="stat-value">54hr</div><div class="stat-label">Competition</div></div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Urban Design</span>
+                            <span class="tag">Community</span>
+                            <span class="tag">Adaptive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p>
-                Available for computational design roles, building performance analysis positions, 
+                Available for computational design roles, building performance analysis positions,
                 and collaborative research opportunities. Let's connect!
             </p>
             <div class="contact-links">
@@ -1699,11 +2624,11 @@
             <button class="modal-close" onclick="closeModal('thesis')">&times;</button>
             <h2 class="modal-title">Adaptive Reuse: Office-to-Residential Conversions</h2>
             <img src="Images/thesis-detail.jpg" alt="Thesis Research Detail" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    Thesis research focusing on adaptive reuse of Pittsburgh office buildings from 1965-1985, 
+                    Thesis research focusing on adaptive reuse of Pittsburgh office buildings from 1965-1985,
                     analyzing residential conversion potential with emphasis on daylighting performance.
                 </p>
             </div>
@@ -1730,11 +2655,11 @@
             <button class="modal-close" onclick="closeModal('tartan')">&times;</button>
             <h2 class="modal-title">Tartan Tuesday Management System</h2>
             <img src="Images/tartan-detail.jpg" alt="Tartan Tuesday App Interface" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    Full-stack web application serving 200+ weekly participants with real-time attendance tracking, 
+                    Full-stack web application serving 200+ weekly participants with real-time attendance tracking,
                     point management, and prize redemption.
                 </p>
             </div>
@@ -1761,11 +2686,11 @@
             <button class="modal-close" onclick="closeModal('fire')">&times;</button>
             <h2 class="modal-title">Urban Fire Risk Prediction</h2>
             <img src="Images/fire-detail.jpg" alt="Fire Risk Dashboard" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    Winner of Harvard HPAIR Impact Challenge 2025. ML model for fire-spread prediction 
+                    Winner of Harvard HPAIR Impact Challenge 2025. ML model for fire-spread prediction
                     using geospatial data and simulation-based analysis.
                 </p>
             </div>
@@ -1791,11 +2716,11 @@
             <button class="modal-close" onclick="closeModal('chicago')">&times;</button>
             <h2 class="modal-title">Chicago Drug Data Dashboard</h2>
             <img src="Images/chicago-detail.jpg" alt="Chicago Dashboard Interface" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    Interactive data science web application analyzing 100,000+ drug-related data points 
+                    Interactive data science web application analyzing 100,000+ drug-related data points
                     with geospatial visualizations and time-series analysis.
                 </p>
             </div>
@@ -1821,27 +2746,95 @@
             <button class="modal-close" onclick="closeModal('ashrae')">&times;</button>
             <h2 class="modal-title">ASHRAE Design Competition: São Paulo Public Library</h2>
             <img src="Images/ashrae-detail.jpg" alt="Library HVAC Design" class="modal-image">
-            
+
             <div class="modal-section">
-                <h3>Overview</h3>
+                <h3>Project Overview</h3>
                 <p>
-                    Comprehensive HVAC system design for a three-story public library 
-                    integrating VRF-DOAS with renewable energy.
+                    <strong>Building Type:</strong> Three-story public library<br>
+                    <strong>Location:</strong> São Paulo, Brazil<br>
+                    <strong>Climate Zone:</strong> 2A (Warm, Humid)<br>
+                    <strong>Service Life:</strong> 50 years<br>
+                    <strong>Team:</strong> Anisha, Ananya, Kansi, Shruti
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Climate Characteristics</h3>
+                <p>
+                    High temperature and humidity year-round, especially in summers.
+                    DBT comfort range: Winter (71°F–78°F), Summer (76°F–82°F).
+                    High humidity levels throughout the year drive the need for dedicated dehumidification strategies.
                 </p>
             </div>
 
             <div class="highlight-box">
                 <h3>Performance Achievements</h3>
                 <ul>
-                    <li>45% energy reduction (284 to 157 kWh/m²)</li>
-                    <li>397,800 kWh/year solar generation</li>
-                    <li>Operational carbon: 101 kgCO₂/m²</li>
+                    <li><strong>45% energy reduction</strong> (284 to 157 kWh/m²)</li>
+                    <li><strong>397,800 kWh/year</strong> solar generation</li>
+                    <li><strong>Operational carbon:</strong> 101 kgCO₂/m²</li>
                 </ul>
             </div>
 
             <div class="modal-section">
-                <h3>Tools</h3>
-                <p><strong>ClimateStudio, Energy Modeling, ASHRAE Standards, PVWatts</strong></p>
+                <h3>Primary HVAC System: VRF with DOAS</h3>
+                <p>
+                    The Variable Refrigerant Flow (VRF) system with Dedicated Outdoor Air System (DOAS) was selected for
+                    its
+                    flexibility for future space modifications, individual zone control for occupant comfort, and quiet
+                    operation
+                    essential for a library environment — achieving <strong>41–66% energy cost reduction</strong>
+                    compared to conventional systems.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>System Components</h3>
+                <ul>
+                    <li><strong>DOAS-VRF Integration</strong>: Efficient temperature control through accessible ducted
+                        air distribution</li>
+                    <li><strong>Energy Recovery Ventilators (ERVs)</strong>: Handle ventilation and humidity in
+                        high-occupancy areas (reading zones, study areas)</li>
+                    <li><strong>Desiccant Dehumidifiers</strong>: Critical for São Paulo's humid climate, ensuring
+                        stable humidity without over-reliance on cooling</li>
+                    <li><strong>Overhead Diffusers</strong>: Ceiling-mounted for even conditioned air distribution</li>
+                    <li><strong>Sidewall Grilles/Linear Diffusers</strong>: For perimeter zones near windows and heat
+                        sources</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Zoning Strategy</h3>
+                <p>
+                    Space-based zoning across reading areas, study zones, circulation, and administrative spaces.
+                    VRF outdoor unit placement optimized for system efficiency with multiple indoor units distributed
+                    per functional zone.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Photovoltaic System</h3>
+                <ul>
+                    <li><strong>Annual Generation:</strong> 397,800 kWh/year</li>
+                    <li><strong>System Capacity:</strong> 93 kW installed (92.8 kW calculated)</li>
+                    <li><strong>Panels:</strong> 232 panels @ 400W each (1.7 m² per panel)</li>
+                    <li><strong>Total Cost:</strong> 372,000 BRL (93 kW × 4,000 BRL/kW)</li>
+                    <li><strong>Avg Solar Radiation:</strong> 5.88 kWh/m²/day</li>
+                    <li><strong>Peak Month:</strong> September — 6.37 kWh/m²/day (34,886 kWh)</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Additional Green Features</h3>
+                <p>
+                    Green roof potential, bio-wall integration, and solar-assisted cooling enhancement
+                    complement the core HVAC strategy for a holistic low-carbon building approach.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>ClimateStudio, Energy Modeling, ASHRAE Standards, PVWatts, VRF-DOAS Design</strong></p>
             </div>
         </div>
     </div>
@@ -1851,11 +2844,11 @@
             <button class="modal-close" onclick="closeModal('hvac')">&times;</button>
             <h2 class="modal-title">Small Office HVAC System Selection</h2>
             <img src="Images/hvac-detail.jpg" alt="HVAC System Analysis" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    Comprehensive HVAC analysis for small coworking office with 
+                    Comprehensive HVAC analysis for small coworking office with
                     load calculations and system recommendations.
                 </p>
             </div>
@@ -1881,11 +2874,11 @@
             <button class="modal-close" onclick="closeModal('shading')">&times;</button>
             <h2 class="modal-title">Shaping Daylight Workshop</h2>
             <img src="Images/shading-detail.jpg" alt="Daylight Analysis" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    Intensive workshop exploring daylight performance through parametric 
+                    Intensive workshop exploring daylight performance through parametric
                     iteration and simulation-based analysis.
                 </p>
             </div>
@@ -1911,11 +2904,11 @@
             <button class="modal-close" onclick="closeModal('attendance')">&times;</button>
             <h2 class="modal-title">Attendance Matrix Tool</h2>
             <img src="Images/attendance-detail.jpg" alt="Attendance Tool Interface" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    Web-based automation tool processing Excel files for 66 students across 
+                    Web-based automation tool processing Excel files for 66 students across
                     21 sessions with real-time percentage calculations.
                 </p>
             </div>
@@ -1942,11 +2935,11 @@
             <button class="modal-close" onclick="closeModal('gis')">&times;</button>
             <h2 class="modal-title">Environmental Justice Analysis: Louisiana Cancer Alley</h2>
             <img src="Images/gis-detail.jpg" alt="GIS Spatial Analysis" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    GIS analysis examining spatial relationships between industrial facilities 
+                    GIS analysis examining spatial relationships between industrial facilities
                     and community demographics.
                 </p>
             </div>
@@ -1972,12 +2965,13 @@
             <button class="modal-close" onclick="closeModal('crossy')">&times;</button>
             <h2 class="modal-title">Crossy Road: Arcade Game</h2>
             <img src="Images/Crossy.jpg" alt="Crossy Road Gameplay" class="modal-image">
-            
+
             <div class="modal-section">
                 <h3>Overview</h3>
                 <p>
-                    A faithful recreation of the classic arcade game Crossy Road, built in Python 
-                    using the cmu_graphics library using Prompt Engineering. The game features a top view, endless procedural 
+                    A faithful recreation of the classic arcade game Crossy Road, built in Python
+                    using the cmu_graphics library using Prompt Engineering. The game features a top view, endless
+                    procedural
                     terrain generation, and progressively difficult obstacles.
                 </p>
             </div>
@@ -1986,7 +2980,8 @@
                 <h3>Key Features</h3>
                 <ul>
                     <li><strong>Procedural Generation</strong>: Infinite diverse terrain (Grass, Roads, Rivers)</li>
-                    <li><strong>Object-Oriented Design</strong>: Robust class structure for Lanes, Player, and Obstacles</li>
+                    <li><strong>Object-Oriented Design</strong>: Robust class structure for Lanes, Player, and Obstacles
+                    </li>
                     <li><strong>Collision Detection</strong>: Precise hitbox management for cars and logs</li>
                     <li><strong>Visual Polish</strong>: Custom drawing logic for voxel-style aesthetics</li>
                 </ul>
@@ -2021,7 +3016,8 @@
                     <li><strong>Browse Dogs</strong>: View random dog images, optionally filtered by breed</li>
                     <li><strong>Save Favorites</strong>: Star photos to add them to your favorites collection</li>
                     <li><strong>Jigsaw Puzzles</strong>: Play a 3×3 tile-swap puzzle using any favorited photo</li>
-                    <li><strong>Score Tracking</strong>: Earn points for solving puzzles (fewer moves = more points), tracked across sessions</li>
+                    <li><strong>Score Tracking</strong>: Earn points for solving puzzles (fewer moves = more points),
+                        tracked across sessions</li>
                 </ul>
             </div>
 
@@ -2090,7 +3086,8 @@
             <div class="highlight-box">
                 <h3>Why Existing Apps Fail</h3>
                 <ul>
-                    <li><strong>Tedious Logging</strong>: Apps like Cool the Globe require navigating 1000+ dropdown menus</li>
+                    <li><strong>Tedious Logging</strong>: Apps like Cool the Globe require navigating 1000+ dropdown
+                        menus</li>
                     <li><strong>Meaningless Impact</strong>: Saving 2kg CO2 alone feels pointless</li>
                     <li><strong>No Personalization</strong>: Same generic actions for everyone</li>
                     <li><strong>Result</strong>: 80% abandonment within week 1</li>
@@ -2102,8 +3099,10 @@
                 <ul>
                     <li><strong>Conversational AI</strong>: Text your actions naturally, like talking to a friend</li>
                     <li><strong>Personal Baseline</strong>: 2-minute onboarding calculates YOUR specific footprint</li>
-                    <li><strong>Live Collective Counter</strong>: Watch your actions join a global total that updates minute-by-minute</li>
-                    <li><strong>Cited Numbers</strong>: Every emission factor traces to EPA, DEFRA, or peer-reviewed research</li>
+                    <li><strong>Live Collective Counter</strong>: Watch your actions join a global total that updates
+                        minute-by-minute</li>
+                    <li><strong>Cited Numbers</strong>: Every emission factor traces to EPA, DEFRA, or peer-reviewed
+                        research</li>
                 </ul>
             </div>
 
@@ -2123,7 +3122,8 @@
                 <p>
                     <strong>Onboarding:</strong> Tell the AI where you live, how you commute, what you eat,
                     and your energy habits. It calculates your personal carbon baseline in 2 minutes.<br><br>
-                    <strong>Logging:</strong> Type naturally — "I took the bus today and had a veggie burrito for lunch" —
+                    <strong>Logging:</strong> Type naturally — "I took the bus today and had a veggie burrito for lunch"
+                    —
                     and the AI calculates your savings with tangible equivalencies.<br><br>
                     <strong>Collective Impact:</strong> Watch the live counter tick up as your savings join
                     hundreds of others in real-time.
@@ -2133,7 +3133,8 @@
             <div class="modal-section">
                 <h3>Why the LLM Is Not a Gimmick</h3>
                 <p>
-                    The LLM handles three hard problems: <strong>intent parsing</strong> ("biked to work" → round trip or one way?),
+                    The LLM handles three hard problems: <strong>intent parsing</strong> ("biked to work" → round trip
+                    or one way?),
                     <strong>contextual calculation</strong> (auto-fills distance from user profile), and
                     <strong>ambiguity resolution</strong> (asks natural clarifying questions). Critical rule:
                     the LLM classifies and communicates — it NEVER generates carbon numbers. Every number
@@ -2154,9 +3155,12 @@
             <div class="modal-section">
                 <h3>Tech Stack</h3>
                 <p>
-                    <strong>Backend:</strong> FastAPI (Python), Claude Sonnet 4 (Anthropic AI), in-memory database (SQLite-ready)<br>
-                    <strong>Frontend:</strong> React (vanilla — no build step), mobile-first responsive design, real-time polling<br>
-                    <strong>Data:</strong> 25+ emission factors across food, transport, home energy, and lifestyle categories
+                    <strong>Backend:</strong> FastAPI (Python), Claude Sonnet 4 (Anthropic AI), in-memory database
+                    (SQLite-ready)<br>
+                    <strong>Frontend:</strong> React (vanilla — no build step), mobile-first responsive design,
+                    real-time polling<br>
+                    <strong>Data:</strong> 25+ emission factors across food, transport, home energy, and lifestyle
+                    categories
                 </p>
             </div>
 
@@ -2167,17 +3171,798 @@
         </div>
     </div>
 
+    <!-- Environmental Performance Simulation Modal -->
+    <div id="epsModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('eps')">&times;</button>
+            <h2 class="modal-title">Environmental Performance Simulation & Daylighting Analysis</h2>
+            <!-- Replace src with your image when ready -->
+            <img src="" alt="Environmental Performance Simulation" class="modal-image"
+                style="background: var(--light-bg);">
+
+            <!-- ==================== SMALL OFFICE ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">Small
+                    Office Space — Daylighting Study</h3>
+                <p>
+                    Parametric daylighting analysis of a small office using Climate Studio, exploring spatial
+                    quality through annual metrics, glare analysis, and view studies across 3 design iterations.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Space Programming</h3>
+                <ul>
+                    <li><strong>Open Workspace (120 sq ft)</strong>: High use intensity, high internal loads, priority
+                        10/10</li>
+                    <li><strong>Lounge (70 sq ft)</strong>: Medium use intensity, low internal loads, priority 8/10</li>
+                    <li><strong>Conference (50 sq ft)</strong>: Low use intensity, low internal loads, priority 7/10
+                    </li>
+                    <li><strong>All spaces:</strong> Cooling and ventilation as HVAC priority</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Daylighting Results (Climate Studio)</h3>
+                <ul>
+                    <li><strong>sDA₃₀₀/₅₀%:</strong> 57.1% — just above threshold for LEED credit</li>
+                    <li><strong>ASE₁₀₀₀,₂₅₀:</strong> 3.6% — good control over excessive direct sunlight</li>
+                    <li><strong>Average UDIa:</strong> 54.2%</li>
+                    <li><strong>Average Lux:</strong> 780</li>
+                    <li><strong>Blinds Open:</strong> 92.7% of the time</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Spatial Light Zones — Design Intent</h3>
+                <p>
+                    <strong>"Chorus" zone</strong> (near balcony/windows, 300–3000 lux): Heartfelt, warm, comforting<br>
+                    <strong>"Verse" zone</strong> (central areas, 300–500 lux): Reflective, introspective, nostalgic,
+                    melodious<br>
+                    <strong>"Intro" zone</strong> (dim zones near TV, below 300 lux): Dreamy, serene, gentle,
+                    calm<br><br>
+                    Creates a dull indie-like vibe for rest and relaxation — bright near outdoor connection,
+                    intimate interior. Perfect balance for residential comfort.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Glare & Illuminance Analysis</h3>
+                <ul>
+                    <li><strong>Spatial Daylight Glare (sDG):</strong> 10.7% of space experiences glare — contained to
+                        specific viewing angles near windows</li>
+                    <li><strong>Near Windows:</strong> 1000–3000 lux (red/yellow zones)</li>
+                    <li><strong>Central Areas:</strong> 300–500 lux (green zones)</li>
+                    <li><strong>Darker Areas:</strong> &lt;300 lux (blue zones)</li>
+                    <li><strong>Mitigation:</strong> Needed in specific zones only, not whole room</li>
+                </ul>
+            </div>
+
+            <!-- ==================== SECONDARY SCHOOL ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">
+                    Secondary School Building — Pittsburgh (IESVE Analysis)</h3>
+                <p>
+                    <strong>Climate Zone:</strong> 5A (Pittsburgh)<br>
+                    <strong>Software:</strong> IESVE (Integrated Environmental Solutions Virtual Environment)<br>
+                    <strong>Standards:</strong> ASHRAE 90.1-2016, PNNL guidelines<br>
+                    <strong>Categories:</strong> Envelope geometry, envelope thermal properties, internal loads,
+                    operational schedules
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>WWR Optimization</h3>
+                <ul>
+                    <li><strong>Baseline (35% WWR):</strong> 14,251.9 mBtu/yr — EUI 33.0 kBtu/ft²/yr</li>
+                    <li><strong>Iteration 1 (30%):</strong> 13,386.1 mBtu/yr — EUI 31.0</li>
+                    <li><strong>Iteration 2 (25%, Best):</strong> 8,835.4 mBtu/yr — EUI 20.9</li>
+                    <li><strong>Finding:</strong> 25% optimal based on daylighting requirements + energy performance
+                    </li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Roof & Wall Thermal Properties</h3>
+                <ul>
+                    <li><strong>Roof:</strong> Baseline R-15 (U-0.067) maintained — R-18 and R-30 iterations showed
+                        minimal EUI change; PRM CZ5 standards already optimized</li>
+                    <li><strong>Wall Baseline:</strong> Steel Frame 2×6, R-13 + R-3 continuous (U-0.084) — EUI 33.0</li>
+                    <li><strong>Wall Best (R-19):</strong> Steel Frame 16" o.c., R-19 cavity (U-0.109) — EUI 20.9</li>
+                    <li><strong>ASHRAE Requirement:</strong> U-value ≤ 0.084 Btu/(h·ft²·°F) for above-grade walls</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Slab & Glazing Properties</h3>
+                <ul>
+                    <li><strong>Slab Baseline:</strong> R-8 + R-9 continuous (R-total 18.18, U-0.051) — EUI 33.0</li>
+                    <li><strong>Slab Best:</strong> Max insulation (R-total 40.95, U-0.02) — EUI 20.8 (significant
+                        improvement)</li>
+                    <li><strong>Glazing Baseline:</strong> Double clear/tint (R-1.75, U-0.570, SHGC 0.490) — EUI 33.0
+                    </li>
+                    <li><strong>Glazing Best (Non-metal frame):</strong> R-3.23, U-0.310, SHGC 0.380, VT 0.420 — EUI
+                        19.0</li>
+                    <li><strong>Critical Finding:</strong> Glazing made the BIGGEST difference in EUI. Non-metal framing
+                        superior to metal</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Lighting Load Optimization</h3>
+                <ul>
+                    <li><strong>Baseline:</strong> DF 80%, LPD 1.05 BTU/h·ft² — EUI 19.0</li>
+                    <li><strong>Iteration 1:</strong> DF 70%, LPD 1.00 — EUI 17.0 (~5% energy reduction)</li>
+                    <li><strong>Iteration 2 (Best):</strong> DF 60%, LPD 0.80 — EUI 15.0 (~12.3% savings vs. baseline)
+                    </li>
+                    <li><strong>Guidelines:</strong> DF recommended 60–85% for secondary schools; LPD should be 25–30%
+                        below ASHRAE 90.1</li>
+                    <li><strong>Combined Effect:</strong> Direct lighting energy reduced + cooling loads decreased (less
+                        heat from fixtures). Slight trade-off: increased heating in cold months</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Final Optimization Summary — Parametric Flow</h3>
+                <ul>
+                    <li><strong>Step 1 — WWR 25%:</strong> EUI → 20.9</li>
+                    <li><strong>Step 2 — Roof (baseline maintained):</strong> EUI → ~20.9</li>
+                    <li><strong>Step 3 — Wall R-19:</strong> EUI → 20.9</li>
+                    <li><strong>Step 4 — Slab (max insulation):</strong> EUI → 20.8</li>
+                    <li><strong>Step 5 — Glazing (non-metal, Low-E):</strong> EUI → 19.0</li>
+                    <li><strong>Step 6 — Lighting (DF 60%, LPD 0.80):</strong> EUI → 15.0</li>
+                    <li><strong>Total Reduction: 33.0 → 15.0 kBtu/ft²/yr (54.5% improvement)</strong></li>
+                </ul>
+            </div>
+
+            <!-- ==================== CLIMATE STRATEGIES ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">
+                    Climate Analysis Integration</h3>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Pittsburgh Climate Strategy</h3>
+                <ul>
+                    <li>Prevailing winds from west — higher insulation needed on west facade</li>
+                    <li>Window orientation: South (max winter sun), North (minimal to reduce heat loss)</li>
+                    <li>Shading: Operable external louvers/overhangs on south for seasonal adjustment</li>
+                    <li>Wall: High-performance insulation, air sealing, vapor barriers, thermal mass</li>
+                    <li>Roof: High R-value, light-colored/cool materials for summer reflection</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Miami Climate Strategy</h3>
+                <ul>
+                    <li>Summer winds leveraged for natural ventilation</li>
+                    <li>Reduce southern radiation in summer, increase indoor sun in winter</li>
+                    <li>Hurricane and flood protection integral to design</li>
+                    <li>Wall: Reinforced concrete with insulation (structural + thermal mass)</li>
+                    <li>Roof: High-performance insulation, light-colored to reduce heat pooling</li>
+                    <li>Glazing: Low SHGC, balance daylight vs. harsh sun, Low-E coatings</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>Climate Studio, IESVE, ASHRAE 90.1-2016, PNNL Guidelines, Parametric OFAT Analysis,
+                        Daylighting Metrics (sDA/ASE/DGP)</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Building Performance Modeling Modal -->
+    <div id="bpmModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('bpm')">&times;</button>
+            <h2 class="modal-title">Building Performance Modeling — Pittsburgh & Miami Comparison</h2>
+            <!-- Replace src with your image when ready -->
+            <img src="" alt="Building Performance Modeling" class="modal-image" style="background: var(--light-bg);">
+
+            <div class="modal-section">
+                <h3>Project Scope & Methodology</h3>
+                <p>
+                    <strong>Software:</strong> eQUEST 3.65 (DOE-2 engine)<br>
+                    <strong>Team:</strong> 4-person team (2 on Pittsburgh, 2 on Miami)<br>
+                    <strong>Approach:</strong> One-Factor-At-A-Time (OFAT) parametric optimization<br>
+                    <strong>Total Models:</strong> 37 energy models (including baselines and iterations)<br>
+                    <strong>Analysis Method:</strong> Schematic Design Wizard mode<br>
+                    <strong>Building Type:</strong> Office building<br>
+                    <strong>Climate Zones:</strong> Pittsburgh (5A — Cold), Miami (1A — Hot-Humid)<br>
+                    <strong>Baseline:</strong> Identical for both cities to enable direct comparison
+                </p>
+            </div>
+
+            <!-- ==================== PITTSBURGH ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">
+                    Pittsburgh Analysis (Climate Zone 5A)</h3>
+                <p>
+                    Cold winters with heating demand, moderate summers, prevailing winds from west.
+                    Focus on minimizing winter heat loss through thermal insulation, passive solar heating, and air
+                    sealing.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Pittsburgh — Parametric Optimization Sequence</h3>
+                <ul>
+                    <li><strong>Orientation</strong>: Baseline already optimal — no EUI change</li>
+                    <li><strong>Building Form</strong>: 5 iterations tested — rectangle maintained as best performer
+                        (EUI 43.94)</li>
+                    <li><strong>WWR</strong>: Reduced from 40% to 22.5% — EUI 43.94 → 43.1 kBtu/ft²/yr (most significant
+                        geometric parameter)</li>
+                    <li><strong>Wall Assembly</strong>: Steel Frame 16" o.c., R-19 cavity — EUI dropped to 40.3</li>
+                    <li><strong>Roof Assembly</strong>: R-18 baseline maintained — minimal EUI change (40.06)</li>
+                    <li><strong>Slab Assembly</strong>: Increased insulation R-8→4.6", R-9→5.5" — EUI 20.80 (significant
+                        improvement, limited by economic viability)</li>
+                    <li><strong>Glazing (Most Impactful)</strong>: ASHRAE CZ5 non-metal frame, Quad Low-E — EUI dropped
+                        to 19.0</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Pittsburgh — Glazing Comparison</h3>
+                <ul>
+                    <li><strong>Baseline (Double clear/tint)</strong>: R-1.75, U-0.570, SHGC 0.490, VT 0.520 — EUI 33.0
+                    </li>
+                    <li><strong>ASHRAE CZ5 Metal frame</strong>: R-2.63, U-0.380, SHGC 0.370, VT 0.420 — EUI 20.0</li>
+                    <li><strong>ASHRAE CZ5 Non-metal frame (Best)</strong>: R-3.23, U-0.310, SHGC 0.380, VT 0.420 — EUI
+                        19.0</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Pittsburgh — Final Results</h3>
+                <ul>
+                    <li><strong>Baseline EUI:</strong> 43.94 kBtu/ft²/yr | Cost: $39,713/yr | CO₂: 1,117.57 metric tons
+                    </li>
+                    <li><strong>Optimized EUI:</strong> 41.5 kBtu/ft²/yr (-5.6%) | Cost: $37,063/yr ($2,650 savings) |
+                        CO₂: 1,051.24 metric tons</li>
+                    <li><strong>CO₂ Reduction:</strong> 66.33 metric tons/year (6.7% decrease)</li>
+                    <li><strong>Best Config:</strong> Rectangle, 22.5% WWR, Wood Frame R-5, 8" Concrete Roof R-21,
+                        Under-Slab R-10, Quad Low-E Krypton</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Pittsburgh — Benchmarking</h3>
+                <p>
+                    National Benchmark: 82.8 kBtu/ft²/yr | Pennsylvania Avg: 61.8 kBtu/ft²/yr<br>
+                    Baseline: 43.95 kBtu/ft²/yr (<strong>47% better</strong> than national)<br>
+                    Optimized: 33.25 kBtu/ft²/yr (<strong>60% better</strong> than national)
+                </p>
+            </div>
+
+            <!-- ==================== MIAMI ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">Miami
+                    Analysis (Climate Zone 1A)</h3>
+                <p>
+                    Hot, humid year-round with high cooling demand. Hurricane and flood considerations.
+                    Focus on reducing solar heat gain, managing humidity, and passive solar design
+                    (window shading achieved 24.4% comfort improvement).
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Miami — Form Optimization (6 Iterations)</h3>
+                <ul>
+                    <li><strong>Baseline Rectangle</strong>: EUI 48.34 | Cost $113,609</li>
+                    <li><strong>Trapezoid (Winner)</strong>: EUI 48.12 | Cost $113,098 — angled walls reduce solar heat
+                        gain</li>
+                    <li><strong>U-shape</strong>: EUI 50.50 | <strong>T-shape</strong>: EUI 50.26 |
+                        <strong>Plus</strong>: EUI 51.02 | <strong>L-shape</strong>: EUI 50.50
+                    </li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Miami — Directional WWR Optimization</h3>
+                <ul>
+                    <li><strong>North: 25%</strong> (reduced from 40%)</li>
+                    <li><strong>South: 22%</strong> (maximum reduction for solar control)</li>
+                    <li><strong>East: 20%</strong> (morning sun mitigation)</li>
+                    <li><strong>West: 18%</strong> (lowest — harsh afternoon sun)</li>
+                    <li><strong>Strategy:</strong> Directional optimization vs. uniform reduction; South and West
+                        prioritized for heat gain reduction</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Miami — Envelope Optimization</h3>
+                <ul>
+                    <li><strong>Wall (Optimized)</strong>: 12" HW Concrete with R-21 exterior + R-21 interior — thermal
+                        mass + hurricane resistance</li>
+                    <li><strong>Roof (Optimized)</strong>: Clay Tile, White lacquer (reflective) + R-18 + R-19 batt —
+                        light color significantly reduced heat penetration</li>
+                    <li><strong>Slab</strong>: Vinyl Tile, 12" Concrete — low conductivity, high density materials</li>
+                    <li><strong>Glazing</strong>: Quad Low-E, 1/8" clear, 1/3" Krypton (4651), Wood/Aluminum Clad frame
+                    </li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Miami — Roof Iteration Analysis</h3>
+                <ul>
+                    <li><strong>Baseline</strong>: Built-up Medium, R-18 — EUI 48.34, Cost $111,095</li>
+                    <li><strong>Iteration 1 (Best)</strong>: Clay Tile White gloss, R-18 + R-21 batt — EUI 45.57, Cost
+                        $104,567</li>
+                    <li><strong>Iteration 2</strong>: Built-up Medium, R-21 + R-21 batt — EUI 45.68, Cost $104,822</li>
+                    <li><strong>Iteration 3</strong>: Built-up Medium, R-12, no batt — EUI 45.75, Cost $104,982</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Miami — Final Results</h3>
+                <ul>
+                    <li><strong>Baseline EUI:</strong> 48.34 kBtu/ft²/yr | Cost: $111,095/yr | CO₂: 440,516 lbs</li>
+                    <li><strong>Optimized EUI:</strong> 44.08 kBtu/ft²/yr (-8.8%) | Cost: $101,048/yr ($10,047 savings)
+                        | CO₂: 410,984 lbs</li>
+                    <li><strong>CO₂ Reduction:</strong> 29,532 lbs/year (6.7% decrease)</li>
+                    <li><strong>Best Config:</strong> Trapezoid, N:25%/S:22%/E:20%/W:18% WWR, 12" Concrete R-21+R-21,
+                        Clay Tile White R-18+R-19, Quad Low-E Krypton</li>
+                </ul>
+            </div>
+
+            <!-- ==================== COMPARISON ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">
+                    Comparative Conclusions</h3>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Pittsburgh vs. Miami — Key Achievements</h3>
+                <ul>
+                    <li><strong>Pittsburgh</strong>: 5.6% EUI reduction | $2,650/yr savings | 66.33 metric tons CO₂/yr |
+                        Best strategies: WWR reduction, high-performance glazing, slab insulation</li>
+                    <li><strong>Miami</strong>: 8.8% EUI reduction | $10,047/yr savings (4× Pittsburgh) | 29,532 lbs
+                        CO₂/yr | Best strategies: Trapezoid form, directional WWR, reflective roofing, concrete thermal
+                        mass</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Critical Insights</h3>
+                <ul>
+                    <li><strong>WWR and glazing</strong> had the greatest impact across both climates</li>
+                    <li><strong>Form matters more</strong> in cooling-dominated climates (Miami trapezoid vs. Pittsburgh
+                        rectangle)</li>
+                    <li><strong>Miami showed larger % gains</strong> due to higher baseline consumption</li>
+                    <li><strong>Material selection must respond to climate:</strong> concrete mass for Miami heat,
+                        insulation for Pittsburgh cold</li>
+                    <li>Both cities achieved significant improvements through climate-specific strategies</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>eQUEST 3.65 (DOE-2), ASHRAE Standards, Parametric OFAT Analysis, Energy Benchmarking</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Museum of Event 1971 Modal -->
+    <div id="museum1971Modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('museum1971')">&times;</button>
+            <h2 class="modal-title">Museum of Event 1971 — Bangladesh Liberation War Memorial</h2>
+            <!-- Replace src with your image when ready -->
+            <img src="" alt="Museum of Event 1971" class="modal-image" style="background: var(--light-bg);">
+
+            <div class="modal-section">
+                <h3>Project Overview</h3>
+                <p>
+                    <strong>Type:</strong> Thesis Project — Cultural/Memorial Architecture<br>
+                    <strong>Duration:</strong> 4 Months<br>
+                    <strong>Location:</strong> Taki, West Bengal, India (India-Bangladesh border on River Ichhamati)<br>
+                    <strong>Recognition:</strong> Highest marks in Final External Jury 2023<br>
+                    <strong>Inspirations:</strong> Louis I. Kahn, Charles Correa, Peter Zumthor, Juhani Pallasmaa
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Design Philosophy</h3>
+                <p>
+                    Architectural storytelling of the 1971 Bangladesh Liberation War through phenomenological design,
+                    creating an experiential journey that transitions users through emotions chronologically as
+                    historical events unfolded. The museum uses Gordon Cullen's Serial Vision — sequential discovery,
+                    moments of surprise, and sensory manipulation through water, light, and shadow.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Site Selection — Strategic Criteria</h3>
+                <ul>
+                    <li><strong>Migration corridors</strong> along eastern Radcliffe line (India–East Pakistan border)</li>
+                    <li><strong>River border location</strong> — Ichhamati River acts as international boundary</li>
+                    <li><strong>Cultural significance</strong> — Durga Puja festival, December 16 boat memorial (India-Bangladesh victory celebration)</li>
+                    <li><strong>Metropolitan accessibility</strong> — weekend getaway from Kolkata</li>
+                    <li><strong>Cross-border relations</strong> — shared remembrance strengthening ties</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Key Metrics</h3>
+                <ul>
+                    <li><strong>Total Site Area:</strong> 41,682 sqm</li>
+                    <li><strong>Landscape Coverage:</strong> 33,353 sqm (80%)</li>
+                    <li><strong>Ground Coverage:</strong> 7,004 sqm | FAR: 0.32</li>
+                    <li><strong>Total Travel Distance:</strong> 1.2 km</li>
+                    <li><strong>Journey Time:</strong> 45–60 minutes</li>
+                    <li><strong>Zones:</strong> 12 emotional zones across 2 museum blocks</li>
+                </ul>
+            </div>
+
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">North Museum Block — Bangladesh Perspective (6 Blocks)</h3>
+                <p>
+                    <strong>Narrative:</strong> Before the War → West Pakistan Dominance → Genocide → Awami League Win → Liberation Attempt → Attempt to Escape<br>
+                    <strong>Character:</strong> Closed envelope, limited calculated light, dark/calm/cool atmosphere<br>
+                    <strong>Materials:</strong> Rat-trap bond double-wall system using local brick from neighboring factories
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>North Block — Key Spaces</h3>
+                <ul>
+                    <li><strong>Hall of Trivial Essence:</strong> Bamboo jaali shadows with water reflection create contemplative atmosphere</li>
+                    <li><strong>Hall of Dominance:</strong> Conscious pressure visualization through spatial compression</li>
+                    <li><strong>Hall of Unstability:</strong> Sloped walkways toward central water, gravitational pull sensation</li>
+                    <li><strong>Hall of Genocide:</strong> 3 million hanging spherical objects (representing deaths) + 40,000 pebbles on floor (representing women assaulted)</li>
+                    <li><strong>Spatial Strategy:</strong> Failed circulation — stairs that lead nowhere, suppression through dead-ends</li>
+                </ul>
+            </div>
+
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">South Museum Block — Indian Perspective (6 Blocks)</h3>
+                <p>
+                    <strong>Narrative:</strong> Indian Support → Jessore Liberation → Upper Hand → Operation Python → Battles → Victory<br>
+                    <strong>Character:</strong> Open envelope, multiple light sources, bright/warm/energetic atmosphere<br>
+                    <strong>Strategy:</strong> Progressive liberation through increasing openness
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>South Block — Key Spaces</h3>
+                <ul>
+                    <li><strong>Staircase of Reunion:</strong> 4 entrances with slits providing glimpses, frequency increases to reunite families</li>
+                    <li><strong>Liberation of Jessore:</strong> Exterior staircase indicating geographical liberation</li>
+                    <li><strong>Battle of Chamb:</strong> Exterior entry/exit (Southern Kashmir captured by Pakistan)</li>
+                    <li><strong>Martyrs' Hall:</strong> Surrounded by waterbody reflecting light onto interior sculptures</li>
+                    <li><strong>Gallery Spaces:</strong> Sharp sunlight for wayfinding, energetic progression</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Central Space — Circle of Stillness (Path of Exodus)</h3>
+                <ul>
+                    <li><strong>Concept:</strong> Serene circular waterbody represents peace/destination</li>
+                    <li><strong>Below-grade tunnel</strong> separates chaos from peace (spatial segregation)</li>
+                    <li><strong>Wide entrance</strong> (mass exodus) → <strong>congested exit</strong> (arrival in India with resource shortages)</li>
+                    <li><strong>Skylights that mislead direction</strong> — disorientation during migration</li>
+                    <li><strong>Dead-end branches</strong> — representing deaths during exodus</li>
+                    <li><strong>Perimeter wall:</strong> Symmetric, non-dynamic view for contemplation</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Building Performance & Climate Response</h3>
+                <p>
+                    <strong>Solar orientation:</strong> East-west axis aligned with sunrise/sunset for symbolic "birth of new nation"<br>
+                    <strong>Sunpath optimization:</strong> Waterbody positioned to create reflections during key times of day<br>
+                    <strong>Natural ventilation:</strong> Open central space above grade with below-grade exodus tunnel to separate thermal zones<br>
+                    <strong>Daylighting:</strong> North Block (dark, controlled) vs. South Block (bright, open envelope)<br>
+                    <strong>Passive shading:</strong> Local bamboo jaali (lattice) creates dynamic shadow patterns — direct sunlight, still water reflection, dynamic water reflections
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Material Strategy</h3>
+                <ul>
+                    <li><strong>Structure:</strong> Framed structure with rat-trap bond double walls</li>
+                    <li><strong>Brick:</strong> Standard brick from neighboring local factories</li>
+                    <li><strong>Jaali Screens:</strong> Local bamboo craft — controlled light, cultural authenticity, dynamic shadows, natural ventilation</li>
+                    <li><strong>Water Features:</strong> Still and dynamic bodies for reflection, sound, thermal regulation, and symbolic meaning</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Light & Shadow Studies</h3>
+                <p>
+                    <strong>North Block (Dark Narrative):</strong> Minimal southern openings, strategic northern placement, orderly shadows,
+                    broken mirror reflections showing "shattered lives", jaali creates moving shadows through water reflection.<br><br>
+                    <strong>South Block (Bright Narrative):</strong> Maximum southern exposure, large waterbody amplifies light, multiple
+                    pause points to combat museum fatigue, energetic warm atmosphere.<br><br>
+                    <strong>Experimental Work:</strong> Physical models testing bamboo jaali shadow patterns — direct sunlight effects,
+                    still water reflections, dynamic water reflections integrated into museum design.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Serial Vision — Design Methodology</h3>
+                <p>
+                    Gordon Cullen's Serial Vision applied: existing view → emerging view → sequential discovery →
+                    moments of surprise → sensory manipulation (water sounds without direct visibility).
+                    Building heights correspond to emotional intensity of events. Sky captured in architectural frames.
+                    Landscape enhanced through reflection.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>3D Modeling, Solar Analysis, Perspectival Framing, Rendering, Physical Model Making, Phenomenological Design</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tesseract Modal -->
+    <div id="tesseractModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('tesseract')">&times;</button>
+            <h2 class="modal-title">Tesseract — Mixed-Use Development in Kolkata</h2>
+            <!-- Replace src with your image when ready -->
+            <img src="" alt="Tesseract Mixed-Use Development" class="modal-image" style="background: var(--light-bg);">
+
+            <div class="modal-section">
+                <h3>Project Overview</h3>
+                <p>
+                    <strong>Type:</strong> Studio Project — Mixed-Use (Commercial + Residential)<br>
+                    <strong>Duration:</strong> 3 Months<br>
+                    <strong>Location:</strong> Downtown Kolkata, India<br>
+                    <strong>Climate:</strong> Hot-Humid Tropical<br>
+                    <strong>Recognition:</strong> Top 5 in External Jury Critique
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Design Concept — The Fourth Dimension</h3>
+                <p>
+                    The "Tesseract" metaphor extends architecture beyond 3D (closed and open spaces) into a
+                    4th dimension: intangible culture development through built form. The building acts as a
+                    catalyst for community formation — physical networking as architecture's fourth dimension.
+                </p>
+            </div>
+
+            <!-- ==================== FORM DEVELOPMENT ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">Climate-Responsive Form Development</h3>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Iterative Parametric Process</h3>
+                <ul>
+                    <li><strong>Step 1 — Basic Blocking:</strong> 4 apartments per block, 20 blocks total. Regular stacking for two-sided exposure</li>
+                    <li><strong>Step 2 — Dislocation:</strong> Blocks shifted according to wind flow direction. Improved cross-ventilation, some units gain 3+ facade exposures</li>
+                    <li><strong>Step 3 — Porosity (Final):</strong> Multiple climate software iterations. Venturi effect optimization — wind speeds up through building voids. Most space falls within comfort zone</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Wind Flow Strategy</h3>
+                <p>
+                    Void openings aligned with prevailing wind direction (especially summer months).
+                    Natural cooling through accelerated airflow. Inner open spaces shaded most of day
+                    throughout year. Reduced mechanical cooling loads through passive ventilation.
+                </p>
+            </div>
+
+            <!-- ==================== BUILDING PROGRAM ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">Building Program</h3>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Vertical Stacking (12+ Floors)</h3>
+                <ul>
+                    <li><strong>Basement:</strong> Parking for residents, office workers, and retail visitors. Direct vertical access to residential (privacy maintained)</li>
+                    <li><strong>Ground + 1st Floor:</strong> Retail shopping complex — extroverted, street-facing. Two anchor stores at opposite ends force movement through external shops</li>
+                    <li><strong>2nd Floor:</strong> Collaborative office/coworking spaces with flexible layouts</li>
+                    <li><strong>3rd Floor (Podium):</strong> Residential amenity deck — sports, pool, sauna, community hall, guest rooms, open terraces</li>
+                    <li><strong>Floors 4–8:</strong> 3BHK Simplex apartments (living, dining, 3 bedrooms, 2 baths, kitchen, balconies)</li>
+                    <li><strong>Floors 9–12+:</strong> 4BHK Duplex apartments (two-level units with master suite, private terrace, study)</li>
+                    <li><strong>Total:</strong> 80 apartments across 4 vertical residential cores + 2 separate commercial cores</li>
+                </ul>
+            </div>
+
+            <!-- ==================== COMMUNITY ==================== -->
+            <div class="modal-section" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 16px; color: var(--primary); text-transform: none; letter-spacing: -0.01em;">Community-Building Through Design</h3>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Activity Landscape — 15+ Node Types</h3>
+                <ul>
+                    <li><strong>Agricultural Farms</strong> + Urban Sea Farm (rooftop aquaponics)</li>
+                    <li><strong>Sensory Spaces:</strong> Meditation, reflection zones</li>
+                    <li><strong>Reading Spaces</strong> + Hobby Spaces (craft, art, maker)</li>
+                    <li><strong>Food Trucks</strong> + Communal Dining</li>
+                    <li><strong>Exercising Nodes:</strong> Fitness, yoga, sports</li>
+                    <li><strong>Playscapes</strong> + Open Seating + Gathering Nodes</li>
+                    <li><strong>Energy Generation:</strong> Solar panel integration</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Design Psychology</h3>
+                <p>
+                    <strong>Smaller volumes = better engagement</strong> — research shows people interact more in compact spaces.
+                    <strong>Shared activities = common ground</strong> — similar interests create conversation and bonds.
+                    <strong>Reward-based destinations</strong> — coffee shops, gardens as "rewards" for social trips.
+                    Multiple engagement points attract diverse residents.
+                </p>
+            </div>
+
+            <!-- ==================== URBAN DESIGN ==================== -->
+            <div class="modal-section">
+                <h3>Urban Design — "The Street Isn't Curb to Curb"</h3>
+                <p>
+                    <strong>Ground level:</strong> Setback activation with public architecture on lower levels, breaking the rigid compound wall concept.<br>
+                    <strong>"At 4th floor we lose identity with streets"</strong> — public spaces on floors 0–3 for street connection, private residences floor 4+ for disconnect from noise.<br>
+                    <strong>Marketing through visibility:</strong> When people see others enjoying services, they're attracted — better than banners.
+                </p>
+            </div>
+
+            <!-- ==================== PERFORMANCE ==================== -->
+            <div class="highlight-box">
+                <h3>Building Performance</h3>
+                <ul>
+                    <li><strong>Thermal:</strong> Porous form reduces urban heat island. Wind acceleration through voids (Venturi effect). Shaded central spaces throughout day</li>
+                    <li><strong>Ventilation:</strong> 100% of units with cross-ventilation (minimum 2 facades exposed)</li>
+                    <li><strong>Daylighting:</strong> Multiple facade exposures per unit. Open central voids prevent deep, dark cores</li>
+                    <li><strong>Energy:</strong> Natural ventilation reduces mechanical cooling. Green roofs for thermal mass. Solar panels on activity platforms</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Sustainability Features</h3>
+                <ul>
+                    <li><strong>Passive:</strong> Wind-driven natural ventilation, solar orientation, green roofs, vertical landscaping, urban farming, shaded outdoor spaces</li>
+                    <li><strong>Active:</strong> Solar panels, rainwater harvesting, gray water recycling, energy-efficient lighting, smart building controls</li>
+                    <li><strong>Social:</strong> Affordable housing through efficient design, mixed-income potential, community spaces foster social capital, local employment</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Circulation & Privacy</h3>
+                <p>
+                    Non-monotonous corridor layouts with private entrance zones per apartment. Visual variety breaks
+                    repetition. 4 residential cores + 2 commercial cores (completely separate). Basement provides
+                    direct access to residences only — privacy maintained between residential and commercial users.
+                    Unique unit placements enable varied pricing flexibility.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Computational Design Process</h3>
+                <p>
+                    <strong>Iterative optimization:</strong> Functional stacking (baseline) → wind-responsive dislocation →
+                    climate software validation → porosity refinement → activity space integration → final form.<br>
+                    <strong>Tools:</strong> Climate analysis software (wind flow + comfort validation), 3D modeling (Rhino/SketchUp),
+                    daylighting analysis (shadow studies for void placement), conceptual CFD for Venturi effect validation.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>Climate Analysis, CFD (Conceptual), 3D Modeling, Daylighting Analysis, Parametric Form Development, Urban Design</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Nexus Modal -->
+    <div id="socialnexusModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('socialnexus')">&times;</button>
+            <h2 class="modal-title">Social Nexus — Tianducheng Ghost City Activation</h2>
+            <!-- Replace src with your image when ready -->
+            <img src="" alt="Social Nexus - Tianducheng" class="modal-image" style="background: var(--light-bg);">
+
+            <div class="modal-section">
+                <h3>Project Overview</h3>
+                <p>
+                    <strong>Type:</strong> International Competition<br>
+                    <strong>Duration:</strong> 54 hours (timed competition)<br>
+                    <strong>Team:</strong> 3 members<br>
+                    <strong>Location:</strong> Tianducheng, China (Parisian replica / "duplitecture")<br>
+                    <strong>Recognition:</strong> International Winner — Docexdoce Competition<br>
+                    <strong>Publication:</strong> Web publication
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Problem Statement</h3>
+                <p>
+                    Tianducheng is a Chinese suburb replicating Paris (including an Eiffel Tower replica), resulting in
+                    ghost town conditions — used only as a photo backdrop with informal, unstructured living,
+                    no cultural identity, and a small growing population with zero community engagement.
+                    The challenge: create cultural identity through intangible daily activities rather than
+                    iconic architecture replication.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Design Philosophy</h3>
+                <p>
+                    <em>"Culture does not make people, people make culture"</em> — Chimamanda Ngozi Adichie<br><br>
+                    Replicating heritage buildings does not equal cultural authenticity. Cultural identity comes from
+                    the intangible aspects of daily resident activities. Architecture serves as a catalyst, not the solution.
+                    The design responds through a simple, effective grid system with adaptive squares enabling
+                    sense of ownership, developing community through three pillars: <strong>interaction, collaboration, and creation</strong>.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Site Strategy — Central Park Transformation</h3>
+                <ul>
+                    <li><strong>Location:</strong> Central park at base of Eiffel Tower replica</li>
+                    <li><strong>Step 1 — Baseline Grid:</strong> Simple pathways dividing park into regular squares</li>
+                    <li><strong>Step 2 — Shape Variation:</strong> Cut into different sized/shaped plots</li>
+                    <li><strong>Step 3 — Community Customization:</strong> Residents build collaborative environments in each plot</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>16 Adaptive Square Typologies</h3>
+                <ul>
+                    <li><strong>Social/Gathering:</strong> Gathering nodes, open seating spaces, communal spaces (shared meals, events)</li>
+                    <li><strong>Recreation:</strong> Mini playgrounds, exercise circuits, playscapes (creative play)</li>
+                    <li><strong>Learning/Working:</strong> Reading spaces, hobby spaces (craft, art, making), mini farm (urban agriculture education)</li>
+                    <li><strong>Productivity:</strong> Agricultural farms, agrofarms (specialized crops), urban sea farm (aquaculture)</li>
+                    <li><strong>Infrastructure:</strong> Food trucks (mobile dining, entrepreneurship), forklift charging stations, energy generation (solar, community power)</li>
+                    <li><strong>Wellness:</strong> Sensory spaces (meditation, mindfulness)</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Design Principles</h3>
+                <ul>
+                    <li><strong>Flexibility:</strong> Grid adapts to any combination of activities. No predetermined program — residents choose functions based on community needs. Phased development possible</li>
+                    <li><strong>Community Ownership:</strong> Residents develop their own grids, creating territorial ownership and pride in community-built environment</li>
+                    <li><strong>Social Psychology:</strong> Activities requiring interaction, collaboration, creation. Similar interest groups form naturally. Shared activities = conversation topics = stronger bonds</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Urban Strategy</h3>
+                <p>
+                    <strong>Circulation:</strong> Grid pathways ensure connectivity with multiple access points to each square.
+                    Pedestrian-priority environment with flexible routing.<br><br>
+                    <strong>Landscape:</strong> Green infrastructure in every grid with varied topography, water features, and native planting.<br><br>
+                    <strong>Infrastructure:</strong> Underground utilities, distributed water/power to each grid. Modular infrastructure allows
+                    phased development with sustainable drainage systems.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Expected Outcomes — Phased Development</h3>
+                <ul>
+                    <li><strong>Phase 1 (Immediate):</strong> Activity kickstart for residents, initial community formation, testing of popular activity types</li>
+                    <li><strong>Phase 2 (Medium-term):</strong> Organic expansion of successful activities, resident-driven modifications, emerging neighborhood identities</li>
+                    <li><strong>Phase 3 (Long-term):</strong> Established cultural practices, unique Tianducheng identity (not Parisian replica), intangible heritage development, ghost town transformation</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>Urban Design, Adaptive Grid Systems, Community Participation Design, Landscape Architecture, Phased Development Strategy</strong></p>
+            </div>
+        </div>
+    </div>
+
     <script>
-// Fun fact functionality
+        // Fun fact functionality
         function showFunFact(letter, fact) {
             const overlay = document.getElementById('funFactOverlay');
             const card = document.getElementById('funFactCard');
             const letterEl = document.getElementById('funFactLetter');
             const textEl = document.getElementById('funFactText');
-            
+
             letterEl.textContent = letter;
             textEl.textContent = fact;
-            
+
             overlay.classList.add('active');
             card.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -2186,7 +3971,7 @@
         function closeFunFact() {
             const overlay = document.getElementById('funFactOverlay');
             const card = document.getElementById('funFactCard');
-            
+
             overlay.classList.remove('active');
             card.classList.remove('active');
             document.body.style.overflow = 'auto';
@@ -2209,13 +3994,40 @@
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
             });
-            
+
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            
+
             document.getElementById(tabName + '-content').classList.add('active');
             event.target.classList.add('active');
+        }
+
+        function sortProjects(value) {
+            const [sortBy, direction] = value.split('-');
+
+            document.querySelectorAll('.projects-grid').forEach(grid => {
+                const cards = Array.from(grid.querySelectorAll('.project-card'));
+                if (cards.length === 0) return;
+
+                cards.sort((a, b) => {
+                    let valA, valB;
+
+                    if (sortBy === 'number') {
+                        valA = parseInt(a.querySelector('.project-number').textContent, 10) || 0;
+                        valB = parseInt(b.querySelector('.project-number').textContent, 10) || 0;
+                    } else if (sortBy === 'year') {
+                        const yearA = a.querySelector('.project-year').textContent.trim();
+                        const yearB = b.querySelector('.project-year').textContent.trim();
+                        valA = yearA === 'Ongoing' ? 9999 : parseInt(yearA, 10);
+                        valB = yearB === 'Ongoing' ? 9999 : parseInt(yearB, 10);
+                    }
+
+                    return direction === 'asc' ? valA - valB : valB - valA;
+                });
+
+                cards.forEach(card => grid.appendChild(card));
+            });
         }
 
         function openModal(project) {
@@ -2253,4 +4065,5 @@
         });
     </script>
 </body>
+
 </html>
