@@ -1246,7 +1246,7 @@
                         </div>
                         <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
                         <h3 class="project-title">Carb-Off</h3>
-                        <p class="project-meta">AI Climate Coach · 2026</p>
+                        <p class="project-meta">AI Climate Coach · Tartan Hacks 2026</p>
                         <p class="project-description">
                             Conversational AI carbon tracker with real-time collective impact counter.
                             Natural language logging replaces tedious dropdown menus — inspired by
@@ -1492,6 +1492,32 @@
                             <span class="tag">Pandas</span>
                         </div>
                     </div>
+
+                    <div class="project-card" onclick="openModal('dogjigsaw')">
+                        <div class="project-header">
+                            <span class="project-number">04</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="Images/Dogout.jpg" alt="Dog Jigsaw App" class="project-image">
+                        <h3 class="project-title">Dog Jigsaw</h3>
+                        <p class="project-meta">Flask Web App · Claude Opus 4.6</p>
+                        <p class="project-description">
+                            Browse random dog photos, save favorites, and solve 3×3 jigsaw puzzles.
+                            Score tracking rewards fewer moves with more points.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat"><div class="stat-value">Flask</div><div class="stat-label">Backend</div></div>
+                            <div class="stat"><div class="stat-value">API</div><div class="stat-label">Dog CEO</div></div>
+                            <div class="stat"><div class="stat-value">3×3</div><div class="stat-label">Puzzle</div></div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Claude Opus 4.6</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -1617,6 +1643,31 @@
                             <div class="stat"><div class="stat-value">OOP</div><div class="stat-label">Architecture</div></div>
                             <div class="stat"><div class="stat-value">Python</div><div class="stat-label">Language</div></div>
                             <div class="stat"><div class="stat-value">Game</div><div class="stat-label">Logic</div></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('carboff')">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
+                        <h3 class="project-title">Carb-Off</h3>
+                        <p class="project-meta">AI Climate Coach · Tartan Hacks 2026</p>
+                        <p class="project-description">
+                            Conversational AI carbon tracker with real-time collective impact counter.
+                            Inspired by Indore's behavior change model.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat"><div class="stat-value">AI</div><div class="stat-label">Claude Sonnet 4</div></div>
+                            <div class="stat"><div class="stat-value">FastAPI</div><div class="stat-label">Backend</div></div>
+                            <div class="stat"><div class="stat-value">React</div><div class="stat-label">Frontend</div></div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Anthropic AI</span>
                         </div>
                     </div>
                 </div>
@@ -1944,6 +1995,174 @@
             <div class="modal-section">
                 <h3>Tools & Technologies</h3>
                 <p><strong>Python, CMU Graphics, Object-Oriented Programming (OOP)</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dog Jigsaw Modal -->
+    <div id="dogjigsawModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('dogjigsaw')">&times;</button>
+            <h2 class="modal-title">Dog Jigsaw</h2>
+            <img src="Images/Dog.jpg" alt="Dog Jigsaw App" class="modal-image">
+
+            <div class="modal-section">
+                <h3>Overview</h3>
+                <p>
+                    A Flask web app that lets you browse random dog photos from the Dog CEO API,
+                    save your favorites, and solve 3×3 jigsaw puzzles made from them. Built using
+                    Claude Opus 4.6 as a development template.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Browse Dogs</strong>: View random dog images, optionally filtered by breed</li>
+                    <li><strong>Save Favorites</strong>: Star photos to add them to your favorites collection</li>
+                    <li><strong>Jigsaw Puzzles</strong>: Play a 3×3 tile-swap puzzle using any favorited photo</li>
+                    <li><strong>Score Tracking</strong>: Earn points for solving puzzles (fewer moves = more points), tracked across sessions</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>How It Works</h3>
+                <p>
+                    Browse random dog images on the home page and filter by breed with the dropdown.
+                    Click the star button to save a photo to your favorites. Go to Favorites and click the
+                    puzzle icon on any saved photo to play a jigsaw puzzle. Swap tiles by clicking two of
+                    them — solve the puzzle to earn points. Fewer moves = more points (max 100, min 10 per puzzle).
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Demo</h3>
+                <video controls style="width: 100%; border: 1px solid var(--border); margin-top: 0.5rem;">
+                    <source src="Images/Demo (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="modal-section">
+                <h3>Project Structure</h3>
+                <p>
+                    <strong>app.py</strong> — Flask routes and API logic<br>
+                    <strong>favorites.json</strong> — Saved favorite images (auto-created)<br>
+                    <strong>score.json</strong> — Puzzle score data (auto-created)<br>
+                    <strong>requirements.txt</strong> — Python dependencies<br>
+                    <strong>templates/</strong> — index.html, favorites.html, puzzle.html
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>API Details</h3>
+                <p>
+                    Uses the free <strong>Dog CEO API</strong> — no API key required. Endpoints include
+                    <code>/breeds/list/all</code> for breed listing and <code>/breed/{breed}/images/random</code>
+                    for fetching random images. All calls made via Python's requests module.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>Python, Flask, Dog CEO REST API, HTML/CSS/JS, Claude Opus 4.6</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carb-Off Modal -->
+    <div id="carboffModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('carboff')">&times;</button>
+            <h2 class="modal-title">Carb-Off — Your AI Climate Coach</h2>
+            <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="modal-image">
+
+            <div class="modal-section">
+                <h3>Overview</h3>
+                <p>
+                    "Don't just track actions. See them add up with thousands of others, in real-time."
+                    Carb-Off is a conversational AI carbon tracker inspired by Indore's proven behavior
+                    change model — the city that went from average cleanliness to #1 in India for 7
+                    consecutive years through visible progress and collective identity.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Why Existing Apps Fail</h3>
+                <ul>
+                    <li><strong>Tedious Logging</strong>: Apps like Cool the Globe require navigating 1000+ dropdown menus</li>
+                    <li><strong>Meaningless Impact</strong>: Saving 2kg CO2 alone feels pointless</li>
+                    <li><strong>No Personalization</strong>: Same generic actions for everyone</li>
+                    <li><strong>Result</strong>: 80% abandonment within week 1</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Our Solution</h3>
+                <ul>
+                    <li><strong>Conversational AI</strong>: Text your actions naturally, like talking to a friend</li>
+                    <li><strong>Personal Baseline</strong>: 2-minute onboarding calculates YOUR specific footprint</li>
+                    <li><strong>Live Collective Counter</strong>: Watch your actions join a global total that updates minute-by-minute</li>
+                    <li><strong>Cited Numbers</strong>: Every emission factor traces to EPA, DEFRA, or peer-reviewed research</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Indore Story</h3>
+                <p>
+                    In 2016, my hometown Indore was an average city in terms of cleanliness. By 2023,
+                    it was the cleanest for the 7th year running. The secret wasn't fancy technology —
+                    it was visible progress (everyone could see rankings update in real-time) and
+                    collective identity (your actions joined something bigger). 3.5 million people
+                    changed behavior using this exact model, sustained for 7+ years.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>How It Works</h3>
+                <p>
+                    <strong>Onboarding:</strong> Tell the AI where you live, how you commute, what you eat,
+                    and your energy habits. It calculates your personal carbon baseline in 2 minutes.<br><br>
+                    <strong>Logging:</strong> Type naturally — "I took the bus today and had a veggie burrito for lunch" —
+                    and the AI calculates your savings with tangible equivalencies.<br><br>
+                    <strong>Collective Impact:</strong> Watch the live counter tick up as your savings join
+                    hundreds of others in real-time.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Why the LLM Is Not a Gimmick</h3>
+                <p>
+                    The LLM handles three hard problems: <strong>intent parsing</strong> ("biked to work" → round trip or one way?),
+                    <strong>contextual calculation</strong> (auto-fills distance from user profile), and
+                    <strong>ambiguity resolution</strong> (asks natural clarifying questions). Critical rule:
+                    the LLM classifies and communicates — it NEVER generates carbon numbers. Every number
+                    traces to a cited emission factor from EPA 2024, DEFRA 2024, or Poore & Nemecek 2018.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Key Features (V0)</h3>
+                <ul>
+                    <li><strong>Conversational AI onboarding</strong> in 2 minutes — no forms</li>
+                    <li><strong>Natural language action logging</strong> — no dropdowns</li>
+                    <li><strong>Real-time collective counter</strong> updating every 5 seconds</li>
+                    <li><strong>25+ emission factors</strong> sourced from EPA/DEFRA with citations</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tech Stack</h3>
+                <p>
+                    <strong>Backend:</strong> FastAPI (Python), Claude Sonnet 4 (Anthropic AI), in-memory database (SQLite-ready)<br>
+                    <strong>Frontend:</strong> React (vanilla — no build step), mobile-first responsive design, real-time polling<br>
+                    <strong>Data:</strong> 25+ emission factors across food, transport, home energy, and lifestyle categories
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>Python, FastAPI, React, Anthropic Claude Sonnet 4, EPA/DEFRA Emission Data</strong></p>
             </div>
         </div>
     </div>
