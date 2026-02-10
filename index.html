@@ -4,775 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ananya Shrimali</title>
+    <title>Ananya Shrimali · Computational Design & Building Performance</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=JetBrains+Mono:wght@300;400&display=swap"
         rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #000000;
-            --secondary: #666666;
-            --accent: #999999;
-            --light-bg: #FAFAFA;
-            --white: #FFFFFF;
-            --border: #E5E5E5;
-            --highlight: #000000;
-            --highlight2: #97A399;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            font-size: 13px;
-            font-weight: 300;
-            line-height: 1.7;
-            color: var(--primary);
-            background: var(--white);
-            letter-spacing: -0.01em;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid var(--highlight);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.2rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
-            font-weight: 400;
-            color: var(--primary);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--secondary);
-            font-size: 11px;
-            font-weight: 300;
-            transition: color 0.2s;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-        }
-
-        .nav-links a:hover {
-            color: var(--highlight);
-        }
-
-        .hero {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 8rem 3rem 6rem;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero-photo {
-            width: 120px;
-            height: 160px;
-            border-radius: 0;
-            object-fit: cover;
-            margin: 0 0 2rem 0;
-            display: block;
-            border: 1px solid var(--border);
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .hero-photo:hover {
-            transform: translateY(-2px);
-            border-color: var(--highlight);
-        }
-
-        /* Fun Fact Card Styles */
-        .fun-fact-card {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
-            background: var(--white);
-            border: 2px solid var(--highlight);
-            padding: 2.5rem;
-            max-width: 400px;
-            width: 90%;
-            z-index: 2000;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .fun-fact-card.active {
-            opacity: 1;
-            pointer-events: all;
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        .fun-fact-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1999;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .fun-fact-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .fun-fact-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--secondary);
-            background: none;
-            border: none;
-            font-weight: 200;
-            transition: color 0.2s;
-        }
-
-        .fun-fact-close:hover {
-            color: var(--highlight);
-        }
-
-        .fun-fact-letter {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 48px;
-            font-weight: 300;
-            color: var(--highlight);
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .fun-fact-text {
-            font-size: 14px;
-            line-height: 1.8;
-            color: var(--secondary);
-            text-align: center;
-        }
-
-        /* UPDATED: Interactive heading with letter hover effect */
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 200;
-            letter-spacing: -0.03em;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            line-height: 1.1;
-            cursor: default;
-            display: flex;
-            gap: 1px;
-        }
-
-        .hero h1 span {
-            display: inline-block;
-            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), font-weight 0.2s ease, color 0.2s ease;
-            font-weight: 200;
-        }
-
-        .hero h1 span:hover {
-            font-weight: 500;
-            color: var(--highlight);
-            transform: scale(1.05) translateY(-2px);
-        }
-
-        .hero .subtitle {
-            font-size: 15px;
-            font-weight: 300;
-            margin-bottom: 2.5rem;
-            color: var(--secondary);
-            letter-spacing: 0.01em;
-        }
-
-        .hero .description {
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 1.8;
-            color: var(--secondary);
-            max-width: 650px;
-            letter-spacing: 0.01em;
-        }
-
-        .hero-metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .metric {
-            text-align: left;
-        }
-
-        .metric-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 28px;
-            font-weight: 300;
-            color: var(--primary);
-            margin-bottom: 0.3rem;
-        }
-
-        .metric-label {
-            font-size: 10px;
-            font-weight: 300;
-            color: var(--secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .skills {
-            padding: 3rem 3rem;
-            background: var(--light-bg);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .skills-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .skill-badge {
-            background: var(--white);
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--border);
-            font-size: 10px;
-            font-weight: 300;
-            color: var(--secondary);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            transition: all 0.2s;
-        }
-
-        .skill-badge:hover {
-            border-color: var(--highlight);
-            color: var(--primary);
-        }
-
-        /* Category Tabs */
-        .category-tabs {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 2rem 3rem 0;
-            position: sticky;
-            top: 66px;
-            z-index: 90;
-            backdrop-filter: blur(10px);
-        }
-
-        .tabs-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            gap: 0;
-        }
-
-        .tab-btn {
-            background: transparent;
-            border: none;
-            border-bottom: 2px solid transparent;
-            padding: 1rem 2rem;
-            font-size: 11px;
-            font-weight: 400;
-            color: var(--secondary);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .tab-btn:hover {
-            color: var(--highlight);
-        }
-
-        .tab-btn.active {
-            color: var(--highlight);
-            border-bottom-color: var(--highlight);
-        }
-
-        /* UPDATED: Removed grey background from projects section */
-        section {
-            padding: 5rem 3rem;
-            background: var(--white);
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 10px;
-            color: var(--secondary);
-            margin-bottom: 4rem;
-            font-weight: 400;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 1px;
-            background: var(--border);
-            border: 1px solid var(--border);
-        }
-
-        .project-card {
-            background: var(--white);
-            padding: 3rem;
-            transition: background 0.2s, transform 0.2s;
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            background: var(--light-bg);
-            transform: translateY(-2px);
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .project-number {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
-            color: var(--accent);
-            letter-spacing: 0.1em;
-        }
-
-        .project-year {
-            font-size: 10px;
-            color: var(--accent);
-            letter-spacing: 0.05em;
-        }
-
-        /* PROJECT IMAGES */
-        .project-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--border);
-            background: var(--light-bg);
-        }
-
-        .project-title {
-            font-size: 20px;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-            letter-spacing: -0.01em;
-            line-height: 1.3;
-        }
-
-        .project-meta {
-            color: var(--secondary);
-            font-size: 11px;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-            letter-spacing: 0.01em;
-        }
-
-        .project-description {
-            color: var(--secondary);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-            font-size: 13px;
-            font-weight: 300;
-        }
-
-        .project-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 2rem 0;
-            padding: 1.5rem 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 22px;
-            font-weight: 300;
-            color: var(--primary);
-            margin-bottom: 0.3rem;
-        }
-
-        .stat-label {
-            font-size: 9px;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag {
-            background: transparent;
-            border: 1px solid var(--border);
-            padding: 0.3rem 0.8rem;
-            font-size: 9px;
-            color: var(--secondary);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-
-        .contact {
-            background: var(--light-bg);
-            border-top: 1px solid var(--border);
-            padding: 5rem 3rem;
-        }
-
-        .contact .container {
-            text-align: center;
-            max-width: 700px;
-        }
-
-        .contact p {
-            font-size: 13px;
-            color: var(--secondary);
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            font-weight: 300;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .contact-btn {
-            background: transparent;
-            color: var(--primary);
-            padding: 1rem 2rem;
-            border: 1px solid var(--border);
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 11px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            transition: all 0.2s;
-        }
-
-        .contact-btn:hover {
-            background: var(--highlight);
-            color: var(--white);
-            border-color: var(--highlight);
-        }
-
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-            font-size: 10px;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            overflow-y: auto;
-            padding: 3rem;
-        }
-
-        .modal.active {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: var(--white);
-            border: 1px solid var(--border);
-            padding: 4rem;
-            max-width: 900px;
-            width: 100%;
-            margin-top: 3rem;
-            position: relative;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--secondary);
-            background: none;
-            border: none;
-            font-weight: 200;
-            transition: color 0.2s;
-        }
-
-        .modal-close:hover {
-            color: var(--highlight);
-        }
-
-        .modal-title {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            font-weight: 300;
-            letter-spacing: -0.02em;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        /* MODAL IMAGES */
-        .modal-image {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border);
-            background: var(--light-bg);
-        }
-
-        .modal-section {
-            margin-bottom: 3rem;
-        }
-
-        .modal-section h3 {
-            color: var(--highlight2);
-            margin-bottom: 1rem;
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .modal-section p {
-            font-size: 13px;
-            line-height: 1.8;
-            color: var(--secondary);
-            font-weight: 300;
-        }
-
-        .modal-section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .modal-section li {
-            font-size: 13px;
-            line-height: 1.8;
-            color: var(--secondary);
-            font-weight: 300;
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.5rem;
-        }
-
-        .modal-section li:before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        .highlight-box {
-            background: var(--light-bg);
-            border: 1px solid var(--border);
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem 1.5rem;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .fun-fact-card {
-                max-width: 90%;
-                padding: 2rem;
-            }
-
-            .fun-fact-letter {
-                font-size: 36px;
-            }
-
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .hero {
-                padding: 5rem 1.5rem 4rem;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-                flex-wrap: wrap;
-            }
-
-            section {
-                padding: 3rem 1.5rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-card {
-                padding: 2rem;
-            }
-
-            .modal {
-                padding: 1rem;
-            }
-
-            .modal-content {
-                padding: 2rem 1.5rem;
-                margin-top: 1rem;
-            }
-
-            .project-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-metrics {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .category-tabs {
-                padding: 1rem 1.5rem 0;
-            }
-
-            .tabs-container {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .tab-btn {
-                white-space: nowrap;
-                padding: 1rem 1.5rem;
-            }
-
-            .sort-controls {
-                margin-bottom: 1.5rem;
-            }
-        }
-
-        /* Sort Controls */
-        .sort-controls {
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .sort-label {
-            font-size: 10px;
-            font-weight: 400;
-            color: var(--secondary);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .sort-select {
-            appearance: none;
-            -webkit-appearance: none;
-            background: transparent;
-            border: 1px solid var(--border);
-            padding: 0.5rem 2rem 0.5rem 0.8rem;
-            font-size: 10px;
-            font-weight: 300;
-            color: var(--secondary);
-            letter-spacing: 0.03em;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: 'Inter', sans-serif;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 0.6rem center;
-        }
-
-        .sort-select:hover,
-        .sort-select:focus {
-            border-color: var(--highlight);
-            color: var(--primary);
-            outline: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -812,7 +50,7 @@
                     data-fact="Luminous. Not really, I just love the word. I like low intensity lights or no lights at all.">l</span><span
                     data-fact="Investigator if you ask investigation worthy questions.">i</span>
             </h1>
-            <p class="subtitle">Computational Designer · Sustainable Design · Architectural Design · Building Performance Optimization</p>
+            <p class="subtitle">Computational Designer · Building Performance Analyst · Sustainable Design</p>
             <p class="description">
                 <a href="https://www.cmu.edu" target="_blank"
                     style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border);">Carnegie
@@ -1221,7 +459,7 @@
                     <div class="project-card" onclick="openModal('gis')">
                         <div class="project-header">
                             <span class="project-number">09</span>
-                            <span class="project-year">Ongoing</span>
+                            <span class="project-year">2025</span>
                         </div>
                         <img src="Images/GISOut.jpg" alt="Environmental Justice Analysis" class="project-image">
                         <h3 class="project-title">Environmental Justice Analysis</h3>
@@ -1571,7 +809,8 @@
                             <span class="project-number">18</span>
                             <span class="project-year">2022</span>
                         </div>
-                        <img src="Images/lagracieux_out.jpg" alt="La Gracieux - Cannes Pavilion" class="project-image" style="background: var(--light-bg);">
+                        <img src="Images/lagracieux_out.jpg" alt="La Gracieux - Cannes Pavilion" class="project-image"
+                            style="background: var(--light-bg);">
                         <h3 class="project-title">La Gracieux</h3>
                         <p class="project-meta">Cannes Film Festival Pavilion · International Top 30</p>
                         <p class="project-description">
@@ -1609,7 +848,8 @@
                             <span class="project-number">19</span>
                             <span class="project-year">2020</span>
                         </div>
-                        <img src="" alt="Fractal - Modular Housing" class="project-image" style="background: var(--light-bg);">
+                        <img src="" alt="Fractal - Modular Housing" class="project-image"
+                            style="background: var(--light-bg);">
                         <h3 class="project-title">Fractal</h3>
                         <p class="project-meta">Modular Housing for Migrant Workers · IGBC Shortlisted</p>
                         <p class="project-description">
@@ -2504,7 +1744,8 @@
                             <span class="project-number">11</span>
                             <span class="project-year">2020</span>
                         </div>
-                        <img src="" alt="Fractal - Modular Housing" class="project-image" style="background: var(--light-bg);">
+                        <img src="" alt="Fractal - Modular Housing" class="project-image"
+                            style="background: var(--light-bg);">
                         <h3 class="project-title">Fractal</h3>
                         <p class="project-meta">Modular Housing · IGBC Shortlisted</p>
                         <p class="project-description">
@@ -2512,9 +1753,18 @@
                             biodegradable, natural ventilation, no mechanical cooling needed.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">Zero</div><div class="stat-label">Waste</div></div>
-                            <div class="stat"><div class="stat-value">Natural</div><div class="stat-label">Ventilation</div></div>
-                            <div class="stat"><div class="stat-value">Bio</div><div class="stat-label">Degradable</div></div>
+                            <div class="stat">
+                                <div class="stat-value">Zero</div>
+                                <div class="stat-label">Waste</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Natural</div>
+                                <div class="stat-label">Ventilation</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Bio</div>
+                                <div class="stat-label">Degradable</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Sustainable Materials</span>
@@ -2743,7 +1993,8 @@
                             <span class="project-number">04</span>
                             <span class="project-year">2022</span>
                         </div>
-                        <img src="Images/lagracieux_out.jpg" alt="La Gracieux - Cannes Pavilion" class="project-image" style="background: var(--light-bg);">
+                        <img src="Images/lagracieux_out.jpg" alt="La Gracieux - Cannes Pavilion" class="project-image"
+                            style="background: var(--light-bg);">
                         <h3 class="project-title">La Gracieux</h3>
                         <p class="project-meta">Cannes Film Festival Pavilion · Top 30</p>
                         <p class="project-description">
@@ -2751,9 +2002,18 @@
                             through Character, Conflict, and Desire.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">Top 30</div><div class="stat-label">International</div></div>
-                            <div class="stat"><div class="stat-value">Cannes</div><div class="stat-label">France</div></div>
-                            <div class="stat"><div class="stat-value">Temp</div><div class="stat-label">Structure</div></div>
+                            <div class="stat">
+                                <div class="stat-value">Top 30</div>
+                                <div class="stat-label">International</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Cannes</div>
+                                <div class="stat-label">France</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Temp</div>
+                                <div class="stat-label">Structure</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Temporary</span>
@@ -2767,7 +2027,8 @@
                             <span class="project-number">05</span>
                             <span class="project-year">2020</span>
                         </div>
-                        <img src="" alt="Fractal - Modular Housing" class="project-image" style="background: var(--light-bg);">
+                        <img src="" alt="Fractal - Modular Housing" class="project-image"
+                            style="background: var(--light-bg);">
                         <h3 class="project-title">Fractal</h3>
                         <p class="project-meta">Modular Housing for Migrant Workers · IGBC Shortlisted</p>
                         <p class="project-description">
@@ -2775,9 +2036,18 @@
                             Scalable, sustainable, self-assembled in 4-6 hours.
                         </p>
                         <div class="project-stats">
-                            <div class="stat"><div class="stat-value">IGBC</div><div class="stat-label">Shortlisted</div></div>
-                            <div class="stat"><div class="stat-value">4-6 hrs</div><div class="stat-label">Assembly</div></div>
-                            <div class="stat"><div class="stat-value">100+</div><div class="stat-label">Scalable</div></div>
+                            <div class="stat">
+                                <div class="stat-value">IGBC</div>
+                                <div class="stat-label">Shortlisted</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4-6 hrs</div>
+                                <div class="stat-label">Assembly</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">100+</div>
+                                <div class="stat-label">Scalable</div>
+                            </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Prefabrication</span>
@@ -3224,7 +2494,7 @@
             <div class="modal-section">
                 <h3>Demo</h3>
                 <video controls style="width: 100%; border: 1px solid var(--border); margin-top: 0.5rem;">
-                    <source src="Images/Demo (1).mp4" type="video/mp4">
+                    <source src="Videos/Demo (1).mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -3262,6 +2532,12 @@
             <button class="modal-close" onclick="closeModal('carboff')">&times;</button>
             <h2 class="modal-title">Carb-Off — Your AI Climate Coach</h2>
             <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="modal-image">
+
+            <video controls class="modal-image"
+                style="width: 100%; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border);">
+                <source src="Videos/demo-v2.mov" type="video/quicktime">
+                Your browser does not support the video tag.
+            </video>
 
             <div class="modal-section">
                 <h3>Overview</h3>
@@ -3739,9 +3015,6 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('museum1971')">&times;</button>
             <h2 class="modal-title">Museum of Event 1971 — Bangladesh Liberation War Memorial</h2>
-            <!-- Replace src with your image when ready -->
-            <img src="Images/1971_out.jpg" alt="Museum of Event 1971" class="modal-image" style="background: var(--light-bg);">
-
             <div class="modal-section">
                 <h3>Project Overview</h3>
                 <p>
@@ -4094,7 +3367,8 @@
                 </ul>
             </div>
 
-            <img src="Images/mixeduse_6.jpg" alt="Tesseract — Building Performance & Sustainability" class="modal-image">
+            <img src="Images/mixeduse_6.jpg" alt="Tesseract — Building Performance & Sustainability"
+                class="modal-image">
 
             <div class="modal-section">
                 <h3>Circulation & Privacy</h3>
@@ -4253,7 +3527,8 @@
             <button class="modal-close" onclick="closeModal('lagracieux')">&times;</button>
             <h2 class="modal-title">La Gracieux — Cannes Film Festival Pavilion</h2>
             <!-- Replace src with your image when ready -->
-            <img src="Images/lagracieux_out.jpg" alt="La Gracieux - Cannes Pavilion" class="modal-image" style="background: var(--light-bg);">
+            <img src="Images/lagracieux_out.jpg" alt="La Gracieux - Cannes Pavilion" class="modal-image"
+                style="background: var(--light-bg);">
 
             <div class="modal-section">
                 <h3>Project Overview</h3>
@@ -4271,7 +3546,7 @@
                 <h3>Design Philosophy</h3>
                 <p>
                     <em>"Architecture and filmmaking, both should be able to create a narrative other than
-                    mainstream, in order to be incredibly successful."</em><br><br>
+                        mainstream, in order to be incredibly successful."</em><br><br>
                     Architecture and filmmaking are treated as parallel narrative mediums. Three elements of
                     storytelling — <strong>Character, Conflict, and Desire</strong> — are translated directly into
                     architectural form, creating a pavilion that visitors experience as a story unfolding.
@@ -4281,9 +3556,15 @@
             <div class="highlight-box">
                 <h3>Architectural Translation of Filmmaking</h3>
                 <ul>
-                    <li><strong>Character — The Spine:</strong> Cubicle volume with only structural spine retained. Hollow yet looks large — visual trick through skeletal structure. Creates iconic silhouette on beach, porous allowing views through. Minimal material, maximum presence</li>
-                    <li><strong>Conflict — Level Changes:</strong> Series of level differences throughout pavilion. Visitors surpass many obstacles to reach destination. Ramps, stairs, platforms at varied heights. Physical effort mirrors emotional investment in a film's plot</li>
-                    <li><strong>Desire — Elevated Seating:</strong> Cinema seating elevated from ground achieves viewer desire to be "above" while watching. Panoramic views of beach + screen. The destination worth the journey's effort</li>
+                    <li><strong>Character — The Spine:</strong> Cubicle volume with only structural spine retained.
+                        Hollow yet looks large — visual trick through skeletal structure. Creates iconic silhouette on
+                        beach, porous allowing views through. Minimal material, maximum presence</li>
+                    <li><strong>Conflict — Level Changes:</strong> Series of level differences throughout pavilion.
+                        Visitors surpass many obstacles to reach destination. Ramps, stairs, platforms at varied
+                        heights. Physical effort mirrors emotional investment in a film's plot</li>
+                    <li><strong>Desire — Elevated Seating:</strong> Cinema seating elevated from ground achieves viewer
+                        desire to be "above" while watching. Panoramic views of beach + screen. The destination worth
+                        the journey's effort</li>
                 </ul>
             </div>
 
@@ -4303,19 +3584,24 @@
                 <h3>Volumetric Strategy</h3>
                 <p>
                     <strong>Volume:</strong> Create desire through elevated seating platform.<br>
-                    <strong>Spine:</strong> Exclude all faces, retain only structural skeleton — maximum visual impact with minimum material.<br>
-                    <strong>Skin:</strong> Cover select volumes (museum, ramp, café) with tensile fabric for weather protection while maintaining porosity.
+                    <strong>Spine:</strong> Exclude all faces, retain only structural skeleton — maximum visual impact
+                    with minimum material.<br>
+                    <strong>Skin:</strong> Cover select volumes (museum, ramp, café) with tensile fabric for weather
+                    protection while maintaining porosity.
                 </p>
             </div>
 
             <div class="highlight-box">
                 <h3>Structural System</h3>
                 <ul>
-                    <li><strong>Frame:</strong> Triangulated truss system — lightweight steel, prefabricated components</li>
-                    <li><strong>Temporary construction:</strong> Designed for rapid assembly and complete disassembly post-festival</li>
+                    <li><strong>Frame:</strong> Triangulated truss system — lightweight steel, prefabricated components
+                    </li>
+                    <li><strong>Temporary construction:</strong> Designed for rapid assembly and complete disassembly
+                        post-festival</li>
                     <li><strong>Skin:</strong> Tensile fabric for shaded areas</li>
                     <li><strong>Platforms:</strong> Timber decking for seating and walkways</li>
-                    <li><strong>Sustainability:</strong> Minimal foundations (beach site), fully recyclable/reusable materials, minimal environmental impact</li>
+                    <li><strong>Sustainability:</strong> Minimal foundations (beach site), fully recyclable/reusable
+                        materials, minimal environmental impact</li>
                 </ul>
             </div>
 
@@ -4337,23 +3623,28 @@
                     <strong>Sun:</strong> Tensile fabric skins provide targeted shade.<br>
                     <strong>Wind:</strong> Porous frame allows sea breeze through — natural ventilation.<br>
                     <strong>Rain:</strong> Protected areas under fabric skins.<br>
-                    <strong>Heat:</strong> Elevated platforms catch sea breeze, thermal mass minimized for temporary use.<br>
-                    <strong>Views:</strong> Beach-facing transparency, city-facing enclosure. Elevated platforms frame ocean + sunset.
+                    <strong>Heat:</strong> Elevated platforms catch sea breeze, thermal mass minimized for temporary
+                    use.<br>
+                    <strong>Views:</strong> Beach-facing transparency, city-facing enclosure. Elevated platforms frame
+                    ocean + sunset.
                 </p>
             </div>
 
             <div class="modal-section">
                 <h3>Cultural Context</h3>
                 <p>
-                    The Cannes Film Festival celebrates the collective effort of creative people. Audio-visual experience
+                    The Cannes Film Festival celebrates the collective effort of creative people. Audio-visual
+                    experience
                     requires synchronization of senses. The pavilion becomes a "buildification" of story — spaces
-                    transition through drama and sophistication phases, with architecture evoking emotion in parallel to film.
+                    transition through drama and sophistication phases, with architecture evoking emotion in parallel to
+                    film.
                 </p>
             </div>
 
             <div class="modal-section">
                 <h3>Tools & Technologies</h3>
-                <p><strong>3D Modeling, Structural Design, Tensile Fabric Systems, Temporary Construction, Narrative Architecture, Experiential Design</strong></p>
+                <p><strong>3D Modeling, Structural Design, Tensile Fabric Systems, Temporary Construction, Narrative
+                        Architecture, Experiential Design</strong></p>
             </div>
         </div>
     </div>
@@ -4368,28 +3659,38 @@
 
             <div class="modal-section">
                 <h3>Overview</h3>
-                <p>Pandemic response architecture addressing the COVID-19 housing crisis for urban poor and migrant workers.
-                   During lockdown, millions of migrant workers were stranded in cities — unable to return home, without
-                   transportation, spending months in goods carrier trucks and streets with complete loss of income and shelter.</p>
+                <p>Pandemic response architecture addressing the COVID-19 housing crisis for urban poor and migrant
+                    workers.
+                    During lockdown, millions of migrant workers were stranded in cities — unable to return home,
+                    without
+                    transportation, spending months in goods carrier trucks and streets with complete loss of income and
+                    shelter.</p>
                 <p><strong>Recognition:</strong> Shortlisted — IGBC (Indian Green Building Council)</p>
             </div>
 
             <div class="highlight-box">
                 <h4>Design Concept: "Fractal"</h4>
-                <p>Named after the mathematical concept of self-similar patterns at any scale. The system works identically
-                   for a sole family or a dense community — scalable from 1 unit to 100+ units while maintaining livability
-                   at all scales. A flexible prefabricated initiative that blends in any context.</p>
+                <p>Named after the mathematical concept of self-similar patterns at any scale. The system works
+                    identically
+                    for a sole family or a dense community — scalable from 1 unit to 100+ units while maintaining
+                    livability
+                    at all scales. A flexible prefabricated initiative that blends in any context.</p>
             </div>
 
             <div class="modal-section">
                 <h3>Why Hexagonal Geometry?</h3>
-                <p><strong>Psychological Benefits:</strong> Reduces feeling of "packed closeness," provides more atmosphere
-                   for 24/7 indoor stay, psychologically more comfortable shape, less claustrophobic than rectangular boxes.</p>
-                <p><strong>Functional Benefits:</strong> Optimized daylight exposure with more facade area per unit, better
-                   ventilation from multiple facade orientations, spatial efficiency fitting more units in same area,
-                   circulation flexibility with no dead ends, and layout that promotes socialization.</p>
-                <p><strong>Environmental Benefits:</strong> Maximum outer facade area for daylighting, better natural ventilation
-                   from multiple angles, reduced mechanical cooling needs, and integration of community gardens between units.</p>
+                <p><strong>Psychological Benefits:</strong> Reduces feeling of "packed closeness," provides more
+                    atmosphere
+                    for 24/7 indoor stay, psychologically more comfortable shape, less claustrophobic than rectangular
+                    boxes.</p>
+                <p><strong>Functional Benefits:</strong> Optimized daylight exposure with more facade area per unit,
+                    better
+                    ventilation from multiple facade orientations, spatial efficiency fitting more units in same area,
+                    circulation flexibility with no dead ends, and layout that promotes socialization.</p>
+                <p><strong>Environmental Benefits:</strong> Maximum outer facade area for daylighting, better natural
+                    ventilation
+                    from multiple angles, reduced mechanical cooling needs, and integration of community gardens between
+                    units.</p>
             </div>
 
             <div class="modal-section">
@@ -4402,192 +3703,101 @@
                     <li>Roof components: Weatherproof covering</li>
                     <li>Joineries: Connectors, fasteners, hardware</li>
                 </ul>
-                <p><strong>Materials:</strong> Paper, wood, straw (sustainable, affordable). Fabric walls for flexibility,
-                   natural insulation (straw, cardboard), residents can customize with local materials.</p>
+                <p><strong>Materials:</strong> Paper, wood, straw (sustainable, affordable). Fabric walls for
+                    flexibility,
+                    natural insulation (straw, cardboard), residents can customize with local materials.</p>
             </div>
 
             <div class="modal-section">
                 <h3>Assembly Process</h3>
                 <p><strong>Step 1 — Interlocking:</strong> Frame members slot together using joinery system requiring
-                   no specialized tools. Residents can self-assemble with basic instruction.</p>
-                <p><strong>Step 2 — Finishing:</strong> Structure + covering material put over frame. Residents customize
-                   screens/walls. Personalization creates sense of home.</p>
+                    no specialized tools. Residents can self-assemble with basic instruction.</p>
+                <p><strong>Step 2 — Finishing:</strong> Structure + covering material put over frame. Residents
+                    customize
+                    screens/walls. Personalization creates sense of home.</p>
                 <p><strong>Step 3 — Combining:</strong> Units combine in various honeycomb geometries with infinite
-                   arrangement possibilities. Shared walls reduce material needs, community develops organically.</p>
+                    arrangement possibilities. Shared walls reduce material needs, community develops organically.</p>
             </div>
 
             <div class="highlight-box">
                 <h4>Scalability & Flexibility</h4>
-                <p><strong>Individual Family (1 Unit):</strong> Single hexagonal module, all sides open to exterior, maximum ventilation/daylight.</p>
-                <p><strong>Small Community (5-10 Units):</strong> Honeycomb cluster with shared central courtyard, community garden spaces between units.</p>
-                <p><strong>Dense Community (50+ Units):</strong> Multi-story hexagonal towers with vertical stacking, shared circulation, roof gardens, integrated community spaces.</p>
+                <p><strong>Individual Family (1 Unit):</strong> Single hexagonal module, all sides open to exterior,
+                    maximum ventilation/daylight.</p>
+                <p><strong>Small Community (5-10 Units):</strong> Honeycomb cluster with shared central courtyard,
+                    community garden spaces between units.</p>
+                <p><strong>Dense Community (50+ Units):</strong> Multi-story hexagonal towers with vertical stacking,
+                    shared circulation, roof gardens, integrated community spaces.</p>
             </div>
 
             <div class="modal-section">
                 <h3>Urban Integration</h3>
-                <p><strong>High-Density Cities (Mumbai):</strong> Vertical towers in gaps between buildings, near parking,
-                   in unused lots, on underutilized rooftops of existing buildings.</p>
+                <p><strong>High-Density Cities (Mumbai):</strong> Vertical towers in gaps between buildings, near
+                    parking,
+                    in unused lots, on underutilized rooftops of existing buildings.</p>
                 <p><strong>Semi-Urban Areas:</strong> Horizontal clusters with community spaces.</p>
                 <p><strong>Rural Areas:</strong> Scattered individual units near work sites.</p>
-                <p><strong>Tower Configuration:</strong> Ground level (community kitchen, storage), mid-levels (residential units),
-                   roof (garden, gathering space, water collection).</p>
+                <p><strong>Tower Configuration:</strong> Ground level (community kitchen, storage), mid-levels
+                    (residential units),
+                    roof (garden, gathering space, water collection).</p>
             </div>
 
             <div class="modal-section">
                 <h3>Community Spaces Integration</h3>
-                <p>Between units: community gardens, children's play areas, shared cooking facilities, learning/skill-sharing spaces, storage.</p>
+                <p>Between units: community gardens, children's play areas, shared cooking facilities,
+                    learning/skill-sharing spaces, storage.</p>
                 <p><strong>"Tower as Second Place":</strong> Learning opportunities, skill development workshops,
-                   social support network, mental health through community connection.</p>
+                    social support network, mental health through community connection.</p>
             </div>
 
             <div class="modal-section">
                 <h3>Psychological Design Considerations</h3>
                 <p><strong>Identity in Crisis:</strong> Customization opportunity through personalized fabric/screens,
-                   traditional cultural motif integration, sense of ownership from self-building, community formation through shared construction.</p>
-                <p><strong>Comfort in Confinement:</strong> Hexagon reduces claustrophobia vs. rectangle, multiple facade angles
-                   provide varied views, natural ventilation ensures better air quality, community visibility reduces isolation.</p>
+                    traditional cultural motif integration, sense of ownership from self-building, community formation
+                    through shared construction.</p>
+                <p><strong>Comfort in Confinement:</strong> Hexagon reduces claustrophobia vs. rectangle, multiple
+                    facade angles
+                    provide varied views, natural ventilation ensures better air quality, community visibility reduces
+                    isolation.</p>
             </div>
 
             <div class="highlight-box">
                 <h4>Sustainability</h4>
-                <p><strong>Materials:</strong> Paper, wood, straw — renewable, biodegradable, minimal carbon footprint, locally sourceable, affordable.</p>
-                <p><strong>Construction:</strong> No heavy machinery, minimal skilled labor, self-assembly by residents, temporary/reversible foundations.</p>
-                <p><strong>Operation:</strong> Natural ventilation (no mechanical cooling), daylighting, rainwater collection, community gardens for food security.</p>
-                <p><strong>End-of-Life:</strong> Fully demountable, components reusable, biodegradable materials, zero waste disassembly.</p>
+                <p><strong>Materials:</strong> Paper, wood, straw — renewable, biodegradable, minimal carbon footprint,
+                    locally sourceable, affordable.</p>
+                <p><strong>Construction:</strong> No heavy machinery, minimal skilled labor, self-assembly by residents,
+                    temporary/reversible foundations.</p>
+                <p><strong>Operation:</strong> Natural ventilation (no mechanical cooling), daylighting, rainwater
+                    collection, community gardens for food security.</p>
+                <p><strong>End-of-Life:</strong> Fully demountable, components reusable, biodegradable materials, zero
+                    waste disassembly.</p>
             </div>
 
             <div class="modal-section">
                 <h3>Logistics & Implementation</h3>
-                <p><strong>Transport:</strong> Flat-pack design, all components fit in conventional truck, lightweight (manual handling), many units per truck.</p>
-                <p><strong>Assembly:</strong> Simple tools (hammer, screwdriver), pictorial instruction manual, 2-4 people can assemble 1 unit in 4-6 hours.</p>
-                <p><strong>Distribution:</strong> Government/NGO procurement, distribution through relief networks, site selection by local authorities, residents self-assemble with supervision.</p>
+                <p><strong>Transport:</strong> Flat-pack design, all components fit in conventional truck, lightweight
+                    (manual handling), many units per truck.</p>
+                <p><strong>Assembly:</strong> Simple tools (hammer, screwdriver), pictorial instruction manual, 2-4
+                    people can assemble 1 unit in 4-6 hours.</p>
+                <p><strong>Distribution:</strong> Government/NGO procurement, distribution through relief networks, site
+                    selection by local authorities, residents self-assemble with supervision.</p>
             </div>
 
             <div class="highlight-box">
                 <h4>Quantitative Impact</h4>
-                <p>Each unit: ~12-15 sqm living space | 1 truck: ~20-30 flat-pack units | 1 tower (100 units): ~100 families housed | Assembly: 1 community (10 units) = 2-3 days with 10 people</p>
+                <p>Each unit: ~12-15 sqm living space | 1 truck: ~20-30 flat-pack units | 1 tower (100 units): ~100
+                    families housed | Assembly: 1 community (10 units) = 2-3 days with 10 people</p>
             </div>
 
             <div class="modal-section">
                 <h3>Tools & Technologies</h3>
-                <p><strong>Prefabricated Timber Systems, Hexagonal Geometry, Modular Construction, Sustainable Materials,
-                   Flat-Pack Design, Community-Driven Assembly, Pandemic Response Architecture</strong></p>
+                <p><strong>Prefabricated Timber Systems, Hexagonal Geometry, Modular Construction, Sustainable
+                        Materials,
+                        Flat-Pack Design, Community-Driven Assembly, Pandemic Response Architecture</strong></p>
             </div>
         </div>
     </div>
 
-    <script>
-        // Fun fact functionality
-        function showFunFact(letter, fact) {
-            const overlay = document.getElementById('funFactOverlay');
-            const card = document.getElementById('funFactCard');
-            const letterEl = document.getElementById('funFactLetter');
-            const textEl = document.getElementById('funFactText');
-
-            letterEl.textContent = letter;
-            textEl.textContent = fact;
-
-            overlay.classList.add('active');
-            card.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeFunFact() {
-            const overlay = document.getElementById('funFactOverlay');
-            const card = document.getElementById('funFactCard');
-
-            overlay.classList.remove('active');
-            card.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Add click listeners to name letters
-        document.querySelectorAll('.hero h1 span').forEach(span => {
-            const fact = span.getAttribute('data-fact');
-            if (fact) {
-                span.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const letter = span.textContent.trim();
-                    if (letter) {
-                        showFunFact(letter, fact);
-                    }
-                });
-            }
-        });
-        function switchTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            document.getElementById(tabName + '-content').classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        function sortProjects(value) {
-            const [sortBy, direction] = value.split('-');
-
-            document.querySelectorAll('.projects-grid').forEach(grid => {
-                const cards = Array.from(grid.querySelectorAll('.project-card'));
-                if (cards.length === 0) return;
-
-                cards.sort((a, b) => {
-                    let valA, valB;
-
-                    if (sortBy === 'number') {
-                        valA = parseInt(a.querySelector('.project-number').textContent, 10) || 0;
-                        valB = parseInt(b.querySelector('.project-number').textContent, 10) || 0;
-                    } else if (sortBy === 'year') {
-                        const yearA = a.querySelector('.project-year').textContent.trim();
-                        const yearB = b.querySelector('.project-year').textContent.trim();
-                        valA = yearA === 'Ongoing' ? 9999 : parseInt(yearA, 10);
-                        valB = yearB === 'Ongoing' ? 9999 : parseInt(yearB, 10);
-                    }
-
-                    return direction === 'asc' ? valA - valB : valB - valA;
-                });
-
-                cards.forEach(card => grid.appendChild(card));
-            });
-        }
-
-        function openModal(project) {
-            const modal = document.getElementById(project + 'Modal');
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(project) {
-            const modal = document.getElementById(project + 'Modal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
