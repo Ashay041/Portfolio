@@ -95,6 +95,10 @@ document.querySelectorAll('.modal').forEach(modal => {
             document.body.style.overflow = 'auto';
         }
     });
+    modal.addEventListener('scroll', () => {
+        const btn = modal.querySelector('.modal-close');
+        if (btn) btn.style.transform = 'rotate(' + modal.scrollTop + 'deg)';
+    });
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

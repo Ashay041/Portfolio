@@ -556,16 +556,23 @@ footer {
 }
 
 .modal-close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+    position: sticky;
+    top: 1rem;
+    float: right;
+    z-index: 10;
     font-size: 24px;
     cursor: pointer;
-    color: var(--secondary);
-    background: none;
+    color: red;
+    background: var(--card-bg);
     border: none;
     font-weight: 200;
     transition: color 0.2s;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-close:hover {
