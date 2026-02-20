@@ -129,11 +129,10 @@
     <div class="category-tabs" id="projects">
         <div class="tabs-container">
             <button class="tab-btn active" onclick="switchTab('all')">All Projects</button>
-            <button class="tab-btn" onclick="switchTab('computational')">Computational Design</button>
-            <button class="tab-btn" onclick="switchTab('fullstack')">Web Development</button>
-            <button class="tab-btn" onclick="switchTab('performance')">Building Performance</button>
-            <button class="tab-btn" onclick="switchTab('sustainable')">Sustainable Design</button>
-            <button class="tab-btn" onclick="switchTab('gamedev')">Game Development</button>
+            <button class="tab-btn" onclick="switchTab('daylight')">Daylight + Lighting</button>
+            <button class="tab-btn" onclick="switchTab('energy')">Energy + HVAC + Carbon</button>
+            <button class="tab-btn" onclick="switchTab('data')">Data-Driven Design</button>
+            <button class="tab-btn" onclick="switchTab('programming')">Programming</button>
             <button class="tab-btn" onclick="switchTab('architecture')">Architectural Design</button>
         </div>
     </div>
@@ -154,87 +153,10 @@
                 <h2 class="section-title">All Work</h2>
 
                 <div class="projects-grid">
-                    <!-- Project 1: Museum of Event 1971 -->
-                    <div class="project-card" onclick="openModal('museum1971')">
-                        <div class="project-header">
-                            <span class="project-number">01</span>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <img src="Images/1971_out.jpg" alt="Museum of Event 1971" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">Museum of Event 1971</h3>
-                        <p class="project-meta">Bangladesh Liberation War Memorial · Thesis Project</p>
-                        <p class="project-description">
-                            Phenomenological architecture translating the 1971 Bangladesh Liberation War into
-                            a 1.2 km experiential journey through 12 emotional zones. Best Thesis 2023.
-                        </p>
-
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">1.2km</div>
-                                <div class="stat-label">Journey</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">12</div>
-                                <div class="stat-label">Emotional Zones</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">80%</div>
-                                <div class="stat-label">Landscape</div>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Phenomenology</span>
-                            <span class="tag">Memorial</span>
-                            <span class="tag">Daylighting</span>
-                            <span class="tag">Serial Vision</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Tesseract -->
-                    <div class="project-card" onclick="openModal('tesseract')">
-                        <div class="project-header">
-                            <span class="project-number">02</span>
-                            <span class="project-year">2022</span>
-                        </div>
-                        <img src="Images/nexusout.jpg" alt="Tesseract Mixed-Use Development" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">Tesseract</h3>
-                        <p class="project-meta">Mixed-Use Development · Downtown Kolkata · Studio Project</p>
-                        <p class="project-description">
-                            Climate-responsive high-density mixed-use development with 80 residential units,
-                            retail, and coworking. Porous form achieves Venturi-effect natural ventilation
-                            and community-building through 15+ activity nodes. Top 5 in External Jury.
-                        </p>
-
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">80</div>
-                                <div class="stat-label">Apartments</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">12+</div>
-                                <div class="stat-label">Floors</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">100%</div>
-                                <div class="stat-label">Cross-Vent</div>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Mixed-Use</span>
-                            <span class="tag">Climate-Responsive</span>
-                            <span class="tag">Community Design</span>
-                            <span class="tag">Venturi Effect</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Environmental Justice Analysis -->
+                    <!-- Project 01: Environmental Justice Analysis -->
                     <div class="project-card" onclick="openModal('gis')">
                         <div class="project-header">
-                            <span class="project-number">03</span>
+                            <span class="project-number">01</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/GISOut.jpg" alt="Environmental Justice Analysis" class="project-image">
@@ -267,10 +189,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 4: Adaptive Reuse Thesis -->
+                    <!-- Project 02: Adaptive Reuse Thesis -->
                     <div class="project-card" onclick="openModal('thesis')">
                         <div class="project-header">
-                            <span class="project-number">04</span>
+                            <span class="project-number">02</span>
                             <span class="project-year">Ongoing</span>
                         </div>
                         <img src="Images/ThesisOut.jpg" alt="Adaptive Reuse Thesis" class="project-image">
@@ -306,10 +228,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 5: Small Office HVAC Analysis -->
+                    <!-- Project 03: Small Office HVAC Analysis -->
                     <div class="project-card" onclick="openModal('hvac')">
                         <div class="project-header">
-                            <span class="project-number">05</span>
+                            <span class="project-number">03</span>
                             <span class="project-year">2024</span>
                         </div>
                         <img src="Images/HVACOut.jpg" alt="Small Office HVAC Analysis" class="project-image">
@@ -343,10 +265,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 6: Farmhouse - VR Daylighting -->
+                    <!-- Project 04: Farmhouse - VR Daylighting -->
                     <div class="project-card" onclick="openModal('shading')">
                         <div class="project-header">
-                            <span class="project-number">06</span>
+                            <span class="project-number">04</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/DaylightOut.jpg" alt="Farmhouse - VR Daylighting" class="project-image">
@@ -379,10 +301,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 7: Building Performance Modeling -->
+                    <!-- Project 05: Building Performance Modeling -->
                     <div class="project-card" onclick="openModal('bpm')">
                         <div class="project-header">
-                            <span class="project-number">07</span>
+                            <span class="project-number">05</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="" alt="Building Performance Modeling" class="project-image"
@@ -418,10 +340,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 8: Environmental Performance Simulation -->
+                    <!-- Project 06: Environmental Performance Simulation -->
                     <div class="project-card" onclick="openModal('eps')">
                         <div class="project-header">
-                            <span class="project-number">08</span>
+                            <span class="project-number">06</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/EPSout.jpg" alt="Environmental Performance Simulation" class="project-image"
@@ -457,87 +379,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 9: Social Nexus -->
-                    <div class="project-card" onclick="openModal('socialnexus')">
-                        <div class="project-header">
-                            <span class="project-number">09</span>
-                            <span class="project-year">2022</span>
-                        </div>
-                        <img src="Images/adaptiveout.jpg" alt="Social Nexus - Tianducheng" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">Social Nexus</h3>
-                        <p class="project-meta">Tianducheng Ghost City Activation · International Competition Winner</p>
-                        <p class="project-description">
-                            Adaptive urban design transforming a Chinese ghost town (Parisian replica) through
-                            grid-based community activation. 16 activity typologies foster cultural identity
-                            through interaction, collaboration, and creation. 54-hour competition winner.
-                        </p>
-
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">Winner</div>
-                                <div class="stat-label">International</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">16</div>
-                                <div class="stat-label">Activity Types</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">54hr</div>
-                                <div class="stat-label">Competition</div>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Urban Design</span>
-                            <span class="tag">Community</span>
-                            <span class="tag">Adaptive Reuse</span>
-                            <span class="tag">Competition Winner</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 10: Fractal -->
-                    <div class="project-card" onclick="openModal('fractal')">
-                        <div class="project-header">
-                            <span class="project-number">10</span>
-                            <span class="project-year">2020</span>
-                        </div>
-                        <img src="Images/Fractalout.jpg" alt="Fractal - Modular Housing" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">Fractal</h3>
-                        <p class="project-meta">Modular Housing for Migrant Workers · IGBC Shortlisted</p>
-                        <p class="project-description">
-                            Flexible prefabricated hexagonal housing system for pandemic-displaced migrant workers.
-                            Scalable from 1 unit to 100+ units using sustainable materials. Self-assembly in 4-6 hours.
-                        </p>
-
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">IGBC</div>
-                                <div class="stat-label">Shortlisted</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">4-6 hrs</div>
-                                <div class="stat-label">Assembly</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">100+</div>
-                                <div class="stat-label">Scalable Units</div>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Prefabrication</span>
-                            <span class="tag">Pandemic Response</span>
-                            <span class="tag">Sustainable</span>
-                            <span class="tag">Hexagonal</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 11: Urban Fire Risk Prediction -->
+                    <!-- Project 07: Urban Fire Risk Prediction -->
                     <div class="project-card" onclick="openModal('fire')">
                         <div class="project-header">
-                            <span class="project-number">11</span>
+                            <span class="project-number">07</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/HPAIROut.jpg" alt="Urban Fire Risk Prediction" class="project-image">
@@ -572,10 +417,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 12: Carb-Off -->
+                    <!-- Project 08: Carb-Off -->
                     <div class="project-card" onclick="openModal('carboff')">
                         <div class="project-header">
-                            <span class="project-number">12</span>
+                            <span class="project-number">08</span>
                             <span class="project-year">2026</span>
                         </div>
                         <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
@@ -610,10 +455,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 13: ASHRAE Library Design -->
+                    <!-- Project 09: ASHRAE Library Design -->
                     <div class="project-card" onclick="openModal('ashrae')">
                         <div class="project-header">
-                            <span class="project-number">13</span>
+                            <span class="project-number">09</span>
                             <span class="project-year">2024</span>
                         </div>
                         <img src="Images/ASHRAEOut.jpg" alt="ASHRAE Library Design" class="project-image">
@@ -647,10 +492,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 14: Tartan Tuesday Management System -->
+                    <!-- Project 10: Tartan Tuesday Management System -->
                     <div class="project-card" onclick="openModal('tartan')">
                         <div class="project-header">
-                            <span class="project-number">14</span>
+                            <span class="project-number">10</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/TartanOut.jpg" alt="Tartan Tuesday Management System" class="project-image">
@@ -686,48 +531,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 15: Attendance Matrix Tool -->
-                    <div class="project-card" onclick="openModal('attendance')">
-                        <div class="project-header">
-                            <span class="project-number">15</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/AttendanceOut.jpg" alt="Attendance Matrix Tool" class="project-image">
-                        <h3 class="project-title">Attendance Matrix Tool</h3>
-                        <p class="project-meta">Carnegie Mellon University · Web-Based Automation</p>
-                        <p class="project-description">
-                            Built web-based tool to automate attendance tracking for 66-student class across 21
-                            sessions.
-                            Processes Excel files, calculates percentages, and generates formatted reports.
-                        </p>
-
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">66</div>
-                                <div class="stat-label">Students</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">21</div>
-                                <div class="stat-label">Sessions</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Auto</div>
-                                <div class="stat-label">Processing</div>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Excel Processing</span>
-                            <span class="tag">Web App</span>
-                            <span class="tag">Automation</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 16: Chicago Drug Data Dashboard -->
+                    <!-- Project 11: Chicago Drug Data Dashboard -->
                     <div class="project-card" onclick="openModal('chicago')">
                         <div class="project-header">
-                            <span class="project-number">16</span>
+                            <span class="project-number">11</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/DrugDataOut.jpg" alt="Chicago Drug Data Dashboard" class="project-image">
@@ -761,86 +568,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 17: La Gracieux -->
-                    <div class="project-card" onclick="openModal('lagracieux')">
-                        <div class="project-header">
-                            <span class="project-number">17</span>
-                            <span class="project-year">2022</span>
-                        </div>
-                        <img src="Images/lagracieux_out.jpg" alt="La Gracieux - Cannes Pavilion" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">La Gracieux</h3>
-                        <p class="project-meta">Cannes Film Festival Pavilion · International Top 30</p>
-                        <p class="project-description">
-                            Temporary festival pavilion translating filmmaking narrative into architecture
-                            through Character (skeletal spine), Conflict (level changes), and Desire
-                            (elevated cinema seating). Beachfront pop-up cinema on Plage Long Beach.
-                        </p>
-
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">Top 30</div>
-                                <div class="stat-label">International</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Cannes</div>
-                                <div class="stat-label">France</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Temp</div>
-                                <div class="stat-label">Structure</div>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Temporary Architecture</span>
-                            <span class="tag">Narrative Design</span>
-                            <span class="tag">Competition</span>
-                            <span class="tag">Festival</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 18: Dog Jigsaw -->
-                    <div class="project-card" onclick="openModal('dogjigsaw')">
-                        <div class="project-header">
-                            <span class="project-number">18</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                        <img src="Images/Dogout.jpg" alt="Dog Jigsaw App" class="project-image">
-                        <h3 class="project-title">Dog Jigsaw</h3>
-                        <p class="project-meta">Flask Web App · Claude Opus 4.6 Template</p>
-                        <p class="project-description">
-                            Browse random dog photos, save favorites, and solve 3×3 jigsaw puzzles
-                            made from them. Score tracking rewards fewer moves with more points.
-                        </p>
-
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">Flask</div>
-                                <div class="stat-label">Backend</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">API</div>
-                                <div class="stat-label">Dog CEO</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">3×3</div>
-                                <div class="stat-label">Puzzle</div>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">REST API</span>
-                            <span class="tag">Claude Opus 4.6</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 19: SolarSync Shutters -->
+                    <!-- Project 12: SolarSync Shutters -->
                     <div class="project-card" onclick="openModal('solarsync')">
                         <div class="project-header">
-                            <span class="project-number">19</span>
+                            <span class="project-number">12</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="" alt="SolarSync Shutters" class="project-image"
@@ -875,10 +606,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 20: Seasons of Nature -->
+                    <!-- Project 13: Seasons of Nature -->
                     <div class="project-card" onclick="openModal('seasons')">
                         <div class="project-header">
-                            <span class="project-number">20</span>
+                            <span class="project-number">13</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="" alt="The Seasons of Nature" class="project-image"
@@ -913,53 +644,50 @@
                         </div>
                     </div>
 
-                    <!-- Project 21: Crossy Road -->
-                    <div class="project-card" onclick="openModal('crossy')">
+                    <!-- Project 14: Proofline -->
+                    <div class="project-card" onclick="openModal('proofline')">
                         <div class="project-header">
-                            <span class="project-number">21</span>
-                            <span class="project-year">2026</span>
+                            <span class="project-number">14</span>
+                            <span class="project-year">2025</span>
                         </div>
-                        <img src="Images/Crossy out.jpg" alt="Crossy Road Game" class="project-image">
-                        <h3 class="project-title">Crossy Road</h3>
-                        <p class="project-meta">Python Arcade Game · CMU 15-113</p>
+                        <img src="" alt="Proofline" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Proofline</h3>
+                        <p class="project-meta">Pre-Startup · CMU AI Venture Studio · Beta</p>
                         <p class="project-description">
-                            2D arcade game clone with procedural terrain generation,
-                            object-oriented design, and dynamic difficulty scaling.
-                            <a href="https://github.com/ananyashrimali03/Crossy-Road-15113-CMU" target="_blank"
-                                onclick="event.stopPropagation()"
-                                style="color: var(--primary); text-decoration: underline; cursor: pointer;">
-                                View Game Code →
-                            </a>
+                            Mobile-first field execution platform for multifamily property management.
+                            Founding full-stack developer and sustainability standards engineer.
                         </p>
 
                         <div class="project-stats">
                             <div class="stat">
-                                <div class="stat-value">OOP</div>
-                                <div class="stat-label">Architecture</div>
+                                <div class="stat-value">PWA</div>
+                                <div class="stat-label">Mobile-First</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">Python</div>
-                                <div class="stat-label">Language</div>
+                                <div class="stat-value">Offline</div>
+                                <div class="stat-label">Capable</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">Game</div>
-                                <div class="stat-label">Logic</div>
+                                <div class="stat-value">Fitwel</div>
+                                <div class="stat-label">Standards</div>
                             </div>
                         </div>
 
                         <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Game Development</span>
-                            <span class="tag">CMU Graphics</span>
-                            <span class="tag">OOP</span>
+                            <span class="tag">Full-Stack</span>
+                            <span class="tag">PWA</span>
+                            <span class="tag">Startup</span>
+                            <span class="tag">Sustainability</span>
                         </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Computational Design Tab -->
-            <div id="computational-content" class="tab-content">
-                <h2 class="section-title">Computational Design</h2>
+            <!-- Daylight + Lighting Tab -->
+            <div id="daylight-content" class="tab-content">
+                <h2 class="section-title">Daylight + Lighting</h2>
 
                 <div class="projects-grid">
                     <div class="project-card" onclick="openModal('thesis')">
@@ -969,502 +697,10 @@
                         </div>
                         <img src="Images/ThesisOut.jpg" alt="Adaptive Reuse Thesis" class="project-image">
                         <h3 class="project-title">Adaptive Reuse Thesis</h3>
-                        <p class="project-meta">Pittsburgh, PA · Office-to-Residential · Computational Research</p>
+                        <p class="project-meta">Daylighting Analysis · Office-to-Residential</p>
                         <p class="project-description">
-                            Parametric analysis using RhinoPython + Grasshopper + ML for daylighting optimization
-                            of 1965-1985 office buildings.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">100+</div>
-                                <div class="stat-label">Iterations</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">ML</div>
-                                <div class="stat-label">Prediction</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">sDA/ASE</div>
-                                <div class="stat-label">Metrics</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">RhinoPython</span>
-                            <span class="tag">Grasshopper</span>
-                            <span class="tag">Machine Learning</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('tartan')">
-                        <div class="project-header">
-                            <span class="project-number">02</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/TartanOut.jpg" alt="Tartan Tuesday" class="project-image">
-                        <h3 class="project-title">Tartan Tuesday Management System</h3>
-                        <p class="project-meta">Carnegie Mellon University</p>
-                        <p class="project-description">
-                            React + Google Apps Script web application for 200+ weekly participants with real-time cloud
-                            sync.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">200+</div>
-                                <div class="stat-label">Users</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">React</div>
-                                <div class="stat-label">Frontend</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Cloud</div>
-                                <div class="stat-label">Backend</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">API Integration</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('fire')">
-                        <div class="project-header">
-                            <span class="project-number">03</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/HPAIROut.jpg" alt="Fire Risk Prediction" class="project-image">
-                        <h3 class="project-title">Urban Fire Risk Prediction</h3>
-                        <p class="project-meta">Harvard HPAIR Winner</p>
-                        <p class="project-description">
-                            ML model for fire-spread prediction using geospatial data.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">Winner</div>
-                                <div class="stat-label">HPAIR</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">ML</div>
-                                <div class="stat-label">Prediction</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">GIS</div>
-                                <div class="stat-label">Analysis</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Python</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('chicago')">
-                        <div class="project-header">
-                            <span class="project-number">04</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/DrugDataOut.jpg" alt="Chicago Dashboard" class="project-image">
-                        <h3 class="project-title">Chicago Drug Data Dashboard</h3>
-                        <p class="project-meta">Interactive Data Science</p>
-                        <p class="project-description">
-                            Python dashboard with interactive geospatial visualizations (100K+ data points).
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">100K+</div>
-                                <div class="stat-label">Data Points</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Python</div>
-                                <div class="stat-label">Stack</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">GeoViz</div>
-                                <div class="stat-label">Interactive</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Streamlit</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('attendance')">
-                        <div class="project-header">
-                            <span class="project-number">05</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/AttendanceOut.jpg" alt="Attendance Tool" class="project-image">
-                        <h3 class="project-title">Attendance Matrix Tool</h3>
-                        <p class="project-meta">Web-Based Automation</p>
-                        <p class="project-description">
-                            Automated attendance tracking for 66 students across 21 sessions.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">66</div>
-                                <div class="stat-label">Students</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">21</div>
-                                <div class="stat-label">Sessions</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Auto</div>
-                                <div class="stat-label">Processing</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Automation</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('gis')">
-                        <div class="project-header">
-                            <span class="project-number">06</span>
-                            <span class="project-year">Ongoing</span>
-                        </div>
-                        <img src="Images/GISOut.jpg" alt="GIS Analysis" class="project-image">
-                        <h3 class="project-title">Environmental Justice Analysis</h3>
-                        <p class="project-meta">Louisiana Cancer Alley</p>
-                        <p class="project-description">
-                            GIS spatial analysis with kernel density and demographic correlations.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">GIS</div>
-                                <div class="stat-label">Analysis</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Python</div>
-                                <div class="stat-label">Scripting</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Model</div>
-                                <div class="stat-label">Builder</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">GIS</span>
-                            <span class="tag">Python</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('solarsync')">
-                        <div class="project-header">
-                            <span class="project-number">07</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="" alt="SolarSync Shutters" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">SolarSync Shutters</h3>
-                        <p class="project-meta">Arduino Servo Control · IntelEnv 2025</p>
-                        <p class="project-description">
-                            Parametric window shutters with 16 Arduino-controlled servos responding to daylight.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">16</div>
-                                <div class="stat-label">Servos</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Arduino</div>
-                                <div class="stat-label">Mega</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Dynamic</div>
-                                <div class="stat-label">Daylight</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Arduino</span>
-                            <span class="tag">Parametric Design</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('seasons')">
-                        <div class="project-header">
-                            <span class="project-number">08</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="" alt="The Seasons of Nature" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">The Seasons of Nature</h3>
-                        <p class="project-meta">LED Strip Animation · Pausch Bridge Lighting Programming</p>
-                        <p class="project-description">
-                            Python-generated 228×8 LED animations simulating seasonal cycles with generative art.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">228×8</div>
-                                <div class="stat-label">LED Array</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">4</div>
-                                <div class="stat-label">Seasons</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Python</div>
-                                <div class="stat-label">Animation</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Generative Art</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Web Development Tab -->
-            <div id="fullstack-content" class="tab-content">
-                <h2 class="section-title">Web Development</h2>
-
-                <div class="projects-grid">
-                    <div class="project-card" onclick="openModal('tartan')">
-                        <div class="project-header">
-                            <span class="project-number">01</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/TartanOut.jpg" alt="Tartan Tuesday" class="project-image">
-                        <h3 class="project-title">Tartan Tuesday Management System</h3>
-                        <p class="project-meta">Full-Stack Application</p>
-                        <p class="project-description">
-                            React frontend with Google Apps Script backend serving 200+ weekly participants.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">200+</div>
-                                <div class="stat-label">Users</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">React</div>
-                                <div class="stat-label">Frontend</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Cloud</div>
-                                <div class="stat-label">Backend</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Google Apps Script</span>
-                            <span class="tag">API Integration</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('attendance')">
-                        <div class="project-header">
-                            <span class="project-number">02</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/AttendanceOut.jpg" alt="Attendance Tool" class="project-image">
-                        <h3 class="project-title">Attendance Matrix Tool</h3>
-                        <p class="project-meta">Web Automation</p>
-                        <p class="project-description">
-                            Client-side Excel processing tool with dynamic report generation.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">66</div>
-                                <div class="stat-label">Students</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">21</div>
-                                <div class="stat-label">Sessions</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">5hrs</div>
-                                <div class="stat-label">Saved Weekly</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">SheetJS</span>
-                            <span class="tag">GitHub Pages</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('chicago')">
-                        <div class="project-header">
-                            <span class="project-number">03</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/DrugDataOut.jpg" alt="Chicago Dashboard" class="project-image">
-                        <h3 class="project-title">Chicago Drug Data Dashboard</h3>
-                        <p class="project-meta">Python Web Application</p>
-                        <p class="project-description">
-                            Streamlit-based dashboard with geospatial visualizations and real-time filtering.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">100K+</div>
-                                <div class="stat-label">Data Points</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Streamlit</div>
-                                <div class="stat-label">Framework</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Interactive</div>
-                                <div class="stat-label">Real-time</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Streamlit</span>
-                            <span class="tag">Pandas</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('dogjigsaw')">
-                        <div class="project-header">
-                            <span class="project-number">04</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                        <img src="Images/Dogout.jpg" alt="Dog Jigsaw App" class="project-image">
-                        <h3 class="project-title">Dog Jigsaw</h3>
-                        <p class="project-meta">Flask Web App · Claude Opus 4.6</p>
-                        <p class="project-description">
-                            Browse random dog photos, save favorites, and solve 3×3 jigsaw puzzles.
-                            Score tracking rewards fewer moves with more points.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">Flask</div>
-                                <div class="stat-label">Backend</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">API</div>
-                                <div class="stat-label">Dog CEO</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">3×3</div>
-                                <div class="stat-label">Puzzle</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">REST API</span>
-                            <span class="tag">Claude Opus 4.6</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('carboff')">
-                        <div class="project-header">
-                            <span class="project-number">05</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                        <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
-                        <h3 class="project-title">Carb-Off</h3>
-                        <p class="project-meta">AI Climate Coach · 15113</p>
-                        <p class="project-description">
-                            Conversational AI carbon tracker with real-time collective impact counter.
-                            FastAPI backend with React frontend powered by Claude Sonnet 4.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">AI</div>
-                                <div class="stat-label">Claude Sonnet 4</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">FastAPI</div>
-                                <div class="stat-label">Backend</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">React</div>
-                                <div class="stat-label">Frontend</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Anthropic AI</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Building Performance Tab -->
-            <div id="performance-content" class="tab-content">
-                <h2 class="section-title">Building Performance</h2>
-
-                <div class="projects-grid">
-                    <div class="project-card" onclick="openModal('ashrae')">
-                        <div class="project-header">
-                            <span class="project-number">01</span>
-                            <span class="project-year">2024</span>
-                        </div>
-                        <img src="Images/ASHRAEOut.jpg" alt="ASHRAE Library" class="project-image">
-                        <h3 class="project-title">ASHRAE Library Design</h3>
-                        <p class="project-meta">São Paulo, Brazil</p>
-                        <p class="project-description">
-                            VRF-DOAS system design achieving 45% energy reduction.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">45%</div>
-                                <div class="stat-label">Energy Saved</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">157</div>
-                                <div class="stat-label">kWh/m² EUI</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">398k</div>
-                                <div class="stat-label">kWh Solar</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">VRF-DOAS</span>
-                            <span class="tag">Energy Analysis</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('hvac')">
-                        <div class="project-header">
-                            <span class="project-number">02</span>
-                            <span class="project-year">2024</span>
-                        </div>
-                        <img src="Images/HVACOut.jpg" alt="HVAC Analysis" class="project-image">
-                        <h3 class="project-title">Small Office HVAC Analysis</h3>
-                        <p class="project-meta">San Francisco, CA</p>
-                        <p class="project-description">
-                            System comparison achieving 33% energy savings.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">33%</div>
-                                <div class="stat-label">Energy Saved</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">54</div>
-                                <div class="stat-label">kBTU/ft²</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">VRF</div>
-                                <div class="stat-label">Selected</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Load Calculations</span>
-                            <span class="tag">ERV Sizing</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('thesis')">
-                        <div class="project-header">
-                            <span class="project-number">03</span>
-                            <span class="project-year">Ongoing</span>
-                        </div>
-                        <img src="Images/ThesisOut.jpg" alt="Thesis Daylighting" class="project-image">
-                        <h3 class="project-title">Adaptive Reuse Thesis</h3>
-                        <p class="project-meta">Daylighting Analysis</p>
-                        <p class="project-description">
-                            Performance analysis of office-to-residential conversions.
+                            ML-driven daylighting optimization of 1965-1985 office buildings using sDA/ASE metrics
+                            and parametric iteration.
                         </p>
                         <div class="project-stats">
                             <div class="stat">
@@ -1483,12 +719,46 @@
                         <div class="project-tags">
                             <span class="tag">Daylighting</span>
                             <span class="tag">ClimateStudio</span>
+                            <span class="tag">Machine Learning</span>
                         </div>
                     </div>
 
                     <div class="project-card" onclick="openModal('shading')">
                         <div class="project-header">
-                            <span class="project-number">04</span>
+                            <span class="project-number">02</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="Images/DaylightOut.jpg" alt="Farmhouse - VR Daylighting" class="project-image">
+                        <h3 class="project-title">Farmhouse - VR Daylighting</h3>
+                        <p class="project-meta">Academic Workshop · Parametric Daylighting</p>
+                        <p class="project-description">
+                            Intensive daylighting workshop exploring spatial quality through annual metrics,
+                            glare analysis, and view studies.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">sDA</div>
+                                <div class="stat-label">Metric</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ASE</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">DGP</div>
+                                <div class="stat-label">Glare</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Daylighting</span>
+                            <span class="tag">ClimateStudio</span>
+                            <span class="tag">Glare Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('shading')">
+                        <div class="project-header">
+                            <span class="project-number">03</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/DaylightOut.jpg" alt="Daylight Workshop" class="project-image">
@@ -1517,43 +787,9 @@
                         </div>
                     </div>
 
-                    <div class="project-card" onclick="openModal('bpm')">
-                        <div class="project-header">
-                            <span class="project-number">05</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="" alt="Building Performance Modeling" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">Building Performance Modeling</h3>
-                        <p class="project-meta">Pittsburgh & Miami · Dual-Climate Analysis</p>
-                        <p class="project-description">
-                            37 parametric energy models across two climate zones. OFAT optimization achieving
-                            5.6% and 8.8% EUI reductions.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">37</div>
-                                <div class="stat-label">Models</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">8.8%</div>
-                                <div class="stat-label">Best Reduction</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">eQUEST</div>
-                                <div class="stat-label">Software</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">eQUEST</span>
-                            <span class="tag">Energy Modeling</span>
-                            <span class="tag">ASHRAE</span>
-                        </div>
-                    </div>
-
                     <div class="project-card" onclick="openModal('eps')">
                         <div class="project-header">
-                            <span class="project-number">06</span>
+                            <span class="project-number">04</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/EPSout.jpg" alt="Environmental Performance Simulation" class="project-image"
@@ -1566,12 +802,12 @@
                         </p>
                         <div class="project-stats">
                             <div class="stat">
-                                <div class="stat-value">54.5%</div>
-                                <div class="stat-label">EUI Reduction</div>
-                            </div>
-                            <div class="stat">
                                 <div class="stat-value">57.1%</div>
                                 <div class="stat-label">sDA</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">54.5%</div>
+                                <div class="stat-label">EUI Reduction</div>
                             </div>
                             <div class="stat">
                                 <div class="stat-value">IESVE</div>
@@ -1584,12 +820,76 @@
                             <span class="tag">Daylighting</span>
                         </div>
                     </div>
+
+                    <div class="project-card" onclick="openModal('solarsync')">
+                        <div class="project-header">
+                            <span class="project-number">05</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="SolarSync Shutters" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">SolarSync Shutters</h3>
+                        <p class="project-meta">Arduino Servo Control · IntelEnv 2025</p>
+                        <p class="project-description">
+                            Automated window shutters responding to daylight. Energy efficiency through adaptive control.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">16</div>
+                                <div class="stat-label">Servos</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Arduino</div>
+                                <div class="stat-label">Mega</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Dynamic</div>
+                                <div class="stat-label">Daylight</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Daylight Responsive</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('seasons')">
+                        <div class="project-header">
+                            <span class="project-number">06</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="The Seasons of Nature" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">The Seasons of Nature</h3>
+                        <p class="project-meta">LED Strip Animation · Pausch Bridge Lighting Programming</p>
+                        <p class="project-description">
+                            Python-generated 228x8 LED animations simulating seasonal cycles with generative art.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">228x8</div>
+                                <div class="stat-label">LED Array</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Seasons</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Python</div>
+                                <div class="stat-label">Animation</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Lighting Design</span>
+                            <span class="tag">Generative Art</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Sustainable Design Tab -->
-            <div id="sustainable-content" class="tab-content">
-                <h2 class="section-title">Sustainable Design</h2>
+            <!-- Energy + HVAC + Carbon Tab -->
+            <div id="energy-content" class="tab-content">
+                <h2 class="section-title">Energy + HVAC + Carbon</h2>
 
                 <div class="projects-grid">
                     <div class="project-card" onclick="openModal('ashrae')">
@@ -1655,72 +955,9 @@
                         </div>
                     </div>
 
-                    <div class="project-card" onclick="openModal('thesis')">
-                        <div class="project-header">
-                            <span class="project-number">03</span>
-                            <span class="project-year">Ongoing</span>
-                        </div>
-                        <img src="Images/ThesisOut.jpg" alt="Thesis Daylighting" class="project-image">
-                        <h3 class="project-title">Adaptive Reuse Thesis</h3>
-                        <p class="project-meta">Daylighting Analysis</p>
-                        <p class="project-description">
-                            Performance analysis of office-to-residential conversions with ML-driven daylighting
-                            optimization.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">100+</div>
-                                <div class="stat-label">Iterations</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">sDA</div>
-                                <div class="stat-label">Metric</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">ASE</div>
-                                <div class="stat-label">Analysis</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Daylighting</span>
-                            <span class="tag">ClimateStudio</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('shading')">
-                        <div class="project-header">
-                            <span class="project-number">04</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="Images/DaylightOut.jpg" alt="Daylight Workshop" class="project-image">
-                        <h3 class="project-title">Shaping Daylight Workshop</h3>
-                        <p class="project-meta">Parametric Daylighting</p>
-                        <p class="project-description">
-                            Annual daylight metrics and parametric shading optimization.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">sDA</div>
-                                <div class="stat-label">Metric</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">ASE</div>
-                                <div class="stat-label">Analysis</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">DGP</div>
-                                <div class="stat-label">Glare</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Daylighting</span>
-                            <span class="tag">Glare Analysis</span>
-                        </div>
-                    </div>
-
                     <div class="project-card" onclick="openModal('bpm')">
                         <div class="project-header">
-                            <span class="project-number">05</span>
+                            <span class="project-number">03</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="" alt="Building Performance Modeling" class="project-image"
@@ -1728,7 +965,8 @@
                         <h3 class="project-title">Building Performance Modeling</h3>
                         <p class="project-meta">Pittsburgh & Miami · Dual-Climate Analysis</p>
                         <p class="project-description">
-                            37 parametric energy models across two climate zones with OFAT optimization.
+                            37 parametric energy models across two climate zones. OFAT optimization achieving
+                            5.6% and 8.8% EUI reductions.
                         </p>
                         <div class="project-stats">
                             <div class="stat">
@@ -1747,20 +985,22 @@
                         <div class="project-tags">
                             <span class="tag">eQUEST</span>
                             <span class="tag">Energy Modeling</span>
+                            <span class="tag">ASHRAE</span>
                         </div>
                     </div>
 
                     <div class="project-card" onclick="openModal('eps')">
                         <div class="project-header">
-                            <span class="project-number">06</span>
+                            <span class="project-number">04</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/EPSout.jpg" alt="Environmental Performance Simulation" class="project-image"
                             style="background: var(--light-bg);">
                         <h3 class="project-title">Environmental Performance Simulation</h3>
-                        <p class="project-meta">Climate Studio & IESVE · Daylighting & Energy</p>
+                        <p class="project-meta">Climate Studio & IESVE · Energy Optimization</p>
                         <p class="project-description">
-                            Daylighting analysis + secondary school energy optimization. 54.5% EUI reduction.
+                            Secondary school energy optimization achieving 54.5% EUI reduction
+                            through parametric envelope and HVAC strategies.
                         </p>
                         <div class="project-stats">
                             <div class="stat">
@@ -1768,23 +1008,128 @@
                                 <div class="stat-label">EUI Reduction</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">57.1%</div>
-                                <div class="stat-label">sDA</div>
-                            </div>
-                            <div class="stat">
                                 <div class="stat-value">IESVE</div>
                                 <div class="stat-label">Simulation</div>
                             </div>
+                            <div class="stat">
+                                <div class="stat-value">HVAC</div>
+                                <div class="stat-label">Optimization</div>
+                            </div>
                         </div>
                         <div class="project-tags">
-                            <span class="tag">Climate Studio</span>
                             <span class="tag">IESVE</span>
+                            <span class="tag">Energy Modeling</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('carboff')">
+                        <div class="project-header">
+                            <span class="project-number">05</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
+                        <h3 class="project-title">Carb-Off</h3>
+                        <p class="project-meta">AI Carbon Tracker · 15113</p>
+                        <p class="project-description">
+                            Conversational AI carbon tracker with real-time collective impact counter.
+                            Inspired by Indore's behavior change model.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">AI</div>
+                                <div class="stat-label">Claude Sonnet 4</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Carbon</div>
+                                <div class="stat-label">Tracking</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">React</div>
+                                <div class="stat-label">Frontend</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Carbon Tracking</span>
+                            <span class="tag">Anthropic AI</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Data-Driven Design Tab -->
+            <div id="data-content" class="tab-content">
+                <h2 class="section-title">Data-Driven Design</h2>
+
+                <div class="projects-grid">
+                    <div class="project-card" onclick="openModal('gis')">
+                        <div class="project-header">
+                            <span class="project-number">01</span>
+                            <span class="project-year">Ongoing</span>
+                        </div>
+                        <img src="Images/GISOut.jpg" alt="GIS Analysis" class="project-image">
+                        <h3 class="project-title">Environmental Justice Analysis</h3>
+                        <p class="project-meta">Louisiana Cancer Alley · GIS</p>
+                        <p class="project-description">
+                            GIS spatial analysis with kernel density and demographic correlations.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">GIS</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Python</div>
+                                <div class="stat-label">Scripting</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Model</div>
+                                <div class="stat-label">Builder</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">GIS</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Geospatial</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('thesis')">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
+                            <span class="project-year">Ongoing</span>
+                        </div>
+                        <img src="Images/ThesisOut.jpg" alt="Adaptive Reuse Thesis" class="project-image">
+                        <h3 class="project-title">Adaptive Reuse Thesis</h3>
+                        <p class="project-meta">ML-Driven Optimization · Computational Research</p>
+                        <p class="project-description">
+                            Machine learning prediction models for daylighting performance across 100+
+                            parametric iterations.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">100+</div>
+                                <div class="stat-label">Iterations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ML</div>
+                                <div class="stat-label">Prediction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">sDA/ASE</div>
+                                <div class="stat-label">Metrics</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">RhinoPython</span>
+                            <span class="tag">Data Analysis</span>
                         </div>
                     </div>
 
                     <div class="project-card" onclick="openModal('fire')">
                         <div class="project-header">
-                            <span class="project-number">07</span>
+                            <span class="project-number">03</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/HPAIROut.jpg" alt="Fire Risk Prediction" class="project-image">
@@ -1813,41 +1158,9 @@
                         </div>
                     </div>
 
-                    <div class="project-card" onclick="openModal('carboff')">
-                        <div class="project-header">
-                            <span class="project-number">08</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                        <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
-                        <h3 class="project-title">Carb-Off</h3>
-                        <p class="project-meta">AI Climate Coach · 15113 HW4 2026</p>
-                        <p class="project-description">
-                            Conversational AI carbon tracker with real-time collective impact counter.
-                            Inspired by Indore's behavior change model.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">AI</div>
-                                <div class="stat-label">Claude Sonnet 4</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">FastAPI</div>
-                                <div class="stat-label">Backend</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">React</div>
-                                <div class="stat-label">Frontend</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Anthropic AI</span>
-                            <span class="tag">Carbon Tracking</span>
-                        </div>
-                    </div>
-
                     <div class="project-card" onclick="openModal('chicago')">
                         <div class="project-header">
-                            <span class="project-number">09</span>
+                            <span class="project-number">04</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/DrugDataOut.jpg" alt="Chicago Dashboard" class="project-image">
@@ -1862,8 +1175,8 @@
                                 <div class="stat-label">Data Points</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">Streamlit</div>
-                                <div class="stat-label">Framework</div>
+                                <div class="stat-value">Python</div>
+                                <div class="stat-label">Stack</div>
                             </div>
                             <div class="stat">
                                 <div class="stat-value">GeoViz</div>
@@ -1873,248 +1186,78 @@
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Streamlit</span>
-                            <span class="tag">Pandas</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('tesseract')">
-                        <div class="project-header">
-                            <span class="project-number">10</span>
-                            <span class="project-year">2022</span>
-                        </div>
-                        <img src="Images/nexusout.jpg" alt="Tesseract Mixed-Use Development" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">Tesseract</h3>
-                        <p class="project-meta">Climate-Responsive Mixed-Use · Kolkata</p>
-                        <p class="project-description">
-                            Porous form with Venturi-effect ventilation, green roofs, rainwater harvesting,
-                            and 100% cross-ventilated units. 80 apartments + retail + coworking.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">80</div>
-                                <div class="stat-label">Apartments</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">100%</div>
-                                <div class="stat-label">Cross-Vent</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Passive</div>
-                                <div class="stat-label">Cooling</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Passive Design</span>
-                            <span class="tag">Green Roofs</span>
-                            <span class="tag">Rainwater</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('fractal')">
-                        <div class="project-header">
-                            <span class="project-number">11</span>
-                            <span class="project-year">2020</span>
-                        </div>
-                        <img src="Images/Fractalout.jpg" alt="Fractal - Modular Housing" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">Fractal</h3>
-                        <p class="project-meta">Modular Housing · IGBC Shortlisted</p>
-                        <p class="project-description">
-                            Sustainable prefabricated hexagonal housing using paper, wood, straw. Zero-waste,
-                            biodegradable, natural ventilation, no mechanical cooling needed.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">Zero</div>
-                                <div class="stat-label">Waste</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Natural</div>
-                                <div class="stat-label">Ventilation</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Bio</div>
-                                <div class="stat-label">Degradable</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Sustainable Materials</span>
-                            <span class="tag">Prefabrication</span>
-                            <span class="tag">Zero Waste</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('museum1971')">
-                        <div class="project-header">
-                            <span class="project-number">12</span>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <img src="Images/1971_out.jpg" alt="Museum of Event 1971" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">Museum of Event 1971</h3>
-                        <p class="project-meta">Bangladesh Liberation War Memorial · Best Thesis 2023</p>
-                        <p class="project-description">
-                            Climate-responsive memorial using passive strategies — solar orientation, natural
-                            ventilation,
-                            bamboo jaali shading, and thermal zoning through water features and below-grade tunnels.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">80%</div>
-                                <div class="stat-label">Landscape</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Passive</div>
-                                <div class="stat-label">Cooling</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Local</div>
-                                <div class="stat-label">Materials</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Passive Design</span>
-                            <span class="tag">Daylighting</span>
-                            <span class="tag">Local Materials</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('solarsync')">
-                        <div class="project-header">
-                            <span class="project-number">13</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="" alt="SolarSync Shutters" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">SolarSync Shutters</h3>
-                        <p class="project-meta">Arduino Servo Control · IntelEnv 2025</p>
-                        <p class="project-description">
-                            Automated window shutters responding to daylight. Energy efficiency through adaptive control.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">16</div>
-                                <div class="stat-label">Servos</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Arduino</div>
-                                <div class="stat-label">Mega</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Dynamic</div>
-                                <div class="stat-label">Daylight</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">IoT</span>
-                            <span class="tag">Energy Efficiency</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('seasons')">
-                        <div class="project-header">
-                            <span class="project-number">14</span>
-                            <span class="project-year">2025</span>
-                        </div>
-                        <img src="" alt="The Seasons of Nature" class="project-image"
-                            style="background: var(--light-bg);">
-                        <h3 class="project-title">The Seasons of Nature</h3>
-                        <p class="project-meta">LED Strip Animation · Pausch Bridge Lighting Programming</p>
-                        <p class="project-description">
-                            Animated LED display simulating seasonal ecological cycles — pollination,
-                            fall transitions, winter aurora, and cherry blossoms.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">228×8</div>
-                                <div class="stat-label">LED Array</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">4</div>
-                                <div class="stat-label">Seasons</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">Python</div>
-                                <div class="stat-label">Animation</div>
-                            </div>
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">LED Installation</span>
-                            <span class="tag">Generative Art</span>
+                            <span class="tag">Data Visualization</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Game Development Tab -->
-            <div id="gamedev-content" class="tab-content">
-                <h2 class="section-title">Game Development</h2>
-                <div class="projects-grid" style="grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));">
-                    <div class="project-card" onclick="openModal('crossy')">
+            <!-- Programming Tab -->
+            <div id="programming-content" class="tab-content">
+                <h2 class="section-title">Programming</h2>
+
+                <div class="projects-grid">
+                    <div class="project-card" onclick="openModal('tartan')">
                         <div class="project-header">
                             <span class="project-number">01</span>
-                            <span class="project-year">2026</span>
+                            <span class="project-year">2025</span>
                         </div>
-                        <img src="Images/Crossy out.jpg" alt="Crossy Road Game" class="project-image">
-                        <h3 class="project-title">Crossy Road</h3>
-                        <p class="project-meta">Python Arcade Game</p>
+                        <img src="Images/TartanOut.jpg" alt="Tartan Tuesday" class="project-image">
+                        <h3 class="project-title">Tartan Tuesday Management System</h3>
+                        <p class="project-meta">Full-Stack Application</p>
                         <p class="project-description">
-                            2D arcade game clone features procedural terrain generation,
-                            object-oriented design, and dynamic difficulty scaling.
-                            <br><br>
-                            <a href="https://github.com/ananyashrimali03/Crossy-Road-15113-CMU" target="_blank"
-                                onclick="event.stopPropagation()"
-                                style="color: var(--primary); text-decoration: underline; cursor: pointer;">
-                                View Game Code →
-                            </a>
+                            React frontend with Google Apps Script backend serving 200+ weekly participants.
                         </p>
                         <div class="project-stats">
                             <div class="stat">
-                                <div class="stat-value">OOP</div>
-                                <div class="stat-label">Architecture</div>
+                                <div class="stat-value">200+</div>
+                                <div class="stat-label">Users</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">Python</div>
-                                <div class="stat-label">Language</div>
+                                <div class="stat-value">React</div>
+                                <div class="stat-label">Frontend</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">Game</div>
-                                <div class="stat-label">Logic</div>
+                                <div class="stat-value">Cloud</div>
+                                <div class="stat-label">Backend</div>
                             </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Google Apps Script</span>
+                            <span class="tag">API Integration</span>
                         </div>
                     </div>
 
-                    <div class="project-card" onclick="openModal('dogjigsaw')">
+                    <div class="project-card" onclick="openModal('chicago')">
                         <div class="project-header">
                             <span class="project-number">02</span>
-                            <span class="project-year">2026</span>
+                            <span class="project-year">2025</span>
                         </div>
-                        <img src="Images/Dogout.jpg" alt="Dog Jigsaw App" class="project-image">
-                        <h3 class="project-title">Dog Jigsaw</h3>
-                        <p class="project-meta">Flask Web App · Claude Opus 4.6</p>
+                        <img src="Images/DrugDataOut.jpg" alt="Chicago Dashboard" class="project-image">
+                        <h3 class="project-title">Chicago Drug Data Dashboard</h3>
+                        <p class="project-meta">Python Web Application</p>
                         <p class="project-description">
-                            Browse random dog photos, save favorites, and solve 3×3 jigsaw puzzles.
-                            Score tracking rewards fewer moves with more points.
+                            Streamlit-based dashboard with geospatial visualizations and real-time filtering.
                         </p>
                         <div class="project-stats">
                             <div class="stat">
-                                <div class="stat-value">Flask</div>
-                                <div class="stat-label">Backend</div>
+                                <div class="stat-value">100K+</div>
+                                <div class="stat-label">Data Points</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">API</div>
-                                <div class="stat-label">Dog CEO</div>
+                                <div class="stat-value">Streamlit</div>
+                                <div class="stat-label">Framework</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">3×3</div>
-                                <div class="stat-label">Puzzle</div>
+                                <div class="stat-value">Interactive</div>
+                                <div class="stat-label">Real-time</div>
                             </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">REST API</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Pandas</span>
                         </div>
                     </div>
 
@@ -2125,10 +1268,10 @@
                         </div>
                         <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
                         <h3 class="project-title">Carb-Off</h3>
-                        <p class="project-meta">AI Climate Coach · 15113 HW4 2026</p>
+                        <p class="project-meta">AI Climate Coach · 15113</p>
                         <p class="project-description">
                             Conversational AI carbon tracker with real-time collective impact counter.
-                            Inspired by Indore's behavior change model.
+                            FastAPI backend with React frontend powered by Claude Sonnet 4.
                         </p>
                         <div class="project-stats">
                             <div class="stat">
@@ -2145,10 +1288,108 @@
                             </div>
                         </div>
                         <div class="project-tags">
-                            <span class="tag">Python</span>
                             <span class="tag">FastAPI</span>
                             <span class="tag">React</span>
                             <span class="tag">Anthropic AI</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('solarsync')">
+                        <div class="project-header">
+                            <span class="project-number">04</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="SolarSync Shutters" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">SolarSync Shutters</h3>
+                        <p class="project-meta">Arduino Servo Control · IntelEnv 2025</p>
+                        <p class="project-description">
+                            Parametric window shutters with 16 Arduino-controlled servos responding to daylight.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">16</div>
+                                <div class="stat-label">Servos</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Arduino</div>
+                                <div class="stat-label">Mega</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">C++</div>
+                                <div class="stat-label">Language</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Arduino</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">IoT</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('seasons')">
+                        <div class="project-header">
+                            <span class="project-number">05</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="The Seasons of Nature" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">The Seasons of Nature</h3>
+                        <p class="project-meta">LED Strip Animation · Pausch Bridge Lighting Programming</p>
+                        <p class="project-description">
+                            Python-generated 228x8 LED animations simulating seasonal cycles with generative art.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">228x8</div>
+                                <div class="stat-label">LED Array</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Seasons</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Python</div>
+                                <div class="stat-label">Animation</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Generative Art</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('proofline')">
+                        <div class="project-header">
+                            <span class="project-number">06</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="" alt="Proofline" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Proofline</h3>
+                        <p class="project-meta">Pre-Startup · CMU AI Venture Studio · Beta</p>
+                        <p class="project-description">
+                            Mobile-first field execution platform for multifamily property management.
+                            Offline-capable PWA with role-based dashboards.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">PWA</div>
+                                <div class="stat-label">Mobile-First</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Offline</div>
+                                <div class="stat-label">Capable</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Full</div>
+                                <div class="stat-label">Stack</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Full-Stack</span>
+                            <span class="tag">PWA</span>
+                            <span class="tag">Startup</span>
                         </div>
                     </div>
                 </div>
@@ -2347,7 +1588,7 @@
     </section>
 
     <footer>
-        <p>© 2025 Ananya Shrimali</p>
+        <p>© 2025 Ananya Shrimali · Built from scratch with HTML, CSS & JavaScript</p>
     </footer>
 
     <!-- MODALS WITH IMAGES -->
@@ -2679,37 +1920,6 @@
         </div>
     </div>
 
-    <div id="attendanceModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('attendance')">&times;</button>
-            <h2 class="modal-title">Attendance Matrix Tool</h2>
-            <img src="Images/attendance-detail.jpg" alt="Attendance Tool Interface" class="modal-image">
-
-            <div class="modal-section">
-                <h3>Overview</h3>
-                <p>
-                    Web-based automation tool processing Excel files for 66 students across
-                    21 sessions with real-time percentage calculations.
-                </p>
-            </div>
-
-            <div class="highlight-box">
-                <h3>Key Features</h3>
-                <ul>
-                    <li>Automatic email-based student matching</li>
-                    <li>Real-time attendance percentage calculation</li>
-                    <li>Export processed data to Excel</li>
-                    <li>Saved 5+ hours of TA administrative work weekly</li>
-                </ul>
-            </div>
-
-            <div class="modal-section">
-                <h3>Tools</h3>
-                <p><strong>JavaScript, HTML/CSS, SheetJS (XLSX.js), GitHub Pages</strong></p>
-            </div>
-        </div>
-    </div>
-
     <div id="gisModal" class="modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('gis')">&times;</button>
@@ -2819,112 +2029,6 @@
             <div class="modal-section">
                 <h3>Tools & Technologies</h3>
                 <p><strong>ArcGIS Pro, ArcGIS StoryMaps, ModelBuilder, Python (ArcPy), Spatial Statistics, Kernel Density Estimation</strong></p>
-            </div>
-        </div>
-    </div>
-
-    <div id="crossyModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('crossy')">&times;</button>
-            <h2 class="modal-title">Crossy Road: Arcade Game</h2>
-            <img src="Images/Crossy.jpg" alt="Crossy Road Gameplay" class="modal-image">
-
-            <div class="modal-section">
-                <h3>Overview</h3>
-                <p>
-                    A faithful recreation of the classic arcade game Crossy Road, built in Python
-                    using the cmu_graphics library using Prompt Engineering. The game features a top view, endless
-                    procedural
-                    terrain generation, and progressively difficult obstacles.
-                </p>
-            </div>
-
-            <div class="highlight-box">
-                <h3>Key Features</h3>
-                <ul>
-                    <li><strong>Procedural Generation</strong>: Infinite diverse terrain (Grass, Roads, Rivers)</li>
-                    <li><strong>Object-Oriented Design</strong>: Robust class structure for Lanes, Player, and Obstacles
-                    </li>
-                    <li><strong>Collision Detection</strong>: Precise hitbox management for cars and logs</li>
-                    <li><strong>Visual Polish</strong>: Custom drawing logic for voxel-style aesthetics</li>
-                </ul>
-            </div>
-
-            <div class="modal-section">
-                <h3>Tools & Technologies</h3>
-                <p><strong>Python, CMU Graphics, Object-Oriented Programming (OOP)</strong></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Dog Jigsaw Modal -->
-    <div id="dogjigsawModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('dogjigsaw')">&times;</button>
-            <h2 class="modal-title">Dog Jigsaw</h2>
-            <img src="Images/Dog.jpg" alt="Dog Jigsaw App" class="modal-image">
-
-            <div style="position: relative; width: 100%; padding-bottom: 56.25%; margin-bottom: 2rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
-                <iframe src="https://www.youtube.com/embed/6fCkEP2Rsf4"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-
-            <div class="modal-section">
-                <h3>Overview</h3>
-                <p>
-                    A Flask web app that lets you browse random dog photos from the Dog CEO API,
-                    save your favorites, and solve 3×3 jigsaw puzzles made from them. Built using
-                    Claude Opus 4.6 as a development template.
-                </p>
-            </div>
-
-            <div class="highlight-box">
-                <h3>Key Features</h3>
-                <ul>
-                    <li><strong>Browse Dogs</strong>: View random dog images, optionally filtered by breed</li>
-                    <li><strong>Save Favorites</strong>: Star photos to add them to your favorites collection</li>
-                    <li><strong>Jigsaw Puzzles</strong>: Play a 3×3 tile-swap puzzle using any favorited photo</li>
-                    <li><strong>Score Tracking</strong>: Earn points for solving puzzles (fewer moves = more points),
-                        tracked across sessions</li>
-                </ul>
-            </div>
-
-            <div class="modal-section">
-                <h3>How It Works</h3>
-                <p>
-                    Browse random dog images on the home page and filter by breed with the dropdown.
-                    Click the star button to save a photo to your favorites. Go to Favorites and click the
-                    puzzle icon on any saved photo to play a jigsaw puzzle. Swap tiles by clicking two of
-                    them — solve the puzzle to earn points. Fewer moves = more points (max 100, min 10 per puzzle).
-                </p>
-            </div>
-
-            <div class="modal-section">
-                <h3>Project Structure</h3>
-                <p>
-                    <strong>app.py</strong> — Flask routes and API logic<br>
-                    <strong>favorites.json</strong> — Saved favorite images (auto-created)<br>
-                    <strong>score.json</strong> — Puzzle score data (auto-created)<br>
-                    <strong>requirements.txt</strong> — Python dependencies<br>
-                    <strong>templates/</strong> — index.html, favorites.html, puzzle.html
-                </p>
-            </div>
-
-            <div class="modal-section">
-                <h3>API Details</h3>
-                <p>
-                    Uses the free <strong>Dog CEO API</strong> — no API key required. Endpoints include
-                    <code>/breeds/list/all</code> for breed listing and <code>/breed/{breed}/images/random</code>
-                    for fetching random images. All calls made via Python's requests module.
-                </p>
-            </div>
-
-            <div class="modal-section">
-                <h3>Tools & Technologies</h3>
-                <p><strong>Python, Flask, Dog CEO REST API, HTML/CSS/JS, Claude Opus 4.6</strong></p>
             </div>
         </div>
     </div>
@@ -4206,6 +3310,99 @@
                 <p><strong>Prefabricated Timber Systems, Hexagonal Geometry, Modular Construction, Sustainable
                         Materials,
                         Flat-Pack Design, Community-Driven Assembly, Pandemic Response Architecture</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proofline Modal -->
+    <div id="prooflineModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('proofline')">&times;</button>
+            <h2 class="modal-title">Proofline — Field Execution & Verification Platform</h2>
+
+            <div class="modal-section">
+                <h3>Overview</h3>
+                <p>
+                    Proofline is a mobile-first field execution and verification platform built for
+                    multifamily property management. It centralizes task assignment, proof-of-work
+                    capture, and approval workflows — replacing the fragmented mix of texts,
+                    spreadsheets, and verbal check-ins that currently define unit turn operations.
+                    Currently in beta as part of CMU's AI Venture Studio at the Swartz Center for
+                    Entrepreneurship.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>The Problem</h3>
+                <p>
+                    Unit turns are time-sensitive and operationally messy. Scope changes don't
+                    propagate, proof of work arrives late or informally, approvals stall, and rework
+                    surfaces at the end of a project rather than mid-process. For property managers
+                    overseeing multiple units simultaneously, there's no single source of truth for
+                    what's been done, what's pending, and what's at risk.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>My Role</h3>
+                <p>
+                    <strong>Founding Full-Stack Developer & Sustainability Standards Engineer.</strong>
+                    I work across front-end development and product, with full-stack integration
+                    connecting the client-side experience to backend systems.<br><br>
+                    <strong>Front-End:</strong> Building and maintaining the design system — ensuring
+                    UI consistency across the property manager dashboard and field worker mobile
+                    interface. The field worker experience is particularly UX-constrained: it needs
+                    to function reliably in low-connectivity environments, minimize typing, and keep
+                    task completion fast.<br><br>
+                    <strong>Sustainability:</strong> Researching how unit-level product specifications
+                    (appliances, finishes, materials) can be evaluated against sustainability and
+                    occupant health standards such as Fitwel — currently in research and scoping phase
+                    for a future product iteration.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Key Technical Features</h3>
+                <ul>
+                    <li><strong>Offline-first data capture</strong> with sync queuing for low-connectivity field environments</li>
+                    <li><strong>Role-based access control</strong> separating property manager, field worker, and asset manager views</li>
+                    <li><strong>Real-time dashboard updates</strong> for property managers tracking multiple units</li>
+                    <li><strong>Proof artifact handling</strong> — photos, audio, structured inputs with immutable audit logging</li>
+                    <li><strong>Progressive Web App</strong> delivery to avoid mandatory app store installation</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Users</h3>
+                <p>
+                    <strong>Property Managers:</strong> Create and oversee unit turn workflows, approve
+                    or flag issues, manage blockers, and track progress across units in real time.<br><br>
+                    <strong>Field Workers:</strong> Check into units, complete assigned tasks with
+                    required proof — photos, measurements, voice-to-text notes — and submit for review.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Stage</h3>
+                <p>
+                    Pre-launch, currently building toward first release through CMU's AI Venture Studio
+                    at the Swartz Center for Entrepreneurship. A waitlist and demo request flow are live
+                    at <a href="https://www.proofline.tech" target="_blank"
+                        style="color: var(--primary); text-decoration: underline;">proofline.tech</a>.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>Progressive Web App, Offline-First Architecture, Role-Based Access Control,
+                    Design Systems, Full-Stack Development, Fitwel Standards Research</strong></p>
+            </div>
+
+            <div class="modal-section" style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://www.proofline.tech" target="_blank"
+                    style="display: inline-block; padding: 0.75rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; letter-spacing: 0.02em;">
+                    Visit Proofline &rarr;
+                </a>
             </div>
         </div>
     </div>
