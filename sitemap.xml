@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ananyashrimali03.github.io/Portfolio/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+```
+
+Push it to your repo, then in Search Console submit `https://ananyashrimali03.github.io/Portfolio/sitemap.xml`.
+
+**Step 3: Add a robots.txt**
+
+Create `robots.txt` in your root folder:
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://ananyashrimali03.github.io/Portfolio/sitemap.xml
