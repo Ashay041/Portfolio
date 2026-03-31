@@ -33,9 +33,6 @@
 
     <section class="hero" id="about">
         <div class="hero-content">
-            <!-- asked claude to add the letter hover effect -->
-            <!-- editted text and image names-->
-
             <img src="Images/profile.jpg" alt="Ananya Shrimali" class="hero-photo">
             <h1>
                 <span
@@ -50,7 +47,7 @@
                     data-fact="Skilled in RhinoPython, AI Automation, and Astrology even though I don't completely believe in it.">S</span><span
                     data-fact="Happy to collaborate on computational design projects and watch a thriller together">h</span><span
                     data-fact="Really passionate about optimization in my work as well as general conversations. I hate small talk.">r</span><span
-                    data-fact=" Inspired by the intersection of code, construction, and candies (dark chocolate if you wanna ask me the type).">i</span><span
+                    data-fact="I built a digital‑twin chatbot of my cognition using Retrieval‑Augmented Generation (RAG) over my cognitive functions tendency mapping.">i</span><span
                     data-fact="Maps out everything, including my life from plan-A till plan-appendices">m</span><span
                     data-fact="Amused about being right but also listening when I'm wrong.">a</span><span
                     data-fact="Luminous. Not really, I just love the word. I like low intensity lights or no lights at all.">l</span><span
@@ -59,32 +56,27 @@
             <p class="subtitle">Computational Building Intelligence</p>
             <p class="description">
                 <a href="https://www.cmu.edu" target="_blank"
-                    style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border);">Carnegie
-                    Mellon University</a> graduate student specializing in parametric design, full-stack development,
-                and data-driven sustainable design.
+                    style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border);">Carnegie Mellon University</a> graduate student specializing in parametric design, full-stack development, and data-driven sustainable design.
                 I build the tools that make building performance analysis faster and more defensible.
             </p>
             <br><br>
-            <strong style="font-weight: 400;">Core Expertise:</strong> Python, Machine Learning, End-to-end tool development, RhinoPython, Grasshopper, Climate Studio, Data
-            Science, Energy Modeling
+            <strong style="font-weight: 400;">Core Expertise:</strong> Python, RAG, Neural Network, Machine Learning, End-to-end tool development, GHPython, Grasshopper, Building Performance Simulation, Data
+            Science, Energy Modeling, Carbon Accounting, Passive Design optimization, HVAC Design, Energy Plus, LEED, WELL, IESVE, Radiance.
             <br><br>
-            <!-- asked claude to add resume link and updated manually -->
             <a href="#resume"
                 onclick="window.open('https://drive.google.com/file/d/1BqCEEF8ljxbLj-432oF0XXdy8G85-0OQ/view?usp=drive_link', '_blank'); return false;"
                 style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">View
-                Resume →</a>
+                Resume &rarr;</a>
             &nbsp;&nbsp;
             <a href="https://github.com/ananyashrimali03" target="_blank"
                 style="color: var(--primary); text-decoration: underline; text-decoration-color: var(--border); font-weight: 400;">GitHub
-                →</a>
-            </p>
-            <!-- asked claude to add chunk for key metrics -->
+                &rarr;</a>
             <div class="hero-metrics">
                 <div class="metric">
                     <div class="metric-value">100+</div>
                     <div class="metric-label">Building Iterations</div>
                 </div>
-                <div class="metric">
+                <div class="metric">    
                     <div class="metric-value">45%</div>
                     <div class="metric-label">Energy Reduction</div>
                 </div>
@@ -137,6 +129,7 @@
             <button class="tab-btn" onclick="switchTab('energy')">Energy + HVAC + Carbon</button>
             <button class="tab-btn" onclick="switchTab('data')">Data-Driven Design</button>
             <button class="tab-btn" onclick="switchTab('programming')">Programming</button>
+            <button class="tab-btn" onclick="switchTab('aiml')">AI + Deep Learning</button>
             <button class="tab-btn" onclick="switchTab('architecture')">Architectural Design</button>
         </div>
     </div>
@@ -157,10 +150,49 @@
                 <h2 class="section-title">All Work</h2>
 
                 <div class="projects-grid">
-                    <!-- Project 01: Environmental Justice Analysis -->
-                    <div class="project-card" onclick="openModal('gis')">
+                    <!-- Project 01: Daylight Optimization Thesis -->
+                    <div class="project-card" onclick="openModal('thesis')">
                         <div class="project-header">
                             <span class="project-number">01</span>
+                            <span class="project-year">Ongoing</span>
+                        </div>
+                        <img src="Images/ThesisOut.jpg" alt="Daylight Optimization Thesis" class="project-image">
+                        <h3 class="project-title">Multi-objective Daylight Optimization</h3>
+                        <p class="project-meta">Pittsburgh, PA · Office-to-Residential · Gulf Tower Case Study</p>
+                        <p class="project-description">
+                            Multi-objective daylight optimization workflow for deep floor plate office-to-residential
+                            conversions. Parametric simulation pipeline evaluating geometric thresholds where layout
+                            depth and facade transparency meet LEED v4 sDA &ge;55% standards.
+                        </p>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Phases</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">sDA</div>
+                                <div class="stat-label">≥55% Target</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">100+</div>
+                                <div class="stat-label">Configurations</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">RhinoPython</span>
+                            <span class="tag">HB-Radiance</span>
+                            <span class="tag">Parametric Simulation</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Daylighting</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 02: Environmental Justice Analysis -->
+                    <div class="project-card" onclick="openModal('gis')">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/GISOut.jpg" alt="Environmental Justice Analysis" class="project-image">
@@ -190,45 +222,6 @@
                             <span class="tag">GIS</span>
                             <span class="tag">Spatial Analysis</span>
                             <span class="tag">Data Visualization</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 02: Adaptive Reuse Thesis -->
-                    <div class="project-card" onclick="openModal('thesis')">
-                        <div class="project-header">
-                            <span class="project-number">02</span>
-                            <span class="project-year">Ongoing</span>
-                        </div>
-                        <img src="Images/ThesisOut.jpg" alt="Adaptive Reuse Thesis" class="project-image">
-                        <h3 class="project-title">Adaptive Reuse Thesis</h3>
-                        <p class="project-meta">Pittsburgh, PA · Office-to-Residential · Computational Research</p>
-                        <p class="project-description">
-                            Parametric analysis using RhinoPython + Grasshopper + ML for daylighting optimization
-                            of 1965-1985 office buildings. Automated workflow evaluating spatial daylight autonomy
-                            across 100+ building configurations.
-                        </p>
-
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">100+</div>
-                                <div class="stat-label">Iterations</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">ML</div>
-                                <div class="stat-label">Prediction</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">sDA/ASE</div>
-                                <div class="stat-label">Metrics</div>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tag">RhinoPython</span>
-                            <span class="tag">Grasshopper</span>
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">ClimateStudio API</span>
-                            <span class="tag">Daylighting</span>
                         </div>
                     </div>
 
@@ -383,10 +376,49 @@
                         </div>
                     </div>
 
-                    <!-- Project 07: Urban Fire Risk Prediction -->
-                    <div class="project-card" onclick="openModal('fire')">
+                    <!-- Project 07: Personal Cognitive Architecture Engine -->
+                    <div class="project-card" onclick="openModal('pcae')">
                         <div class="project-header">
                             <span class="project-number">07</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="" alt="Personal Cognitive Architecture Engine" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Cognitive Architecture Engine</h3>
+                        <p class="project-meta">Digital Twin · PyTorch Neural Network · RAG</p>
+                        <p class="project-description">
+                            Biologically-grounded cognitive digital twin using a ~300K parameter PyTorch brain model
+                            (13 regions, 9 neurotransmitter systems) with RAG memory and dual-axis output control.
+                        </p>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">300K</div>
+                                <div class="stat-label">Parameters</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">13</div>
+                                <div class="stat-label">Brain Regions</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">20</div>
+                                <div class="stat-label">Output Modes</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">ChromaDB</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Neuroscience</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 08: Urban Fire Risk Prediction -->
+                    <div class="project-card" onclick="openModal('fire')">
+                        <div class="project-header">
+                            <span class="project-number">08</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/HPAIROut.jpg" alt="Urban Fire Risk Prediction" class="project-image">
@@ -421,10 +453,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 08: Carb-Off -->
+                    <!-- Project 09: Carb-Off -->
                     <div class="project-card" onclick="openModal('carboff')">
                         <div class="project-header">
-                            <span class="project-number">08</span>
+                            <span class="project-number">09</span>
                             <span class="project-year">2026</span>
                         </div>
                         <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
@@ -459,10 +491,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 09: ASHRAE Library Design -->
+                    <!-- Project 10: ASHRAE Library Design -->
                     <div class="project-card" onclick="openModal('ashrae')">
                         <div class="project-header">
-                            <span class="project-number">09</span>
+                            <span class="project-number">10</span>
                             <span class="project-year">2024</span>
                         </div>
                         <img src="Images/ASHRAEOut.jpg" alt="ASHRAE Library Design" class="project-image">
@@ -496,10 +528,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 10: Tartan Tuesday Management System -->
+                    <!-- Project 11: Tartan Tuesday Management System -->
                     <div class="project-card" onclick="openModal('tartan')">
                         <div class="project-header">
-                            <span class="project-number">10</span>
+                            <span class="project-number">11</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/TartanOut.jpg" alt="Tartan Tuesday Management System" class="project-image">
@@ -535,10 +567,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 11: Chicago Drug Data Dashboard -->
+                    <!-- Project 12: Chicago Drug Data Dashboard -->
                     <div class="project-card" onclick="openModal('chicago')">
                         <div class="project-header">
-                            <span class="project-number">11</span>
+                            <span class="project-number">12</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="Images/DrugDataOut.jpg" alt="Chicago Drug Data Dashboard" class="project-image">
@@ -572,10 +604,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 12: SolarSync Shutters -->
+                    <!-- Project 13: SolarSync Shutters -->
                     <div class="project-card" onclick="openModal('solarsync')">
                         <div class="project-header">
-                            <span class="project-number">12</span>
+                            <span class="project-number">13</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="" alt="SolarSync Shutters" class="project-image"
@@ -610,10 +642,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 13: Seasons of Nature -->
+                    <!-- Project 14: Seasons of Nature -->
                     <div class="project-card" onclick="openModal('seasons')">
                         <div class="project-header">
-                            <span class="project-number">13</span>
+                            <span class="project-number">14</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="" alt="The Seasons of Nature" class="project-image"
@@ -648,10 +680,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 14: Proofline -->
+                    <!-- Project 15: Proofline -->
                     <div class="project-card" onclick="openModal('proofline')">
                         <div class="project-header">
-                            <span class="project-number">14</span>
+                            <span class="project-number">15</span>
                             <span class="project-year">2025</span>
                         </div>
                         <img src="" alt="Proofline" class="project-image"
@@ -699,31 +731,31 @@
                             <span class="project-number">01</span>
                             <span class="project-year">Ongoing</span>
                         </div>
-                        <img src="Images/ThesisOut.jpg" alt="Adaptive Reuse Thesis" class="project-image">
-                        <h3 class="project-title">Adaptive Reuse Thesis</h3>
-                        <p class="project-meta">Daylighting Analysis · Office-to-Residential</p>
+                        <img src="Images/ThesisOut.jpg" alt="Daylight Optimization Thesis" class="project-image">
+                        <h3 class="project-title">Multi-objective Daylight Optimization</h3>
+                        <p class="project-meta">Deep Floor Plate O2R · Gulf Tower, Pittsburgh</p>
                         <p class="project-description">
-                            ML-driven daylighting optimization of 1965-1985 office buildings using sDA/ASE metrics
-                            and parametric iteration.
+                            Parametric simulation workflow identifying geometric thresholds where layout depth
+                            and facade transparency meet residential daylighting standards (LEED v4 sDA &ge;55%).
                         </p>
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">100+</div>
-                                <div class="stat-label">Iterations</div>
+                                <div class="stat-label">Configurations</div>
                             </div>
                             <div class="stat">
                                 <div class="stat-value">sDA</div>
-                                <div class="stat-label">Metric</div>
+                                <div class="stat-label">≥55% Target</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">ASE</div>
-                                <div class="stat-label">Analysis</div>
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Phases</div>
                             </div>
                         </div>
                         <div class="project-tags">
                             <span class="tag">Daylighting</span>
-                            <span class="tag">ClimateStudio</span>
-                            <span class="tag">Machine Learning</span>
+                            <span class="tag">HB-Radiance</span>
+                            <span class="tag">Parametric Simulation</span>
                         </div>
                     </div>
 
@@ -1103,21 +1135,21 @@
                             <span class="project-number">02</span>
                             <span class="project-year">Ongoing</span>
                         </div>
-                        <img src="Images/ThesisOut.jpg" alt="Adaptive Reuse Thesis" class="project-image">
-                        <h3 class="project-title">Adaptive Reuse Thesis</h3>
-                        <p class="project-meta">ML-Driven Optimization · Computational Research</p>
+                        <img src="Images/ThesisOut.jpg" alt="Daylight Optimization Thesis" class="project-image">
+                        <h3 class="project-title">Multi-objective Daylight Optimization</h3>
+                        <p class="project-meta">Simulation Data Pipeline · Interactive Visualization</p>
                         <p class="project-description">
-                            Machine learning prediction models for daylighting performance across 100+
-                            parametric iterations.
+                            Automated simulation pipeline and interactive data visualization tool for
+                            multi-objective daylight optimization across 100+ parametric configurations.
                         </p>
                         <div class="project-stats">
                             <div class="stat">
                                 <div class="stat-value">100+</div>
-                                <div class="stat-label">Iterations</div>
+                                <div class="stat-label">Configurations</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">ML</div>
-                                <div class="stat-label">Prediction</div>
+                                <div class="stat-value">Python</div>
+                                <div class="stat-label">Pipeline</div>
                             </div>
                             <div class="stat">
                                 <div class="stat-value">sDA/ASE</div>
@@ -1125,9 +1157,9 @@
                             </div>
                         </div>
                         <div class="project-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">RhinoPython</span>
-                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">HB-Radiance</span>
+                            <span class="tag">Data Visualization</span>
                         </div>
                     </div>
 
@@ -1399,6 +1431,113 @@
                 </div>
             </div>
 
+            <!-- AI + Deep Learning Tab -->
+            <div id="aiml-content" class="tab-content">
+                <h2 class="section-title">AI + Deep Learning</h2>
+
+                <div class="projects-grid">
+                    <div class="project-card" onclick="openModal('pcae')">
+                        <div class="project-header">
+                            <span class="project-number">01</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="" alt="Personal Cognitive Architecture Engine" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">Cognitive Architecture Engine</h3>
+                        <p class="project-meta">Biologically-Grounded Digital Twin · PyTorch + RAG</p>
+                        <p class="project-description">
+                            A ~300K parameter neural network modeling 13 brain regions and 9 neurotransmitter
+                            systems, with ChromaDB RAG memory and a 5-level &times; 4-tier output control matrix.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">300K</div>
+                                <div class="stat-label">Parameters</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">13</div>
+                                <div class="stat-label">Brain Regions</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">20</div>
+                                <div class="stat-label">Output Modes</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">ChromaDB</span>
+                            <span class="tag">Gemini 1.5 Pro</span>
+                            <span class="tag">FastAPI</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('fire')">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <img src="Images/HPAIROut.jpg" alt="Urban Fire Risk Prediction" class="project-image">
+                        <h3 class="project-title">Urban Fire Risk Prediction</h3>
+                        <p class="project-meta">Harvard HPAIR Winner · ML Geospatial</p>
+                        <p class="project-description">
+                            ML model for fire-spread prediction using geospatial data and simulation-based analysis.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">Winner</div>
+                                <div class="stat-label">Harvard HPAIR</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">ML</div>
+                                <div class="stat-label">Prediction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">GIS</div>
+                                <div class="stat-label">Analysis</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Geospatial</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('carboff')">
+                        <div class="project-header">
+                            <span class="project-number">03</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="Images/Carbonout.jpg" alt="Carb-Off AI Climate Coach" class="project-image">
+                        <h3 class="project-title">Carb-Off</h3>
+                        <p class="project-meta">AI Carbon Tracker · Conversational AI</p>
+                        <p class="project-description">
+                            Conversational AI carbon tracker with real-time collective impact counter.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">AI</div>
+                                <div class="stat-label">Conversational</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">NLP</div>
+                                <div class="stat-label">Logging</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Real-time</div>
+                                <div class="stat-label">Impact</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Carbon Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Architectural Design Tab -->
             <div id="architecture-content" class="tab-content">
                 <h2 class="section-title">Architectural Design</h2>
@@ -1599,30 +1738,133 @@
     <div id="thesisModal" class="modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('thesis')">&times;</button>
-            <h2 class="modal-title">Adaptive Reuse: Office-to-Residential Conversions</h2>
-            <img src="Images/thesis-detail.jpg" alt="Thesis Research Detail" class="modal-image">
+            <h2 class="modal-title">Multi-objective Daylight Optimization for Deep Floor Plate O2R Conversions</h2>
+            <img src="Images/thesis_methodology.png" alt="Thesis Methodology Overview" class="modal-image" loading="lazy">
 
             <div class="modal-section">
-                <h3>Overview</h3>
+                <h3>Project Overview</h3>
                 <p>
-                    Thesis research focusing on adaptive reuse of Pittsburgh office buildings from 1965-1985,
-                    analyzing residential conversion potential with emphasis on daylighting performance.
+                    <strong>Type:</strong> Master's Thesis &mdash; Computational Building Performance<br>
+                    <strong>Duration:</strong> Spring 2026 (Ongoing)<br>
+                    <strong>Location:</strong> Pittsburgh, PA &mdash; Gulf Tower Case Study<br>
+                    <strong>Advisor:</strong> Prof. Dr. Yiqun Pan<br>
+                    <strong>Scope:</strong> Pre-Design &amp; Schematic Design Phase
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Context: Office Floor Plate Typologies</h3>
+                <p>
+                    Office building floor plates have evolved through several shapes over time. While I, U, L,
+                    and H typologies have seen successful residential conversions, deep rectangular floor plates
+                    remain the most challenging &mdash; and are the focus of this thesis.
+                </p>
+                <img src="Images/thesis_typologies.png" alt="Office Floor Plate Typologies" class="modal-image" loading="lazy">
+                <img src="Images/thesis_o2r_conversions.png" alt="Planned and Completed O2R Conversions" class="modal-image" loading="lazy">
+            </div>
+
+            <div class="modal-section">
+                <h3>Case Study: Gulf Tower, Pittsburgh</h3>
+                <p>
+                    Art Deco high-rise (1932) with a rectangular deep floor plate (~192 ft &times; 132 ft) in
+                    Downtown Pittsburgh, with floor plate depths of ~60 ft on one side and ~45 ft on the other.
+                    Currently proposed for office-to-residential conversion with funded development backing.
+                </p>
+                <img src="Images/thesis_gulf_tower.png" alt="Gulf Tower, Downtown Pittsburgh" class="modal-image" loading="lazy">
+                <img src="Images/thesis_floorplate.png" alt="Floor Plate Depth Comparison &mdash; Gulf Tower vs. One Canada Square" class="modal-image" loading="lazy">
+            </div>
+
+            <div class="modal-section">
+                <h3>Problem Statement</h3>
+                <p>
+                    One of the primary technical barriers to converting deep floor plate office buildings into
+                    residential spaces is daylighting performance in interior dark zones. Office buildings feature
+                    deep floor plates and central service cores that create areas unsuitable for residential living.
+                    Achieving residential standards (LEED v4 sDA &ge;55%) is difficult in zones more than
+                    30&ndash;35 feet from exterior windows.
+                </p>
+                <img src="Images/thesis_dark_zones.png" alt="Daylight Zone vs. Dark Zone Analysis" class="modal-image" loading="lazy">
+                <p style="font-size: 11px; color: #888; margin-top: 0.5rem;">Ref: Jiyoon Lee in <em>How to Tailor 50-story Office</em>, Harvard GSD 2023</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Hypothesis</h3>
+                <p>
+                    The feasibility of converting deep-plan office buildings into residential spaces is determined
+                    by the specific geometric threshold beyond the standard 45 ft where layout depth and facade
+                    transparency intersect to meet minimum daylighting autonomy standards.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Methodology &mdash; Phase 1 (Completed)</h3>
+                <p>
+                    Developed an early-stage parametric workflow to understand the maximum livable daylight
+                    threshold achievable through combinations of unit depth and facade transparency.
+                    Unlike typical office daylighting studies that simulate the entire floor plate as one zone,
+                    this approach subdivides into individual dwelling units &mdash; each with different depth,
+                    orientation, ceiling height, and WWR.
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <img src="Images/thesis_unit_module.png" alt="Unit Module &mdash; Parametric Variability" class="modal-image" loading="lazy" style="width: 48%; height: auto; margin: 0;">
+                    <img src="Images/Pipeline.gif" alt="Simulation Data Pipeline" class="modal-image" loading="lazy" style="width: 48%; height: auto; margin: 0;">
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>Methodology &mdash; Phase 2 (Ongoing)</h3>
+                <p>
+                    Developed the <strong>O2R Daylight Advisor</strong> &mdash; an interactive decision framework
+                    that ingests HB-Radiance simulation output and lets architects explore multi-objective
+                    daylight optimization in real time. The tool has four integrated views:
+                </p>
+                <ul>
+                    <li><strong>Feasibility Assessment</strong> &mdash; Set inherited building constraints (orientation,
+                        min WWR, max unit depth) and instantly see which configurations achieve LEED v4 compliance
+                        (sDA &ge;55%, ASE &le;10%)</li>
+                    <li><strong>Cost-Tier Comparison</strong> &mdash; Interventions grouped by renovation cost to find
+                        the point of diminishing returns where higher glazing spend no longer improves sDA</li>
+                    <li><strong>Parallel Coordinates</strong> &mdash; Brush-filter across all 10 input parameters
+                        simultaneously to discover non-obvious facade transparency combinations</li>
+                    <li><strong>Orientation Advisor</strong> &mdash; Facades ranked by average sDA with best-performing
+                        configuration for each, guiding which side to prioritize for habitable rooms</li>
+                </ul>
+                <div style="margin-top: 1.5rem; margin-bottom: 1.5rem; text-align: center;">
+                    <a href="https://ananyashrimali03.github.io/Daylight-Advisor/" target="_blank"
+                       style="display: inline-block; background: #000; color: #fff; padding: 1rem 2.5rem;
+                              text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+                              text-transform: uppercase; border: 2px solid #000; transition: all 0.25s;
+                              font-family: 'Inter', sans-serif;"
+                       onmouseover="this.style.background='#fff';this.style.color='#000';"
+                       onmouseout="this.style.background='#000';this.style.color='#fff';">
+                       Launch O2R Daylight Advisor &rarr;</a>
+                </div>
+                <img src="Images/thesis_dataviz.gif" alt="Daylight Explorer &mdash; Interactive Data Visualization Tool" class="modal-image" loading="lazy">
+                <img src="Images/CSV Automation.png" alt="CSV Automation Pipeline" class="modal-image" loading="lazy">
+                <img src="Images/Pipeline.gif" alt="Simulation &amp; Data Pipeline Workflow" class="modal-image" loading="lazy">
+                <img src="Images/thesis_hero.gif" alt="O2R Daylight Advisor &mdash; Full Workflow Demo" class="modal-image" loading="lazy">
+            </div>
+
+            <div class="modal-section">
+                <h3>Methodology &mdash; Phase 3 (Final Steps)</h3>
+                <p>
+                    Based on tool results, creating a schematic residential unit layout along with
+                    facade transparency recommendations for optimum daylight performance.
                 </p>
             </div>
 
             <div class="highlight-box">
-                <h3>Research Focus</h3>
+                <h3>Expected Outcomes</h3>
                 <ul>
-                    <li>Parametric building iterations using RhinoPython scripts</li>
-                    <li>Comprehensive daylighting analysis via ClimateStudio API</li>
-                    <li>Machine learning for spatial daylight autonomy prediction</li>
-                    <li>Evaluation of 100+ building configurations</li>
+                    <li>Facade transparency recommendations: WWR 70&ndash;90%, VT up to 0.70, SHGC tuning (Solarban 70XL candidate)</li>
+                    <li>Floor plate layout strategies achieving higher spatial daylight autonomy beyond the assumed 45 ft threshold</li>
+                    <li>An interactive decision framework for architects in early-stage O2R conversion design</li>
                 </ul>
             </div>
 
             <div class="modal-section">
                 <h3>Tools & Technologies</h3>
-                <p><strong>Rhino, Grasshopper, RhinoPython, ClimateStudio API, Machine Learning, Python</strong></p>
+                <p><strong>Rhino, Grasshopper, RhinoPython, HB-Radiance, Python, Interactive Data Visualization</strong></p>
             </div>
         </div>
     </div>
@@ -3597,6 +3839,102 @@
             <div class="modal-section">
                 <h3>Tools & Technologies</h3>
                 <p><strong>Arduino Mega, SG90 Servo Motors, C++ (Arduino), Serial Communication, Parametric Design</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="pcaeModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('pcae')">&times;</button>
+            <h2 class="modal-title">Personal Cognitive Architecture Engine (PCAE)</h2>
+
+            <div class="modal-section">
+                <h3>Project Overview</h3>
+                <p>
+                    <strong>Type:</strong> Independent Research &mdash; Computational Neuroscience + AI<br>
+                    <strong>Duration:</strong> March 2026<br>
+                    <strong>Scale:</strong> ~3,300 lines across 5 source files + 937-line cognitive architecture spec<br>
+                    <strong>Model:</strong> ~300K parameter PyTorch neural network (CPU-trainable)
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Concept</h3>
+                <p>
+                    A digital twin system that computationally models an individual's cognitive architecture
+                    using a biologically-grounded neural network. Unlike conventional AI persona systems that
+                    replicate surface-level speech patterns, PCAE models the underlying neural machinery that
+                    produces thought, emotion, and behavior. The system functions simultaneously as a
+                    communication translator, cognitive diagnostic tool, and self-awareness instrument.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>System Architecture</h3>
+                <ul>
+                    <li><strong>Stage 1 &mdash; Memory:</strong> ChromaDB semantic similarity search retrieves
+                        top 5 relevant memories from 12 foundational cognitive documents across 10 modules</li>
+                    <li><strong>Stage 2 &mdash; Neural:</strong> PyTorch model processes input through 13
+                        biologically-ordered brain regions with 9 neurotransmitter channels (~50ms to ~700ms
+                        simulated propagation)</li>
+                    <li><strong>Stage 3 &mdash; Prompt:</strong> Assembles brain state, memories, and
+                        communication protocol based on truth level + audience tier</li>
+                    <li><strong>Stage 4 &mdash; Generation:</strong> Gemini 1.5 Pro produces final articulated
+                        response calibrated to the selected output mode</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Neural Brain Model</h3>
+                <p>
+                    The PyTorch model mirrors biological neural signal propagation through 8 processing stages.
+                    Input text is embedded via all-MiniLM-L6-v2 (384 dimensions), then processed sequentially
+                    through 13 specialized brain region modules: Thalamus, Amygdala, Hypothalamus, Temporal &amp;
+                    Parietal cortex, Prefrontal Cortex (4 sub-regions), Hippocampus, DMN, Insula, Mirror Neurons,
+                    Basal Ganglia, Cerebellum, and Language Center. Each forward pass outputs a BrainState
+                    containing region activations, NT levels, and cognitive readouts (valence, arousal, stress,
+                    speech readiness, dissociation, simulation load).
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Dual-Axis Output Control</h3>
+                <p>
+                    The same raw thought produces dramatically different outputs depending on two independent
+                    control axes &mdash; creating a 4 &times; 5 matrix of 20 distinct communication protocols:
+                </p>
+                <ul>
+                    <li><strong>5 Truth Levels:</strong> Executive Interface &rarr; Strategic Advisor &rarr;
+                        Balanced Direct &rarr; Raw Diagnostic &rarr; Unsparing Mirror</li>
+                    <li><strong>4 Audience Tiers:</strong> Public API &rarr; Inner Circle &rarr;
+                        Private Sanctum &rarr; Admin / Root (full system logs)</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Training</h3>
+                <p>
+                    300 epochs using AdamW with cosine annealing. Loss combines four components: region activation
+                    BCE (1.0), neuroscience wiring constraints enforcing 7 biological rules (0.5), NT baseline
+                    anchoring (0.3), and contrastive brain vector clustering (0.2). The architecture is
+                    neuroscience-defined; individual parameterization via cognitive profile data sets gains,
+                    thresholds, and biases &mdash; the same model class can represent any person.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Frontend</h3>
+                <p>
+                    Dark-theme single-page chat interface with a live brain state visualization showing
+                    13 color-coded region activation bars and 6 cognitive readout gauges (valence, arousal,
+                    speech readiness, action readiness, dissociation, dlPFC load). Sidebar contains audience
+                    tier selector, truth level slider, and memory input panel.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools & Technologies</h3>
+                <p><strong>PyTorch, ChromaDB, all-MiniLM-L6-v2, Google Gemini 1.5 Pro, FastAPI, Uvicorn, Vanilla HTML/CSS/JS</strong></p>
             </div>
         </div>
     </div>
