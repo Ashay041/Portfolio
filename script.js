@@ -54,14 +54,16 @@ function getDriveUrl(fileId) {
     return "https://lh3.googleusercontent.com/d/" + fileId;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('img[src^="Images/"]').forEach(function (img) {
-        var filename = img.getAttribute("src").replace("Images/", "");
-        if (driveImageMap[filename]) {
-            img.setAttribute("src", getDriveUrl(driveImageMap[filename]));
-        }
-    });
-});
+// Drive image replacement disabled — using local Images/ folder directly
+// To re-enable, uncomment the block below and verify Drive IDs are correct
+// document.addEventListener("DOMContentLoaded", function () {
+//     document.querySelectorAll('img[src^="Images/"]').forEach(function (img) {
+//         var filename = img.getAttribute("src").replace("Images/", "");
+//         if (driveImageMap[filename]) {
+//             img.setAttribute("src", getDriveUrl(driveImageMap[filename]));
+//         }
+//     });
+// });
 
 // Fun fact functionality
 function showFunFact(letter, fact) {

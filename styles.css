@@ -399,6 +399,12 @@ section {
     background: var(--light-bg);
 }
 
+.project-image[src^="data:"],
+.modal-image[src^="data:"] {
+    object-fit: none;
+    background: var(--light-bg);
+}
+
 .project-title {
     font-size: 20px;
     color: var(--primary);
