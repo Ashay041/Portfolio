@@ -678,6 +678,43 @@
                         </div>
                     </div>
 
+                    <!-- Project 15: LEED GA Flashcard App -->
+                    <div class="project-card" onclick="openModal('leedga')">
+                        <div class="project-header">
+                            <span class="project-number">15</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="LEED GA Flashcard App" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">LEED GA Flashcard Study App</h3>
+                        <p class="project-meta">React Native · Expo · 15113</p>
+                        <p class="project-description">
+                            Interactive mobile flashcard app for LEED Green Associate exam preparation.
+                            100 mock exam questions with flip animations, progress tracking, and local persistence.
+                        </p>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">100</div>
+                                <div class="stat-label">Questions</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Expo</div>
+                                <div class="stat-label">SDK 54</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Mobile</div>
+                                <div class="stat-label">Cross-Platform</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Expo</span>
+                            <span class="tag">AsyncStorage</span>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -1353,6 +1390,39 @@
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Generative Art</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="openModal('leedga')">
+                        <div class="project-header">
+                            <span class="project-number">06</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="LEED GA Flashcard App" class="project-image"
+                            style="background: var(--light-bg);">
+                        <h3 class="project-title">LEED GA Flashcard Study App</h3>
+                        <p class="project-meta">React Native · Expo · 15113</p>
+                        <p class="project-description">
+                            Mobile flashcard app for LEED GA certification with flip animations and progress persistence.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">100</div>
+                                <div class="stat-label">Questions</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Expo</div>
+                                <div class="stat-label">SDK 54</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">TypeScript</div>
+                                <div class="stat-label">Language</div>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Expo</span>
                         </div>
                     </div>
 
@@ -4079,6 +4149,99 @@
             <div class="modal-section">
                 <h3>Tools & Technologies</h3>
                 <p><strong>PyTorch, ChromaDB, all-MiniLM-L6-v2, Google Gemini 1.5 Pro, FastAPI, Uvicorn, Vanilla HTML/CSS/JS</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="leedgaModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('leedga')">&times;</button>
+            <h2 class="modal-title">LEED GA Flashcard Study App</h2>
+
+            <div class="modal-section">
+                <h3>Project Overview</h3>
+                <p>
+                    <strong>Type:</strong> Mobile Application &mdash; 15113 Course Project<br>
+                    <strong>Duration:</strong> Spring 2026<br>
+                    <strong>Platform:</strong> Cross-platform (iOS &amp; Android) via Expo<br>
+                    <strong>Repository:</strong> <a href="https://github.com/ananyashrimali03/LEED-GA-Flashcards-Phone-App-15113" target="_blank" rel="noopener">GitHub</a>
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Motivation</h3>
+                <p>
+                    While preparing for the LEED Green Associate certification, I wanted a focused, 
+                    interactive flashcard system tailored to LEED GA mock exam questions &mdash; something 
+                    more effective than generic study tools. This app was built to combine exam prep 
+                    with mobile development practice.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>100 LEED GA mock exam questions</strong> bundled directly in the app &mdash; no API keys or backend required</li>
+                    <li><strong>Tap-to-flip card interaction</strong> with smooth Y-axis rotation animation using react-native-reanimated</li>
+                    <li><strong>Progress tracking:</strong> mark cards as <em>Known</em> (green) or <em>Still Learning</em> (orange)</li>
+                    <li><strong>Filter mode:</strong> study only unmastered cards for focused review sessions</li>
+                    <li><strong>Persistent progress</strong> via AsyncStorage &mdash; survives app restarts</li>
+                    <li><strong>Manage screen:</strong> scrollable list of all 100 cards with color-coded status badges and a reset button</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Demo Video</h3>
+                <div style="position: relative; padding-bottom: 177%; height: 0; max-width: 360px; margin: 0 auto;">
+                    <iframe src="https://www.youtube.com/embed/7-48PmHGH6E" 
+                        title="LEED GA Flashcard App Demo" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>App Screens</h3>
+                <p>
+                    <strong>Study Screen (Home Tab):</strong> The main study interface where you flip through 
+                    flashcards one at a time. Tap a card to reveal the answer, use arrow buttons to navigate, 
+                    and mark cards as Known or Still Learning. A filter toggle lets you focus on unmastered cards only.
+                </p>
+                <p>
+                    <strong>Manage Screen (Second Tab):</strong> Displays all 100 flashcards in a scrollable list 
+                    with colored badges indicating mastery status. Shows overall progress at the top with an 
+                    option to reset all progress.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Technical Implementation</h3>
+                <p>
+                    Built with React Native and Expo SDK 54, using file-based routing via expo-router. 
+                    The card flip animation leverages a Y-axis rotation built with react-native-reanimated 
+                    for a native-feel interaction. All 100 questions are stored in a typed data file 
+                    (<code>data/questions.ts</code>), and card progress is persisted locally through 
+                    @react-native-async-storage/async-storage. The app uses a consistent light theme 
+                    with green (#4CAF50) and orange (#FF9800) accents.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Process &amp; Takeaway</h3>
+                <p>
+                    After learning the value of thorough planning in a previous assignment, I invested 
+                    heavily in writing a clear spec and workflow plan before writing any code. 
+                    The structured approach paid off &mdash; the core app was built in a single 
+                    agent-assisted session with only minor tweaks needed (adding answer options to 
+                    card faces). The engineering architecture required no revisions.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Tools &amp; Technologies</h3>
+                <p><strong>React Native, Expo SDK 54, TypeScript, expo-router, react-native-reanimated, 
+                    AsyncStorage, Expo Go</strong></p>
             </div>
         </div>
     </div>
